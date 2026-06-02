@@ -1,0 +1,391 @@
+{
+  "section": "tech",
+  "review_date": "2026-06-02",
+  "generated_at": "2026-06-02T13:00:36.947751",
+  "items": [
+    {
+      "title": "Anthropic Raises $65B Series H, Hits $965B Valuation, Tops OpenAI",
+      "details": "Anthropic closed a $65 billion Series H round led by Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital, valuing the company at $965 billion post-money — surpassing rival OpenAI's $852 billion valuation for the first time. The round includes $15 billion in previously committed hyperscaler investments, including $5 billion from Amazon. Anthropic also reported a $47 billion annualized revenue run rate, up from $10 billion at end of 2025, driven largely by Claude Code enterprise adoption.",
+      "category": "big_tech",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Anthropic Blog",
+          "url": "https://www.anthropic.com/news/series-h"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/"
+        },
+        {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-28/anthropic-raises-at-965-billion-valuation-eclipsing-openai"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Confidentially Files S-1 IPO Prospectus With SEC",
+      "details": "On June 1, 2026, Anthropic confidentially submitted a draft Form S-1 registration statement to the SEC for a proposed IPO, potentially leapfrogging rival OpenAI in the race to a Wall Street debut as soon as fall 2026. No share count or price has been set. The filing follows Anthropic's record $65 billion Series H close and comes as SpaceX and OpenAI are also preparing their own listings, potentially comprising a $3+ trillion AI IPO wave.",
+      "category": "big_tech",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Anthropic Blog",
+          "url": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+        },
+        {
+          "label": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html"
+        },
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/"
+        }
+      ]
+    },
+    {
+      "title": "Claude Opus 4.8 Launches With 69.2% SWE-Bench Pro, 2.5x Fast Mode",
+      "details": "Anthropic released Claude Opus 4.8 on May 28, 2026, just 41 days after Opus 4.7. The model scores 69.2% on SWE-Bench Pro (up from 64.3%), 88.6% on SWE-Bench Verified, and 96.7% on USAMO 2026 math proofs — a 27.4-point gain over Opus 4.7. Fast mode runs at 2.5x standard speed and is now 3x cheaper than on prior models, with Databricks reporting a 61% token-cost reduction in their Genie AI agent. Pricing remains $5/$25 per million tokens.",
+      "category": "new_model",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-opus-4-8"
+        },
+        {
+          "label": "9to5Mac",
+          "url": "https://9to5mac.com/2026/05/28/anthropic-upgrades-claude-with-new-opus-4-8-model-heres-whats-new/"
+        },
+        {
+          "label": "MagicShot.ai",
+          "url": "https://magicshot.ai/news/claude-opus-4-8-release-features-benchmarks/"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Debuts Dynamic Workflows: Hundreds of Parallel Subagents in Claude Code",
+      "details": "Alongside Opus 4.8, Anthropic launched Dynamic Workflows in Claude Code as a research preview for Enterprise, Team, and Max plans. The feature enables Claude to plan a large task, fire off hundreds of parallel subagents in a single session, and self-verify results against an existing test suite. Anthropic demonstrated codebase-scale migrations across hundreds of thousands of lines of code from kickoff to merge, with the alignment team also reporting Opus 4.8 reaches new highs on prosocial traits and near-Mythos levels of aligned behavior.",
+      "category": "product",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-opus-4-8"
+        },
+        {
+          "label": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/28/anthropic-claude-opus-4-8/"
+        },
+        {
+          "label": "Technology.org",
+          "url": "https://www.technology.org/2026/05/29/anthropic-claude-opus-4-8-dynamic-workflows/"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Build 2026 Unveils MAI-Thinking-1, First In-House Reasoning Model",
+      "details": "At Build 2026 on June 2 in San Francisco, Microsoft AI chief Mustafa Suleyman is expected to introduce MAI-Thinking-1, the company's first dedicated reasoning model, developed without model distillation and targeted primarily at enterprise customers. The conference also features MAI-Image-2.5, MAI-Image-2.5-Flash, MAI-Transcribe-1.5, and MAI-Voice-2 — a multilingual TTS model supporting 16+ languages with expanded emotional range. The moves signal Microsoft's intent to reduce reliance on OpenAI across its most strategic developer products.",
+      "category": "new_model",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Business Standard",
+          "url": "https://www.business-standard.com/technology/tech-news/microsoft-build-2026-what-to-expect-new-reasoning-ai-model-surface-laptop-ultra-126060200686_1.html"
+        },
+        {
+          "label": "Windows News AI",
+          "url": "https://windowsnews.ai/article/microsoft-build-2026-leak-mai-image-25-mai-voice-2-and-mai-transcribe-15-set-for-june-2-unveiling.420924"
+        },
+        {
+          "label": "FAQ.com.tw",
+          "url": "https://faq.com.tw/en/developer-tools/2026-06-01-microsoft-build-2026-mai-coding-models-en/"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Build 2026: Windows Local AI, RTX Spark Optimization, MAI Coding Model for Copilot",
+      "details": "Build 2026 also features a dedicated Windows Local AI track to support on-device AI inference without cloud reliance, with Windows optimized specifically for NVIDIA's RTX Spark superchip — including improved workload scheduling, power management, and unified memory handling. A homegrown MAI coding model for GitHub Copilot is also expected, directly addressing the platform's new token-billing controversy. Azure AI Foundry updates will formally expand multi-model support to include Anthropic Claude alongside existing providers.",
+      "category": "big_tech",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Business Standard",
+          "url": "https://www.business-standard.com/technology/tech-news/microsoft-build-2026-what-to-expect-new-reasoning-ai-model-surface-laptop-ultra-126060200686_1.html"
+        },
+        {
+          "label": "Digit.in",
+          "url": "https://www.digit.in/news/general/microsoft-build-2026-new-ai-models-copilot-super-app-and-what-more-to-expect.html"
+        },
+        {
+          "label": "FAQ.com.tw",
+          "url": "https://faq.com.tw/en/developer-tools/2026-06-01-microsoft-build-2026-mai-coding-models-en/"
+        }
+      ]
+    },
+    {
+      "title": "Google Gemini 3.5 Flash Becomes Default AI Mode Model in Search at 4x Speed",
+      "details": "Announced at Google I/O 2026 in May, Gemini 3.5 Flash is now the default model powering Google Search's AI Mode and the Gemini app globally. Google claims it delivers 4x faster output token generation than competing frontier models and outperforms Gemini 3.1 Pro across coding and agentic benchmarks. Google also revealed it is now processing more than 3.2 quadrillion tokens per month, up from 480 trillion at I/O 2025.",
+      "category": "new_model",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Google Blog",
+          "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/"
+        },
+        {
+          "label": "9to5Google",
+          "url": "https://9to5google.com/2026/05/19/google-io-2026-news/"
+        },
+        {
+          "label": "HotHardware",
+          "url": "https://hothardware.com/news/google-io-2026-gemini-35-flash-ai-search-and-more"
+        }
+      ]
+    },
+    {
+      "title": "Google Launches Gemini Spark: Always-On Autonomous Cloud Agent",
+      "details": "Unveiled at Google I/O 2026, Gemini Spark is an always-on autonomous personal agent running in the cloud, continuing to execute tasks even when user devices are powered off. Built on the Antigravity 2.0 platform, Spark connects to Google Workspace and third-party tools via the Model Context Protocol (MCP) and can autonomously monitor apartment listings, product drops, and flight prices, alerting users when parameters change. Initial rollout is for Google AI Pro and Ultra subscribers in the US.",
+      "category": "product",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "9to5Google",
+          "url": "https://9to5google.com/2026/05/19/google-io-2026-news/"
+        },
+        {
+          "label": "US Times Now",
+          "url": "https://www.ustimesnow.com/gemini-3-5-flash-google-ai-agents/amp/"
+        },
+        {
+          "label": "Duke Digital Media Community",
+          "url": "https://sites.duke.edu/ddmc/2026/05/23/google-i-o-2026-gemini-3-5-flash-gemini-omni-gemini-spark/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI GPT-5.5 and Codex Now Generally Available on Amazon Bedrock",
+      "details": "Following a $50 billion AWS-OpenAI partnership announced April 28, 2026 — which ended OpenAI's exclusivity with Microsoft Azure — GPT-5.5, GPT-5.4, and Codex became generally available on Amazon Bedrock as of June 1, 2026. Models run on Bedrock's next-generation inference engine with pricing matching OpenAI first-party rates, usage counting toward existing AWS commitments. Over 5 million developers now use Codex weekly, and the AWS path includes IAM, VPC isolation, KMS encryption, and CloudTrail audit logging.",
+      "category": "infrastructure",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "AWS Blog",
+          "url": "https://aws.amazon.com/blogs/machine-learning/openai-models-and-codex-on-amazon-bedrock-are-now-generally-available/"
+        },
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/openai-on-aws/"
+        },
+        {
+          "label": "About Amazon",
+          "url": "https://www.aboutamazon.com/news/aws/bedrock-openai-models"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI Launches GPT-5.3-Codex Unifying Codex and GPT-5 Training Stacks",
+      "details": "OpenAI shipped GPT-5.3-Codex, described as its most capable agentic coding model yet, combining the Codex and GPT-5 training stacks in a single unified model for the first time. The model is approximately 25% faster than its predecessors and sets new highs on key coding benchmarks. GPT-5.4 subsequently integrated GPT-5.3-Codex's capabilities along with improvements across tools, spreadsheets, presentations, and professional document workflows.",
+      "category": "new_model",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "OpenAI Help Center",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes"
+        },
+        {
+          "label": "Releasebot.io",
+          "url": "https://releasebot.io/updates/openai"
+        },
+        {
+          "label": "AWS Blog",
+          "url": "https://aws.amazon.com/blogs/machine-learning/openai-models-and-codex-on-amazon-bedrock-are-now-generally-available/"
+        }
+      ]
+    },
+    {
+      "title": "Nvidia RTX Spark Superchip Debuts at Computex 2026: Blackwell + Grace in One",
+      "details": "NVIDIA unveiled the RTX Spark superchip at Computex 2026 on June 1, integrating Blackwell RTX graphics with Grace CPU technology in a unified platform with up to 128GB of unified memory. Microsoft has optimized Windows on Arm specifically for RTX Spark, including improved workload scheduling, power management, and larger GPU memory allocation. The chip is positioned to run a 120-billion-parameter AI model with a million-token context entirely on-device, arriving in laptops and mini-PCs from major OEMs later this year.",
+      "category": "infrastructure",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Yahoo Tech",
+          "url": "https://tech.yahoo.com/computing/article/computex-2026-the-biggest-announcements-so-far-from-nvidia-microsoft-intel-and-more-175924050.html"
+        },
+        {
+          "label": "TechStartups",
+          "url": "https://techstartups.com/2026/06/01/top-tech-news-today-june-1-2026/"
+        },
+        {
+          "label": "Business Standard",
+          "url": "https://www.business-standard.com/technology/tech-news/microsoft-build-2026-what-to-expect-new-reasoning-ai-model-surface-laptop-ultra-126060200686_1.html"
+        }
+      ]
+    },
+    {
+      "title": "Cognition Raises $1B at $26B Valuation; Devin Writes 89% of Its Own Code",
+      "details": "AI coding startup Cognition raised over $1 billion in a Series D at a $26 billion post-money valuation, led by Lux Capital, General Catalyst, and 8VC, with participation from Peter Thiel's Founders Fund and Ribbit Capital. Annualized revenue surged from $37 million in May 2025 to $492 million — a 13-fold increase in 12 months — driven by enterprise customers including Goldman Sachs, Mercedes-Benz, and the US Army. Notably, 89% of all code committed by Cognition's own engineers is now written by its Devin AI agent.",
+      "category": "acquisition",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/"
+        },
+        {
+          "label": "The Next Web",
+          "url": "https://thenextweb.com/news/cognition-just-raised-1-billion-at-a-26-billion-valuation-and-90-of-its-own-code-is-written-by-its-ai"
+        },
+        {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-27/ai-coding-startup-cognition-raises-1-billion-at-26-billion-value"
+        }
+      ]
+    },
+    {
+      "title": "SoftBank Commits €75B to Build 5 GW of AI Data Centers in France",
+      "details": "SoftBank Group announced on May 30, 2026 a commitment of up to €75 billion (~$87 billion) to develop and operate 5 gigawatts of AI data center capacity in France, its largest AI infrastructure investment in Europe. The first phase targets 3.1 GW across three sites in the Hauts-de-France region (Dunkirk, Bosquel, Bouchain) by 2031, backed by a €45 billion initial investment. Schneider Electric will be a key industrial partner at the Port of Dunkirk, co-building a manufacturing cluster for enclosures and power modules.",
+      "category": "infrastructure",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "SoftBank Group",
+          "url": "https://group.softbank/en/news/press/20260531_0"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/"
+        },
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/05/30/softbank-75-billion-investment-french-ai-data-centers-masayoshi-son-emmanuel-macron/"
+        }
+      ]
+    },
+    {
+      "title": "First Confirmed In-the-Wild LLM Agent Cyberattack: Database Exfiltrated in Under 1 Hour",
+      "details": "Sysdig's Threat Research Team documented the first confirmed live cyberattack driven entirely by an autonomous LLM agent, observed on May 10, 2026. The attacker exploited CVE-2026-39987 in a Marimo notebook to harvest AWS credentials, pivot through AWS Secrets Manager to retrieve an SSH key, then exfiltrated a full PostgreSQL database in under two minutes across eight parallel SSH sessions — completing the entire chain in under one hour with no human direction. Sysdig identified four LLM-agent signatures including improvised schema enumeration and real-time adaptive command composition.",
+      "category": "breakthrough",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Sysdig",
+          "url": "https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots"
+        },
+        {
+          "label": "The Hacker News",
+          "url": "https://thehackernews.com/2026/05/attackers-use-llm-agent-for-post.html"
+        },
+        {
+          "label": "Security Magazine",
+          "url": "https://www.securitymagazine.com/articles/102325-ai-agent-conducted-a-cyberattack-on-its-own-it-took-less-than-one-hour"
+        }
+      ]
+    },
+    {
+      "title": "GitHub Copilot Switches to Token-Based Billing, Triggering Major Developer Backlash",
+      "details": "On June 1, 2026, GitHub transitioned Copilot's 4.7 million paid subscribers from a flat-rate Premium Request Units model to token-based AI Credits billing, with base prices held steady but agentic and premium-model sessions now metered. Developers running multi-step agentic workflows reported cost increases of 10x to 50x, with one Reddit user projecting their bill would jump from $29/month to $750/month. The announcement attracted nearly 900 downvotes on GitHub's discussion board, and many developers began migrating to Cursor, Windsurf, or direct API access.",
+      "category": "product",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/"
+        },
+        {
+          "label": "TechTimes",
+          "url": "https://www.techtimes.com/articles/317536/20260601/github-copilot-pricing-change-drives-backlash-agentic-bills-jump-10x-50x-power-users.htm"
+        },
+        {
+          "label": "Dataconomy",
+          "url": "https://dataconomy.com/2026/06/01/github-copilot-token-pricing-backlash/"
+        }
+      ]
+    },
+    {
+      "title": "Alibaba Qwen 3.7 Max Debuts With 1M-Token Context and 92.4% GPQA Diamond",
+      "details": "Alibaba's Qwen team launched Qwen 3.7 Max on May 20, 2026 at the Alibaba Cloud Summit, scoring 56.6 on the Artificial Analysis Intelligence Index — ranked 5th globally and the highest-placed Chinese model to date, ahead of Gemini 3.5 Flash. The model features a 1M-token context window (up from 256K), 92.4% on GPQA Diamond, 97.1% on HMMT 2026 math, and demonstrated 35 hours of continuous autonomous coding with 1,158 tool calls. Priced at $2.50/$7.50 per million input/output tokens — roughly half the cost of Claude Opus 4.7 — it is API-only with no open weights.",
+      "category": "new_model",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "DataCamp",
+          "url": "https://www.datacamp.com/blog/qwen3-7-max"
+        },
+        {
+          "label": "CoderSera",
+          "url": "https://codersera.com/blog/qwen-3-7-max-launch-guide-2026/"
+        },
+        {
+          "label": "OfficeChai",
+          "url": "https://officechai.com/ai/qwen-3-7-max-benchmarks/"
+        }
+      ]
+    },
+    {
+      "title": "Yann LeCun Publishes LeJEPA World Model Proof on Gaussian Latent Recovery",
+      "details": "On June 1, 2026, Yann LeCun published a new research paper titled 'When Does LeJEPA Learn a World Model?', proving that under Gaussian latent dynamics, LeJEPA can recover the hidden state behind nonlinear observations up to rotation. The key insight is that linear latent features are the most stable across nearby views while nonlinear features decay faster, causing the objective to naturally select the real-world variables. The guarantee holds under specific Gaussian latent assumptions and represents a formal theoretical foundation for the Joint-Embedding Predictive Architecture family of models.",
+      "category": "research",
+      "importance": "medium",
+      "sources": [
+        {
+          "label": "Radical Data Science",
+          "url": "https://radicaldatascience.wordpress.com/2026/06/01/ai-news-briefs-bulletin-board-for-june-2026/"
+        }
+      ]
+    },
+    {
+      "title": "US AI Data Center Buildout in Crisis: 30–50% of Projects Face Delays or Cancellation",
+      "details": "Analysis by Sightline Climate cited by Bloomberg found that 30–50% of approximately 140 planned US data centers targeting 16 GW of capacity may miss 2026 timelines or be canceled outright, with only about one-third of the 12 GW slated for this year currently under active construction. Primary bottlenecks include transformer lead times stretching to five years, multi-year waits for grid connections, Chinese-manufactured power equipment shortages, permitting friction, and local opposition over energy and water usage. Ohio suspended major data center tax incentives as residents push a ballot measure that could ban hyperscale builds statewide.",
+      "category": "infrastructure",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "TechStartups",
+          "url": "https://techstartups.com/2026/06/01/top-tech-news-today-june-1-2026/"
+        },
+        {
+          "label": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers"
+        },
+        {
+          "label": "Tech Insider",
+          "url": "https://tech-insider.org/us-ai-data-center-delays-cancellations-7gw-capacity-crisis-2026/"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's Project Glasswing Finds 10,000+ Critical Vulnerabilities With Claude Mythos Preview",
+      "details": "Anthropic published its first Project Glasswing update on May 22, 2026, reporting that Claude Mythos Preview — its most advanced model, currently in limited access — identified more than 10,000 high- or critical-severity vulnerabilities in a single month of defensive security operations. The full public release of Mythos-class models to all customers remains pending as Anthropic continues developing stronger safeguards after cybersecurity concerns surfaced during the controlled preview. Anthropic described Mythos Preview as capable of chaining vulnerabilities to execute sophisticated cyberattacks, making safeguard development critical before broad release.",
+      "category": "breakthrough",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Let's Data Science",
+          "url": "https://letsdatascience.com/blog/github-copilot-usage-based-billing-developer-backlash"
+        },
+        {
+          "label": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/28/anthropic-claude-opus-4-8/"
+        },
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/05/29/anthropic-raises-65-billion-at-record-965-billion-valuation-promises-mythos-ai-model-in-wide-release-in-coming-weeks-releases-claude-opus-4-8/"
+        }
+      ]
+    },
+    {
+      "title": "Google Gemma 4 Open Model Released: 500M+ Downloads, Agentic Reasoning Focus",
+      "details": "Google released Gemma 4 in April 2026 at Cloud Next '26, describing it as 'byte for byte the most capable open model,' built specifically for advanced reasoning and agentic workflows. The Gemma family has now surpassed 500 million cumulative developer downloads since the first generation. Google simultaneously launched its eighth-generation TPUs optimized for agentic workloads and the Gemini Enterprise Agent Platform, with more than 260 announcements made to over 32,000 Cloud Next attendees. Gemma 4 is available for self-hosting under Google's open-model license.",
+      "category": "open_source",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Google Blog",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/"
+        }
+      ]
+    }
+  ]
+}
