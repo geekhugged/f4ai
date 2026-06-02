@@ -191,6 +191,12 @@
         .b-infrastructure{background:#fce4ec;color:#c62828;}
         .b-open_source{ background:#e8f5e9; color:#2e7d32; }
         .b-acquisition{ background:#ede7f6; color:#4527a0; }
+        /* Startup badges */
+        .b-launch     { background:#e8f5e9; color:#1b5e20; }
+        .b-founder    { background:#e8eaf6; color:#283593; }
+        .b-accelerator{ background:#f3e8fd; color:#6a1b9a; }
+        .b-unicorn    { background:#fff8e1; color:#f57f17; }
+        .b-pivot      { background:#fce4ec; color:#880e4f; }
 
         .chevron { font-size: 20px; color: var(--text-muted); flex-shrink: 0; transition: transform .22s ease; }
         .acc-btn.open .chevron { transform: rotate(180deg); }
@@ -274,6 +280,10 @@
     <button class="tab" onclick="showTab('tech', this)">
         <span class="material-icons">memory</span>
         Tech
+    </button>
+    <button class="tab" onclick="showTab('startup', this)">
+        <span class="material-icons">bolt</span>
+        Startups &amp; VC
     </button>
 </nav>
 
@@ -759,6 +769,248 @@
         </div>
     </div>
         <!-- TECH_END -->
+    </section>
+
+
+    <section id="startup" class="section">
+        <div class="section-header">
+            <h2>Startup &amp; Venture Observer</h2>
+            <p>Горячие новости стартапов, венчур, основатели, новые запуски</p>
+        </div>
+        <!-- STARTUP_START -->
+    <div class="review-block" data-date="2026-06-02">
+        <button class="review-meta open" onclick="toggleReview(this)">
+            <span class="material-icons">calendar_today</span>
+            <span class="review-date">02 June 2026</span>
+            <span class="review-count">20 insights</span>
+            <span class="material-icons review-chevron">expand_more</span>
+        </button>
+        <div class="review-content open">
+        <div class="accordion">
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">Cognition's Devin AI Agent Raises $1B at $26B Valuation</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Cognition, maker of autonomous AI software engineer Devin, raised over $1 billion at a $26 billion post-money valuation on May 28, 2026 — more than doubling from its $10.2 billion valuation just eight months prior. The round was co-led by Lux Capital, General Catalyst, and 8VC, with Founders Fund, Ribbit Capital, and Atreides also participating. Annualized revenue surged from $37M to $492M in 12 months, with enterprise clients including Goldman Sachs, Mercedes-Benz, NASA, and Santander, and 90% of the company's own code now written by Devin.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch</a><a href="https://thenextweb.com/news/cognition-just-raised-1-billion-at-a-26-billion-valuation-and-90-of-its-own-code-is-written-by-its-ai" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>The Next Web</a><a href="https://www.bloomberg.com/news/articles/2026-05-27/ai-coding-startup-cognition-raises-1-billion-at-26-billion-value" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Bloomberg</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">Anthropic Closes $65B Series H, Files Confidential IPO</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Anthropic closed a $65 billion Series H on May 28, 2026 at a $965 billion post-money valuation — surpassing OpenAI to become the world's most valuable AI startup — led by Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital. The same day, Anthropic released Claude Opus 4.8 with stronger agentic and coding capabilities. On June 1, 2026, Anthropic confidentially filed an S-1 with the SEC, targeting an October 2026 IPO that could debut near a $1 trillion valuation, with run-rate revenue crossing $47 billion in May.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch</a><a href="https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Fortune</a><a href="https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>CNBC</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">Modal Labs Raises $355M Series C at $4.65B as AI Infra Demand Surges</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Modal Labs, a New York-based AI-native serverless cloud platform, closed a $355 million Series C at a $4.65 billion post-money valuation — more than 4x its $1.1 billion valuation from September 2025. The round was led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures, and Accel as new investors. Revenue surged 5x from $60M to $300M ARR since September 2025, driven by demand for GPU inference, RL training loops, and agentic coding sandboxes from customers including DoorDash, Cognition, Suno, and Physical Intelligence.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://modal.com/blog/modal-series-c" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Modal Blog</a><a href="https://www.benzinga.com/markets/private-markets/26/05/52755149/general-catalyst-redpoint-fuel-modals-ai-infrastructure-push-with-355-million-raise" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Benzinga</a><a href="https://techstartups.com/2026/05/21/modal-labs-raises-355m-quadrupling-valuation-to-4-65b-as-ai-infrastructure-demand-surges/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechStartups</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">Exa Labs Raises $250M Series C to Build the Search Engine for AIs</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Exa Labs, an AI-native search infrastructure startup, raised $250 million in a Series C led by Andreessen Horowitz (a16z), valuing the San Francisco company at $2.2 billion — more than triple its $700M valuation from just eight months prior. Exa already powers web search for over 5,000 companies and 400,000+ developers, including Cursor, Cognition, HubSpot, and Monday.com, and processes hundreds of thousands of searches per second. The company will use the funds to train next-generation retrieval models, expand infrastructure capacity, and scale go-to-market operations globally.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://exa.ai/blog/announcing-series-c" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Exa Blog</a><a href="https://www.benzinga.com/markets/private-markets/26/05/52731056/ai-search-startup-exa-labs-raises-250m-at-2-2-billion-valuation-led-by-andreessen-horowitz" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Benzinga</a><a href="https://www.pymnts.com/artificial-intelligence-2/2026/exa-raises-250-million-for-ai-powered-search-infrastructure/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>PYMNTS</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">star</span>
+                <span class="acc-title">OpenRouter Hits $1.3B Unicorn Status With $113M Series B</span>
+                <span class="badge b-unicorn">Unicorn</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>OpenRouter, the NYC-based AI model exchange founded in 2023 by Alex Atallah, raised $113 million in a Series B led by CapitalG (Alphabet's growth fund), with NVIDIA's NVentures, ServiceNow Ventures, Databricks Ventures, Andreessen Horowitz, and Menlo Ventures also participating. The raise valued the company at approximately $1.3 billion, more than double its valuation from a year prior. Weekly token volume exploded 5x in six months — from 5 trillion to 25 trillion tokens — as the platform now serves 8 million developers with access to 400+ AI models through a single API.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://openrouter.ai/announcements/series-b" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenRouter Blog</a><a href="https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch</a><a href="https://www.businesswire.com/news/home/20260526953416/en/OpenRouter-Raises-$113-Million-CapitalG-led-Series-B-as-Weekly-Volume-Explodes-to-25T-Tokens" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Business Wire</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">bolt</span>
+                <span class="acc-title">Reactor Emerges From Stealth With $59M for Real-Time AI Video</span>
+                <span class="badge b-launch">Launch</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Reactor, founded by two former Apple Vision Pro technical leads — Alberto Taiuti (also ex-Luma AI CTO) and Bryce Schmidtchen — emerged from stealth on May 28, 2026 with $59 million in Series A funding led by Lightspeed Venture Partners, with Jeffrey Katzenberg's WndrCo, Amplify Partners, Sky9 Capital, and FPV Ventures participating. The San Francisco startup is building the infrastructure layer for real-time generative video and interactive 'world models,' enabling applications in media, entertainment, physical AI, and robotics. AWS is its preferred cloud provider to support real-time video workloads at global scale.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://variety.com/2026/digital/news/reactor-real-time-ai-video-funding-jeffrey-katzenberg-1236755883/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Variety</a><a href="https://www.prnewswire.com/news-releases/reactor-emerges-from-stealth-with-59m-to-build-the-platform-for-real-time-ai-worlds-302783715.html" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>PR Newswire</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">Corgi Insurtech Doubles Valuation to $2.6B in Three Weeks</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>YC-backed startup Corgi Insurance raised $106 million in a Series B1 led by TCV, valuing the company at $2.6 billion — double its $1.3 billion valuation from just three weeks prior when it closed a $160M Series B. The San Francisco AI-native insurance platform for startups, co-founded by Emily Yuan and Nico Laqua in 2024, has now raised $378 million in total and surpassed $40 million in annualized recurring revenue. The latest capital will fund expansion into trucking, small business, and sports verticals.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://techcrunch.com/2026/05/28/corgi-announces-106m-raise-at-2-6b-valuation-three-weeks-after-160m-series-b/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch</a><a href="https://www.theinsurer.com/ti/news/corgi-doubles-valuation-to-26-billion-with-106-million-series-b1-three-weeks-2026-05-28/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>The Insurer</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">Observable Space Raises $90M Series A, Wins $94M Space Force Contract</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Observable Space, a vertically-integrated space optics and laser communications startup founded by former SpaceX VP Dan Roelker, raised a $90 million Series A led by Lux Capital, co-led by Upfront Ventures, Detroit Venture Partners, Island Green Capital, and RTX Ventures. Simultaneously, the company announced a $94 million sole-sourced IDIQ award from the U.S. Space Force under its APFIT program for optical ground sensing stations, with $22 million in initial task orders. The company manufacturers its systems in Detroit and LA, combining hardware, software, and laser communications for orbital and defense applications.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://observable.space/news/observable-space-closes-90-million-series-a-to-scale-manufacturing-and-turnkey-lasercom-platform-announces-94-million-u-s-space-force-contract/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Observable Space</a><a href="https://spacenews.com/observable-space-raises-90-million-and-wins-space-force-contract-for-optical-systems/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SpaceNews</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">star</span>
+                <span class="acc-title">Starcloud Becomes YC's Fastest-Ever Unicorn With $170M Space Data Centers Round</span>
+                <span class="badge b-unicorn">Unicorn</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Starcloud, a Redmond, WA startup building orbital AI data centers, raised $170 million in a Series A led by Benchmark and EQT Ventures at a $1.1 billion valuation — becoming Y Combinator's fastest-ever unicorn just 17 months after its Summer 2024 demo day. The company has already launched its first satellite (Starcloud-1) with an NVIDIA H100 GPU, achieving the first AI model training and Gemini inference in orbit. Starcloud plans to launch Starcloud-2 in late 2026 and has filed FCC plans for an 88,000-satellite orbital data center constellation.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://techcrunch.com/2026/03/30/starcloud-raises-170-million-series-ato-build-data-centers-in-space/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch</a><a href="https://spacenews.com/starcloud-achieves-unicorn-status-with-170-million-raise-for-orbital-data-centers/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SpaceNews</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">Waypoint Bio Closes $20M Series A for AI-Designed CAR-T Therapies</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Waypoint Bio, a New York AI-native biotech using spatial biology and computer vision to design in vivo CAR T therapies for solid tumors, closed a $20 million Series A led by Amplify Partners on June 1, 2026, with General Catalyst, Time BioVentures, Mitsui Global Investments, and Lux Capital also participating. The funding will advance lead program WAY-103 into an investigator-initiated clinical trial beginning late 2026, with clinical entry in China expected. Dr. Patrick Kaifosh, formerly co-founder and CSO of neuro-AI startup CTRL-Labs and Senior Director at Meta Reality Labs, has joined as CTO.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.businesswire.com/news/home/20260601266582/en/Waypoint-Bio-Raises-$20M-Series-A-Led-by-Amplify-Partners-to-Advance-AI-Designed-Cell-Therapies-Toward-the-Clinic" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Business Wire</a><a href="https://www.biospace.com/press-releases/waypoint-bio-raises-20m-series-a-led-by-amplify-partners-to-advance-ai-designed-cell-therapies-toward-the-clinic" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>BioSpace</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">star</span>
+                <span class="acc-title">Recursive Intelligence Becomes Top-Valued New 2026 Unicorn at $4B</span>
+                <span class="badge b-unicorn">Unicorn</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Recursive Intelligence, an AI-powered chip design startup, reached a $4 billion valuation after raising a $300 million Series A led by Lightspeed Venture Partners — just weeks after launching publicly. The Palo Alto company was co-founded by former Google DeepMind researchers Anna Goldie and Azalia Mirhoseini, known for developing AlphaChip, the system used to automate chip design for Google's TPU processors. It is ranked the most valuable newly minted unicorn of 2026 among companies that first crossed the $1 billion threshold this year.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://techcrunch.com/2026/03/11/almost-40-new-unicorns-have-been-minted-so-far-this-year-here-they-are/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch</a><a href="https://startup-weekly.com/Report-Unicorn-startups-surge-in-2026-as-AI-and-spacetech-drive-record-valuations/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Startup Weekly</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">SpeedLabs Launches $6.5M Seed Round for Real-Time Sports 'Momentum Markets'</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>SpeedLabs, a New York sports-tech startup, announced a $6.5 million seed round on June 1, 2026, led by Parlay Capital, with Bullpen Capital, TA Ventures, and EdgeEquity participating. The company is building 'Momentum Markets' — AI-powered tradable markets created and priced in real time during live sports events, rather than repricing existing sportsbook lines. The platform is designed as an infrastructure layer for sportsbooks and prediction markets, with a consumer-facing live game planned for fall 2026 ahead of football season.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.si.com/onsi/fantasy/news/speedlabs-momentum-markets-app-fantasy-sports" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Sports Illustrated</a><a href="https://sg.finance.yahoo.com/news/speedlabs-launches-6-5m-bring-131500719.html" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Yahoo Finance</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">bolt</span>
+                <span class="acc-title">Martha Stewart Co-Founds Hint AI Home Management Startup with $10M Seed</span>
+                <span class="badge b-launch">Launch</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Hint, an AI home management startup co-founded by Martha Stewart, home-services veteran Yih-Han Ma, and CTO Rush, raised $10 million in seed funding led by Slow Ventures, with Montauk Capital (incubator), Tusk Venture Partners, Amplo, Energy Impact Partners, and Hannah Grey participating. The app pulls public property data, weather, soil, and listing signals from a user's address to proactively manage home maintenance before things break, launching on desktop and iOS in summer 2026. The company's stated principle is that its recommendations remain blind to commercial referral deals.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://fortune.com/2026/05/13/exclusive-martha-stewart-ai-startup-hint-seed-funding-slow-ventures/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Fortune</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="acc-title">Y Combinator W26 Batch Sets All-Time ARR Record at Demo Day</span>
+                <span class="badge b-accelerator">Accelerator</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Y Combinator's Winter 2026 batch of 196 companies broke the all-time cohort record: 14 companies hit $1 million ARR by Demo Day on March 24, 2026, the highest ever for any single YC cohort. Roughly 60% of the 2026 YC batches are AI companies, with W26 running 64% B2B and heavily weighted toward infrastructure. Recent YC graduates hitting major milestones include Gecko Robotics ($4.2B valuation), Kalshi ($11B valuation), and Starcloud (YC's fastest-ever unicorn at $1.1B, achieved in 17 months).</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.peony.ink/blog/top-20-startup-accelerators-worldwide" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Peony</a><a href="https://en.wikipedia.org/wiki/Y_Combinator" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia / Y Combinator</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="acc-title">Google Launches Second AI & Energy Startup Accelerator for 2026</span>
+                <span class="badge b-accelerator">Accelerator</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Google launched its second dedicated startup accelerator for AI and energy firms in 2026, backed by more than 20 partners spanning energy utilities, grid operators, and venture capital firms across Europe and North America. Startups based in Europe and Israel had until June 12, 2026 to apply. The 2025 cohort produced notable outcomes including Spain's Delfos (predictive maintenance for wind/solar assets flagging failures 300 days in advance), France's Tilt Energy (expanded to new markets with hundreds of MWs of distributed flexible capacity), and US-based Artemis (halved its solar imagery extraction error rate via Gemini integration).</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.datacenterdynamics.com/en/news/google-launches-second-startup-accelerator-for-ai-and-energy-firms/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Data Center Dynamics</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">attach_money</span>
+                <span class="acc-title">Global VC Funding Hit Record $297B in Q1 2026, AI Capturing 80%+</span>
+                <span class="badge b-funding">Funding</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Global startup funding hit $297 billion in Q1 2026, shattering all prior records and representing a 2.5x increase over the $118 billion raised in Q4 2025, per Crunchbase data. Artificial intelligence captured over 87% of Q1 investment in North America, where U.S. and Canadian companies secured a staggering $252.6 billion — more than 3x the prior quarter and the largest quarterly total of all time. Just four companies (OpenAI, Anthropic, xAI, and Waymo) accounted for approximately 65% of all global venture investment in the quarter.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://techcrunch.com/2026/04/01/startup-funding-shatters-all-records-in-q1/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch</a><a href="https://news.crunchbase.com/venture/funding-surges-all-stages-ai-north-america-q1-2026/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Crunchbase News</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">merge_type</span>
+                <span class="acc-title">AI Acqui-Hire Wave: Big Tech Spent $20B+ to Hollow Out AI Startups</span>
+                <span class="badge b-acquisition">Acquisition</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Between March 2024 and January 2026, Google, Microsoft, Amazon, and Meta spent over $20 billion hiring away founding teams from AI startups — without technically acquiring a single company — through 'reverse acqui-hire' licensing structures designed to bypass antitrust review. Notable transactions included Google's $2.4 billion deal for Windsurf's top engineering talent and licensing rights, with Cognition later acquiring Windsurf's remaining assets (technology, customers, and remaining employees). Congressional scrutiny of these quasi-merger structures is ongoing in 2026, with the FTC labeling some deals as antitrust workarounds.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.heavybit.com/library/article/the-acqui-hire-is-no-longer-a-distress-sale" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Heavybit</a><a href="https://www.fastaijobs.com/career-hacks/ai-acquihire-map-2026" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>FastAIJobs</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">star</span>
+                <span class="acc-title">Robotics Emerges as #2 Sector for New 2026 Unicorns; 11 Minted So Far</span>
+                <span class="badge b-unicorn">Unicorn</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>As of early May 2026, robotics has become the second-largest sector for newly minted unicorns in 2026 with 11 companies (11.2% of total), behind only AI/ML (25 companies, 25.5%). The most valuable newly minted robotics unicorns are China's Sudu Technology and US-based Mind Robotics, each valued at $2 billion. Notable European robotics entrants include the UK's Roark at $1.8 billion, Germany's STARK at $1.2 billion, and France's Harmattan AI at $1 billion, per BestBrokers data.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.bestbrokers.com/forex-brokers/most-valuable-unicorn-startups/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>BestBrokers</a><a href="https://startup-weekly.com/Report-Unicorn-startups-surge-in-2026-as-AI-and-spacetech-drive-record-valuations/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Startup Weekly</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">person</span>
+                <span class="acc-title">Andrej Karpathy Joins Anthropic Pre-Training Team in High-Profile Founder Move</span>
+                <span class="badge b-founder">Founder</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>In May 2026, Anthropic hired AI luminary Andrej Karpathy — previously co-founder of OpenAI and former Tesla AI Director — who joined the pre-training team with a specific mandate to use Claude to help accelerate the research behind the next version of Claude itself. The hire came the same week Anthropic closed its $65 billion Series H and confidentially filed for IPO. It signals a continued talent arms race among frontier AI labs, following a broader trend of major researcher and founder moves reshaping the AI startup landscape.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.techtimes.com/articles/317530/20260601/anthropic-enterprise-hiring-tops-research-ipo-filing-reveals-commercial-shift.htm" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechTimes</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">star</span>
+                <span class="acc-title">Varda Space Industries Reaches $1.6B Valuation for Space Manufacturing</span>
+                <span class="badge b-unicorn">Unicorn</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Varda Space Industries, the most heavily funded of the 39 new unicorns minted in 2026, reached a $1.6 billion valuation after raising its Series D of $250 million, bringing total venture funding to over $578 million from investors including Founders Fund, Khosla Ventures, and Lux Capital. The company develops spacecraft designed to manufacture high-value materials — such as pharmaceuticals and fiber optic cables — in microgravity before returning them to Earth via re-entry capsule. The milestone is part of a broader 2026 trend of physical-world startups (robotics, energy storage, space manufacturing) capturing a growing share of new unicorn designations.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://techcrunch.com/2026/03/11/almost-40-new-unicorns-have-been-minted-so-far-this-year-here-they-are/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch</a><a href="https://www.mexc.com/learn/article/the-most-valuable-unicorns-in-2026-revealed-spacex-overtakes-openai-with-a-1-25t-valuation/1" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>MEXC</a></div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+        <!-- STARTUP_END -->
     </section>
 
 </div>

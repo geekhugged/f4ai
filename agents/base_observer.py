@@ -43,6 +43,12 @@ ICON_MAP = {
     "infrastructure": "cloud",
     "open_source": "code",
     "acquisition": "merge_type",
+    # Startup
+    "launch": "bolt",
+    "founder": "person",
+    "accelerator": "school",
+    "unicorn": "star",
+    "pivot": "sync_alt",
 }
 
 EMPTY_STATES = {
@@ -58,6 +64,13 @@ EMPTY_STATES = {
         '<span class="material-icons">rocket_launch</span>'
         '<h3>Обзоров пока нет</h3>'
         '<p>Запустите <code>python run_observers.py --tech</code></p>'
+        '</div>'
+    ),
+    "startup": (
+        '<div class="empty-state">'
+        '<span class="material-icons">bolt</span>'
+        '<h3>Обзоров пока нет</h3>'
+        '<p>Запустите <code>python run_observers.py --startup</code></p>'
         '</div>'
     ),
 }
