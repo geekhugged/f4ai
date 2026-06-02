@@ -197,6 +197,17 @@
         .b-accelerator{ background:#f3e8fd; color:#6a1b9a; }
         .b-unicorn    { background:#fff8e1; color:#f57f17; }
         .b-pivot      { background:#fce4ec; color:#880e4f; }
+        /* LLM catalogue */
+        .llm-entry .acc-title { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+        .llm-date { font-size:11px; color:var(--text-muted); font-weight:400; background:var(--border); padding:1px 7px; border-radius:8px; white-space:nowrap; }
+        .b-llm-llm        { background:#e8f0fe; color:#1a73e8; }
+        .b-llm-multimodal { background:#fff3e0; color:#e65100; }
+        .b-llm-reasoning  { background:#f3e8fd; color:#9334e6; }
+        .b-llm-image      { background:#e0f7fa; color:#00695c; }
+        .b-llm-audio      { background:#e8f5e9; color:#2e7d32; }
+        .b-llm-video      { background:#fce4ec; color:#c62828; }
+        .b-llm-code       { background:#e6f4ea; color:#1e8e3e; }
+        .b-llm-embedding  { background:#ede7f6; color:#4527a0; }
 
         .chevron { font-size: 20px; color: var(--text-muted); flex-shrink: 0; transition: transform .22s ease; }
         .acc-btn.open .chevron { transform: rotate(180deg); }
@@ -284,6 +295,10 @@
     <button class="tab" onclick="showTab('startup', this)">
         <span class="material-icons">bolt</span>
         Startups &amp; VC
+    </button>
+    <button class="tab" onclick="showTab('llm', this)">
+        <span class="material-icons">smart_toy</span>
+        LLM
     </button>
 </nav>
 
@@ -771,6 +786,627 @@
         <!-- TECH_END -->
     </section>
 
+
+    <section id="llm" class="section">
+        <div class="section-header">
+            <h2>LLM Models Catalogue</h2>
+            <p>Хронология ключевых AI-моделей — компания, дата, возможности</p>
+        </div>
+        <!-- LLM_START -->
+    <div class="review-block" data-date="2026-06-02">
+        <button class="review-meta open" onclick="toggleReview(this)">
+            <span class="material-icons">calendar_today</span>
+            <span class="review-date">Обновлено: 02 June 2026</span>
+            <span class="review-count">50 моделей</span>
+            <span class="material-icons review-chevron">expand_more</span>
+        </button>
+        <div class="review-content open">
+        <div class="accordion">
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>GPT-2</strong><span class="llm-date">2019-02</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>1.5B-parameter unsupervised language model; staged release due to misuse concerns.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://github.com/jqueryscript/chatgpt-timeline" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Timeline</a><a href="https://en.wikipedia.org/wiki/Generative_pre-trained_transformer" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia GPT</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>GPT-3</strong><span class="llm-date">2020-05</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>175B-parameter model setting new benchmark for few-shot generative AI capabilities.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Generative_pre-trained_transformer" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia GPT</a><a href="https://github.com/jqueryscript/chatgpt-timeline" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Timeline</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">photo</span>
+                <span class="acc-title"><strong>DALL-E</strong><span class="llm-date">2021-01</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-image">image</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First DALL-E text-to-image model using GPT-3 architecture to generate images from text.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia OpenAI Products</a><a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">headphones</span>
+                <span class="acc-title"><strong>Whisper</strong><span class="llm-date">2022-09</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-audio">audio</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>General-purpose speech recognition model trained on diverse audio for multilingual transcription.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia OpenAI Products</a><a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>ChatGPT (GPT-3.5)</strong><span class="llm-date">2022-11</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Instruction-tuned GPT-3.5 chatbot that catalysed the generative AI boom with 100M users in 2 months.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://github.com/jqueryscript/chatgpt-timeline" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Timeline</a><a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Claude 1</strong><span class="llm-date">2023-03</span></span>
+                <span class="badge" style="background:#fce8e6;color:#d93025;">Anthropic</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First public Claude model focused on safe conversation, writing, summarisation, and coding via Constitutional AI.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Claude_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Claude Wikipedia</a><a href="https://www.scriptbyai.com/anthropic-claude-timeline/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ScriptByAI Claude Timeline</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>GPT-4</strong><span class="llm-date">2023-03</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Large multimodal model accepting text and image input; state-of-the-art on professional benchmarks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://github.com/jqueryscript/chatgpt-timeline" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Timeline</a><a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>LLaMA 1</strong><span class="llm-date">2023-02</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">Meta</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Open-weight foundation models (7B–65B params); LLaMA-13B matched GPT-3 on many benchmarks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Llama_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>LLaMA Wikipedia</a><a href="https://arxiv.org/html/2510.12178v1" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>arXiv Survey</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>PaLM 2</strong><span class="llm-date">2023-05</span></span>
+                <span class="badge" style="background:#e6f4ea;color:#1e8e3e;">Google DeepMind</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Successor to PaLM with enhanced coding, multilingual, and reasoning capabilities; powered Google Bard.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.ibm.com/think/topics/google-gemini" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IBM Google Gemini</a><a href="https://time.com/6343450/gemini-google-deepmind-ai/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TIME Gemini</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Mistral 7B</strong><span class="llm-date">2023-09</span></span>
+                <span class="badge" style="background:#f3e8fd;color:#9334e6;">Mistral AI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First open-source Mistral model (Apache 2.0) outperforming LLaMA 2 13B on all benchmarks at 7B params.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://research.contrary.com/company/mistral-ai" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Contrary Research Mistral</a><a href="https://builtin.com/articles/mistral-ai" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Built In Mistral</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>LLaMA 2</strong><span class="llm-date">2023-07</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">Meta</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First Llama with an open commercial license; expanded to 70B parameters with instruction-tuned chat variants.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Llama_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>LLaMA Wikipedia</a><a href="https://www.techtarget.com/whatis/feature/Meta-Llama-4-explained-Everything-you-need-to-know" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechTarget Llama 4</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Qwen 1 (Tongyi Qianwen)</strong><span class="llm-date">2023-08</span></span>
+                <span class="badge" style="background:#fce4ec;color:#c62828;">Alibaba</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Alibaba's first open-weight LLM family (7B–72B), released publicly after regulatory clearance in China.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Qwen" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Qwen Wikipedia</a><a href="https://github.com/QwenLM/Qwen" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Qwen</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">photo</span>
+                <span class="acc-title"><strong>DALL-E 3</strong><span class="llm-date">2023-09</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-image">image</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Improved text-to-image model with better prompt adherence and detailed rendering including hands and text.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia OpenAI Products</a><a href="https://en.wikipedia.org/wiki/Sora_(text-to-video_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Sora Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Grok 1</strong><span class="llm-date">2023-11</span></span>
+                <span class="badge" style="background:#fff3e0;color:#e65100;">xAI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>314B MoE model with real-time X platform data access; later open-sourced under Apache 2.0 in March 2024.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Grok_(chatbot)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Grok Wikipedia</a><a href="https://grokipedia.ac/history-of-grok-the-complete-evolution/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Grokipedia History</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Mixtral 8x7B</strong><span class="llm-date">2023-12</span></span>
+                <span class="badge" style="background:#f3e8fd;color:#9334e6;">Mistral AI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Sparse mixture-of-experts open-source model outperforming LLaMA 2 70B and GPT-3.5 on most benchmarks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Brief Bismarck Mistral</a><a href="https://builtin.com/articles/mistral-ai" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Built In Mistral</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>Gemini 1.0</strong><span class="llm-date">2023-12</span></span>
+                <span class="badge" style="background:#e6f4ea;color:#1e8e3e;">Google DeepMind</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First Gemini family (Ultra/Pro/Nano) processing text, images, audio, and video; Gemini Ultra surpassed GPT-4 on MMLU.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Gemini Wikipedia</a><a href="https://time.com/6343450/gemini-google-deepmind-ai/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TIME Gemini</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>Gemini 1.5 Pro</strong><span class="llm-date">2024-02</span></span>
+                <span class="badge" style="background:#e6f4ea;color:#1e8e3e;">Google DeepMind</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Mixture-of-experts architecture with breakthrough 1-million-token context window for long-document processing.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Gemini Wikipedia</a><a href="https://www.ibm.com/think/topics/google-gemini" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IBM Google Gemini</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>Claude 3 (Opus/Sonnet/Haiku)</strong><span class="llm-date">2024-03</span></span>
+                <span class="badge" style="background:#fce8e6;color:#d93025;">Anthropic</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Three-tier model family establishing Opus/Sonnet/Haiku naming; introduced vision and surpassed GPT-4 on benchmarks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://claudefa.st/blog/models" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ClaudeFast Models</a><a href="https://en.wikipedia.org/wiki/Claude_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Claude Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>LLaMA 3</strong><span class="llm-date">2024-04</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">Meta</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Open-weight models (8B and 70B) debuting as the new open-source standard for their time.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.interconnects.ai/p/llama-4" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Interconnects Llama 4</a><a href="https://www.techtarget.com/whatis/feature/Meta-Llama-4-explained-Everything-you-need-to-know" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechTarget Llama 4</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>GPT-4o</strong><span class="llm-date">2024-05</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Omni model unifying text, audio, and vision in real-time; faster and cheaper than GPT-4 Turbo.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://github.com/jqueryscript/chatgpt-timeline" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Timeline</a><a href="https://platform.openai.com/docs/changelog" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI API Changelog</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>DeepSeek-V2</strong><span class="llm-date">2024-05</span></span>
+                <span class="badge" style="background:#f1f3f4;color:#5f6368;">DeepSeek</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>MoE model with Multi-head Latent Attention; triggered an AI price war in China with aggressive pricing.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/DeepSeek" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DeepSeek Wikipedia</a><a href="https://deepseekai.guide/guides/deepseek-history/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DeepSeek History Guide</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Mistral Large</strong><span class="llm-date">2024-02</span></span>
+                <span class="badge" style="background:#f3e8fd;color:#9334e6;">Mistral AI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Mistral's flagship closed model competing with GPT-4; first released alongside the Le Chat consumer app.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Brief Bismarck Mistral</a><a href="https://builtin.com/articles/mistral-ai" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Built In Mistral</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">movie</span>
+                <span class="acc-title"><strong>Veo (1)</strong><span class="llm-date">2024-05</span></span>
+                <span class="badge" style="background:#e6f4ea;color:#1e8e3e;">Google DeepMind</span>
+                <span class="badge b-llm-video">video</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First Google video generation model announced at Google I/O; generates 1080p videos beyond one minute long.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Google_DeepMind" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Google DeepMind Wikipedia</a><a href="https://www.scriptbyai.com/google-ai-timeline-biggest-moments/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ScriptByAI Google Timeline</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>Claude 3.5 Sonnet</strong><span class="llm-date">2024-06</span></span>
+                <span class="badge" style="background:#fce8e6;color:#d93025;">Anthropic</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Mid-tier model that outperformed Claude 3 Opus at lower cost; became a leading model for coding tasks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://claudefa.st/blog/models" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ClaudeFast Models</a><a href="https://www.scriptbyai.com/anthropic-claude-timeline/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ScriptByAI Claude Timeline</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Qwen2</strong><span class="llm-date">2024-06</span></span>
+                <span class="badge" style="background:#fce4ec;color:#c62828;">Alibaba</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Expanded Qwen family with dense and sparse models; Qwen2-72B competed directly with GPT-4 in reasoning.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Qwen" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Qwen Wikipedia</a><a href="https://github.com/QwenLM/qwen3" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Qwen3</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>LLaMA 3.1</strong><span class="llm-date">2024-07</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">Meta</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>405B model marked first time open-weight model competed with GPT-4; added 128K token context window.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.interconnects.ai/p/llama-4" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Interconnects Llama 4</a><a href="https://en.wikipedia.org/wiki/Llama_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>LLaMA Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Mistral Large 2</strong><span class="llm-date">2024-07</span></span>
+                <span class="badge" style="background:#f3e8fd;color:#9334e6;">Mistral AI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Dense 123B-parameter model with 128K context; improved reasoning, math, coding and multilingual capabilities.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://intuitionlabs.ai/articles/mistral-large-3-moe-llm-explained" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IntuitionLabs Mistral Large 3</a><a href="https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Brief Bismarck Mistral</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>Grok-2</strong><span class="llm-date">2024-08</span></span>
+                <span class="badge" style="background:#fff3e0;color:#e65100;">xAI</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Improved reasoning, tool use and vision; introduced Grok-2 mini for lighter workloads alongside the flagship.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Grok_(chatbot)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Grok Wikipedia</a><a href="https://x.ai/news" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>xAI News</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>LLaMA 3.2</strong><span class="llm-date">2024-09</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">Meta</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Meta's first fully multimodal LLM family with vision-capable 11B and 90B models alongside edge-friendly 1B–3B.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.interconnects.ai/p/llama-4" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Interconnects Llama 4</a><a href="https://www.techtarget.com/whatis/feature/Meta-Llama-4-explained-Everything-you-need-to-know" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechTarget Llama 4</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>Claude 3.5 Sonnet v2</strong><span class="llm-date">2024-10</span></span>
+                <span class="badge" style="background:#fce8e6;color:#d93025;">Anthropic</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First major AI model with Computer Use, enabling direct control of computer interfaces via cursor and keyboard.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://claudefa.st/blog/models" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ClaudeFast Models</a><a href="https://en.wikipedia.org/wiki/Claude_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Claude Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>OpenAI o1</strong><span class="llm-date">2024-09</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First public OpenAI reasoning model series using chain-of-thought for step-by-step logical problem solving.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://github.com/jqueryscript/chatgpt-timeline" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Timeline</a><a href="https://platform.openai.com/docs/changelog" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI API Changelog</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>Gemini 2.0 Flash</strong><span class="llm-date">2024-12</span></span>
+                <span class="badge" style="background:#e6f4ea;color:#1e8e3e;">Google DeepMind</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Next-gen Gemini model with Multimodal Live API, native image generation, and integrated Google Search grounding.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Gemini Wikipedia</a><a href="https://www.techtarget.com/searchenterpriseai/definition/Google-Gemini" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechTarget Gemini</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">movie</span>
+                <span class="acc-title"><strong>Sora</strong><span class="llm-date">2024-12</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-video">video</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Text-to-video diffusion transformer generating up to 1080p, 20-second videos publicly for ChatGPT Plus/Pro users.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Sora_(text-to-video_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Sora Wikipedia</a><a href="https://openai.com/index/sora-is-here/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI Sora is Here</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>DeepSeek-V3</strong><span class="llm-date">2024-12</span></span>
+                <span class="badge" style="background:#f1f3f4;color:#5f6368;">DeepSeek</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>671B MoE model trained for ~$5.6M, sparking global debate on AI cost efficiency vs. US frontier labs.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/DeepSeek" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DeepSeek Wikipedia</a><a href="https://www.iiss.org/publications/strategic-comments/2025/04/deepseeks-release-of-an-open-weight-frontier-ai-model/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IISS DeepSeek Article</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>DeepSeek-R1</strong><span class="llm-date">2025-01</span></span>
+                <span class="badge" style="background:#f1f3f4;color:#5f6368;">DeepSeek</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Open-source reasoning model matching OpenAI o1 benchmarks, trained for ~$294K; triggered 18% Nvidia stock drop.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/DeepSeek" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DeepSeek Wikipedia</a><a href="https://www.britannica.com/money/DeepSeek" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Britannica DeepSeek</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>OpenAI o3-mini</strong><span class="llm-date">2025-01</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Cost-efficient reasoning model for STEM, coding, and math; released to all ChatGPT users including free tier.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/OpenAI_o3" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI o3 Wikipedia</a><a href="https://www.techtarget.com/whatis/feature/OpenAI-o3-explained-Everything-you-need-to-know" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechTarget o3 Explained</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>Gemini 2.0 Pro</strong><span class="llm-date">2025-02</span></span>
+                <span class="badge" style="background:#e6f4ea;color:#1e8e3e;">Google DeepMind</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Full Gemini 2.0 flagship model with advanced reasoning and deeper integration across Google services.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Gemini Wikipedia</a><a href="https://www.toponseek.com/en/blogs/google-gemini-versions/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Toponseek Gemini Versions</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>Claude 3.7 Sonnet</strong><span class="llm-date">2025-02</span></span>
+                <span class="badge" style="background:#fce8e6;color:#d93025;">Anthropic</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Introduced hybrid extended thinking, letting Claude pause and reason step-by-step before responding.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://claudefa.st/blog/models" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ClaudeFast Models</a><a href="https://www.scriptbyai.com/anthropic-claude-timeline/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ScriptByAI Claude Timeline</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>GPT-4.5</strong><span class="llm-date">2025-02</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Research preview of a larger GPT model for chat; described as a giant model with improved accuracy.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia OpenAI Products</a><a href="https://nexos.ai/blog/chatgpt-version-history/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Nexos ChatGPT Versions</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>Grok-3</strong><span class="llm-date">2025-02</span></span>
+                <span class="badge" style="background:#fff3e0;color:#e65100;">xAI</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Major reasoning leap using massive H100 clusters; introduced DeepSearch and Think modes for complex tasks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Grok_(chatbot)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Grok Wikipedia</a><a href="https://grokipedia.ac/history-of-grok-the-complete-evolution/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Grokipedia History</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>Gemini 2.5 Pro</strong><span class="llm-date">2025-03</span></span>
+                <span class="badge" style="background:#e6f4ea;color:#1e8e3e;">Google DeepMind</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Google's most intelligent model with deep reasoning; debuted top of LMArena and leading math/coding benchmarks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/google-gemini-updates-io-2025/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Google I/O 2025 Blog</a><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Gemini Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>GPT-4.1</strong><span class="llm-date">2025-04</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First production model with a 1-million-token context window; optimised for instruction-following and coding.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://nexos.ai/blog/chatgpt-version-history/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Nexos ChatGPT Versions</a><a href="https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia OpenAI Products</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>OpenAI o3</strong><span class="llm-date">2025-04</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Full-scale reasoning model with agentic tool use; 20% fewer major errors than o1 on real-world tasks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/OpenAI_o3" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI o3 Wikipedia</a><a href="https://openai.com/index/introducing-o3-and-o4-mini/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI o3 & o4-mini</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>OpenAI o4-mini</strong><span class="llm-date">2025-04</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Fast, cost-efficient reasoning model best on AIME 2024 & 2025; first reasoning model with full tool use.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/OpenAI_o4-mini" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI o4-mini Wikipedia</a><a href="https://openai.com/index/introducing-o3-and-o4-mini/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>OpenAI o3 & o4-mini</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>LLaMA 4 (Scout & Maverick)</strong><span class="llm-date">2025-04</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">Meta</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>First MoE Llama models; Scout has 10M-token context, Maverick outranked GPT-4o on LM Arena at launch.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Llama_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>LLaMA Wikipedia</a><a href="https://techcrunch.com/2025/10/06/meta-llama-everything-you-need-to-know-about-the-open-generative-ai-model/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TechCrunch Llama</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">code</span>
+                <span class="acc-title"><strong>Claude 4 (Sonnet & Opus)</strong><span class="llm-date">2025-05</span></span>
+                <span class="badge" style="background:#fce8e6;color:#d93025;">Anthropic</span>
+                <span class="badge b-llm-code">code</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Professional-grade coding generation; Claude Code became generally available alongside Claude 4 release.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://claudefa.st/blog/models" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ClaudeFast Models</a><a href="https://en.wikipedia.org/wiki/Claude_(language_model)" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Claude Wikipedia</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>Qwen3</strong><span class="llm-date">2025-04</span></span>
+                <span class="badge" style="background:#fce4ec;color:#c62828;">Alibaba</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Apache 2.0 model family (0.6B–235B MoE) trained on 36T tokens in 119 languages with hybrid thinking mode.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Qwen" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Qwen Wikipedia</a><a href="https://github.com/QwenLM/qwen3" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>GitHub Qwen3</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">image</span>
+                <span class="acc-title"><strong>GPT-5</strong><span class="llm-date">2025-08</span></span>
+                <span class="badge" style="background:#e8f0fe;color:#1a73e8;">OpenAI</span>
+                <span class="badge b-llm-multimodal">multimodal</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Unified system with dynamic router selecting fast or reasoning mode; 256K context, PhD-level across domains.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://en.wikipedia.org/wiki/Generative_pre-trained_transformer" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia GPT</a><a href="https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Wikipedia OpenAI Products</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="acc-title"><strong>Grok-4</strong><span class="llm-date">2025-07</span></span>
+                <span class="badge" style="background:#fff3e0;color:#e65100;">xAI</span>
+                <span class="badge b-llm-reasoning">reasoning</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>100x training improvement over Grok-3; features native tool use, real-time search, and multi-agent capabilities.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://x.ai/news" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>xAI News</a><a href="https://lifearchitect.ai/grok/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>LifeArchitect Grok</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium llm-entry">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">chat</span>
+                <span class="acc-title"><strong>Mistral Large 3</strong><span class="llm-date">2025-12</span></span>
+                <span class="badge" style="background:#f3e8fd;color:#9334e6;">Mistral AI</span>
+                <span class="badge b-llm-llm">llm</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Open-source 675B MoE model with 256K context, native multimodal input, and 40+ language support.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://intuitionlabs.ai/articles/mistral-large-3-moe-llm-explained" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IntuitionLabs Mistral Large 3</a><a href="https://venturebeat.com/ai/mistral-launches-mistral-3-a-family-of-open-models-designed-to-run-on" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>VentureBeat Mistral 3</a></div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+        <!-- LLM_END -->
+    </section>
 
     <section id="startup" class="section">
         <div class="section-header">

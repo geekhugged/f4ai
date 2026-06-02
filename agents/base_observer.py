@@ -73,6 +73,13 @@ EMPTY_STATES = {
         '<p>Запустите <code>python run_observers.py --startup</code></p>'
         '</div>'
     ),
+    "llm": (
+        '<div class="empty-state">'
+        '<span class="material-icons">smart_toy</span>'
+        '<h3>Каталог ещё не сгенерирован</h3>'
+        '<p>Запустите <code>python run_observers.py --llm</code></p>'
+        '</div>'
+    ),
 }
 
 
