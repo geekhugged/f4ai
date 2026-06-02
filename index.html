@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Observer Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #1557b0;
+            --on-primary: #ffffff;
+            --bg: #f1f3f4;
+            --surface: #ffffff;
+            --text: #202124;
+            --text-muted: #5f6368;
+            --border: #dadce0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.18);
+            --shadow-md: 0 3px 6px rgba(0,0,0,.13),0 3px 6px rgba(0,0,0,.17);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* ── App Bar ── */
+        .app-bar {
+            background: var(--primary);
+            color: var(--on-primary);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 0 24px;
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+        .app-bar .material-icons { font-size: 26px; }
+        .app-bar h1 { font-size: 20px; font-weight: 500; letter-spacing: .15px; }
+        .app-bar .tagline { margin-left: auto; font-size: 12px; opacity: .75; }
+
+        /* ── Tabs ── */
+        .tab-bar {
+            background: var(--surface);
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 64px;
+            z-index: 100;
+        }
+        .tab {
+            flex: 0 0 auto;
+            min-width: 160px;
+            padding: 0 24px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            border-bottom: 3px solid transparent;
+            transition: color .2s, border-color .2s, background .15s;
+        }
+        .tab:hover { background: rgba(26,115,232,.06); }
+        .tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+        .tab .material-icons { font-size: 18px; }
+
+        /* ── Content ── */
+        .content { max-width: 900px; margin: 0 auto; padding: 28px 16px 48px; }
+        .section { display: none; }
+        .section.active { display: block; }
+
+        .section-header { margin-bottom: 20px; }
+        .section-header h2 { font-size: 22px; font-weight: 400; }
+        .section-header p { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
+
+        /* ── Review Block ── */
+        .review-block {
+            background: var(--surface);
+            border-radius: 10px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .review-meta {
+            padding: 13px 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f8f9fa;
+            border-bottom: 1px solid var(--border);
+        }
+        .review-meta .material-icons { font-size: 17px; color: var(--primary); }
+        .review-date { font-size: 13px; font-weight: 500; }
+        .review-count {
+            margin-left: auto;
+            font-size: 11px;
+            color: var(--text-muted);
+            background: var(--border);
+            padding: 2px 10px;
+            border-radius: 10px;
+        }
+
+        /* ── Accordion ── */
+        .accordion { padding: 0; }
+        .acc-item { border-bottom: 1px solid var(--border); }
+        .acc-item:last-child { border-bottom: none; }
+
+        /* importance stripe */
+        .acc-item.imp-high   .acc-btn::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:#d93025; }
+        .acc-item.imp-medium .acc-btn::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:#f9ab00; }
+        .acc-item.imp-low    .acc-btn::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:#34a853; }
+
+        .acc-btn {
+            position: relative;
+            width: 100%;
+            padding: 13px 16px 13px 22px;
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            transition: background .15s;
+        }
+        .acc-btn:hover { background: rgba(0,0,0,.03); }
+        .acc-btn.open  { background: rgba(26,115,232,.05); }
+
+        .acc-icon  { font-size: 19px; color: var(--primary); flex-shrink: 0; }
+        .acc-title { font-size: 14px; font-weight: 500; line-height: 1.4; flex: 1; }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        /* Market badges */
+        .b-funding    { background:#e8f0fe; color:#1a73e8; }
+        .b-ipo        { background:#e8f0fe; color:#1a73e8; }
+        .b-regulation { background:#fce8e6; color:#d93025; }
+        .b-forecast   { background:#e6f4ea; color:#1e8e3e; }
+        .b-enterprise { background:#fff8e1; color:#e37400; }
+        .b-m_a        { background:#f3e8fd; color:#9334e6; }
+        .b-partnership{ background:#e0f7fa; color:#0097a7; }
+        .b-revenue    { background:#e8f5e9; color:#388e3c; }
+        .b-market_share{background:#e8f5e9; color:#2e7d32; }
+        /* Tech badges */
+        .b-new_model  { background:#e8f0fe; color:#1a73e8; }
+        .b-breakthrough{background:#f3e8fd; color:#9334e6; }
+        .b-big_tech   { background:#fff3e0; color:#e65100; }
+        .b-research   { background:#f3e8fd; color:#7b1fa2; }
+        .b-product    { background:#e0f7fa; color:#00695c; }
+        .b-infrastructure{background:#fce4ec;color:#c62828;}
+        .b-open_source{ background:#e8f5e9; color:#2e7d32; }
+        .b-acquisition{ background:#ede7f6; color:#4527a0; }
+
+        .chevron { font-size: 20px; color: var(--text-muted); flex-shrink: 0; transition: transform .22s ease; }
+        .acc-btn.open .chevron { transform: rotate(180deg); }
+
+        .acc-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease, padding .3s ease;
+        }
+        .acc-body.open {
+            max-height: 600px;
+            padding: 4px 20px 16px 52px;
+        }
+        .acc-body p { font-size: 14px; line-height: 1.65; color: var(--text-muted); }
+
+        /* ── Empty state ── */
+        .empty-state {
+            text-align: center;
+            padding: 56px 24px;
+            color: var(--text-muted);
+        }
+        .empty-state .material-icons { font-size: 52px; opacity: .3; display: block; margin-bottom: 14px; }
+        .empty-state h3 { font-size: 17px; font-weight: 400; margin-bottom: 8px; }
+        .empty-state code { font-size: 13px; background: var(--bg); padding: 2px 8px; border-radius: 4px; }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .app-bar h1 { font-size: 16px; }
+            .tab { min-width: 120px; font-size: 12px; padding: 0 14px; }
+            .badge { display: none; }
+            .acc-body.open { padding-left: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="app-bar">
+    <span class="material-icons">insights</span>
+    <h1>AI Observer Dashboard</h1>
+    <span class="tagline">Powered by Claude</span>
+</header>
+
+<nav class="tab-bar">
+    <button class="tab active" onclick="showTab('market', this)">
+        <span class="material-icons">trending_up</span>
+        Market
+    </button>
+    <button class="tab" onclick="showTab('tech', this)">
+        <span class="material-icons">memory</span>
+        Tech
+    </button>
+</nav>
+
+<div class="content">
+
+    <section id="market" class="section active">
+        <div class="section-header">
+            <h2>AI Market Observer</h2>
+            <p>Инвестиции, оценки, регулирование, прогнозы рынка ИИ</p>
+        </div>
+        <!-- MARKET_START -->
+        <div class="empty-state"><span class="material-icons">show_chart</span><h3>Обзоров пока нет</h3><p>Запустите <code>python run_observers.py --market</code></p></div>
+        <!-- MARKET_END -->
+    </section>
+
+    <section id="tech" class="section">
+        <div class="section-header">
+            <h2>Tech Observer</h2>
+            <p>Big Tech новости, прорывные технологии, новые AI-модели</p>
+        </div>
+        <!-- TECH_START -->
+        <div class="empty-state"><span class="material-icons">rocket_launch</span><h3>Обзоров пока нет</h3><p>Запустите <code>python run_observers.py --tech</code></p></div>
+        <!-- TECH_END -->
+    </section>
+
+</div>
+
+<script>
+function showTab(id, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+}
+
+function toggleAccordion(btn) {
+    const body = btn.nextElementSibling;
+    const opening = !btn.classList.contains('open');
+    btn.classList.toggle('open', opening);
+    body.classList.toggle('open', opening);
+}
+</script>
+
+</body>
+</html>
