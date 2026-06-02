@@ -198,6 +198,25 @@ class BaseObserver:
             badge = "b-" + cat
             label = cat.replace("_", " ").title()
 
+            # Build sources HTML
+            sources_html = ""
+            sources = item.get("sources", [])
+            if sources:
+                links = []
+                for src in sources:
+                    src_label = src.get("label", "Source").replace("<", "&lt;").replace(">", "&gt;")
+                    src_url   = src.get("url", "#")
+                    links.append(
+                        f'<a href="{src_url}" target="_blank" rel="noopener noreferrer">'
+                        f'<span class="material-icons">open_in_new</span>{src_label}</a>'
+                    )
+                sources_html = (
+                    f'\n            <div class="acc-sources">'
+                    f'<span class="sources-label">Sources:</span>'
+                    + "".join(links)
+                    + f'</div>'
+                )
+
             rows.append(
                 f'        <div class="acc-item imp-{imp}">\n'
                 f'            <button class="acc-btn" onclick="toggleAccordion(this)">\n'
@@ -206,7 +225,8 @@ class BaseObserver:
                 f'                <span class="badge {badge}">{label}</span>\n'
                 f'                <span class="material-icons chevron">expand_more</span>\n'
                 f'            </button>\n'
-                f'            <div class="acc-body"><p>{body}</p></div>\n'
+                f'            <div class="acc-body"><p>{body}</p>{sources_html}\n'
+                f'            </div>\n'
                 f'        </div>'
             )
 

@@ -23,6 +23,7 @@ Instructions:
    - "details"    : 2-3 sentences with concrete facts and figures
    - "category"   : one of: funding | ipo | regulation | forecast | enterprise | m_a | partnership | revenue | market_share
    - "importance" : "high" | "medium" | "low"
+   - "sources"    : array of 1-3 objects, each with "label" (publication name) and "url" (direct link to article)
 """
 
 USER_TEMPLATE = """\

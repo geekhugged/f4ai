@@ -23,6 +23,7 @@ Instructions:
    - "details"    : 2-3 sentences with concrete technical facts
    - "category"   : one of: new_model | breakthrough | big_tech | research | product | infrastructure | open_source | acquisition
    - "importance" : "high" | "medium" | "low"
+   - "sources"    : array of 1-3 objects, each with "label" (publication name) and "url" (direct link to article)
 """
 
 USER_TEMPLATE = """\

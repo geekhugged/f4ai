@@ -1,127 +1,355 @@
 {
   "section": "market",
   "review_date": "2026-06-02",
-  "generated_at": "2026-06-02T12:37:47.295023",
+  "generated_at": "2026-06-02T12:56:46.626719",
   "items": [
     {
-      "title": "Anthropic Raises $65B, Hits $965B Valuation Surpassing OpenAI",
-      "details": "Anthropic closed a $65 billion Series H round at a $965 billion post-money valuation, co-led by Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital, making it the world's most valuable private AI startup. Strategic infrastructure partners including Samsung, SK Hynix, and Micron also joined, and $15 billion of the round came from previously committed hyperscaler investments including $5 billion from Amazon. The round came the same day Anthropic released Claude Opus 4.8 and confidentially filed for an IPO.",
+      "title": "Anthropic Closes $65B Series H at $965B Valuation, Surpasses OpenAI",
+      "details": "Anthropic raised $65 billion in a Series H round on May 28, 2026, led by Altimeter Capital, Dragoneer, Greenoaks, Sequoia, Capital Group, Coatue, D1 Capital, GIC, ICONIQ, and XN. The $965B post-money valuation makes Anthropic the world's most valuable private AI company, overtaking OpenAI's $852B mark. Anthropic's run-rate revenue surpassed $47B as Claude becomes central to global enterprise deployments.",
       "category": "funding",
-      "importance": "high"
+      "importance": "high",
+      "sources": [
+        {
+          "label": "AI Funding Tracker",
+          "url": "https://aifundingtracker.com/"
+        },
+        {
+          "label": "Indmoney",
+          "url": "https://www.indmoney.com/blog/us-stocks/spacex-openai-anthropic-ipo-explained"
+        },
+        {
+          "label": "Open Tools AI",
+          "url": "https://opentools.ai/news/anthropic-revenue-surpasses-openai"
+        }
+      ]
     },
     {
-      "title": "Anthropic Confidentially Files for IPO at $965B Valuation",
-      "details": "On June 2, 2026, Anthropic formally submitted a confidential draft IPO filing, potentially leapfrogging rival OpenAI to a Wall Street debut as early as fall 2026. The company's run-rate revenue crossed $47 billion in late May 2026, and the Wall Street Journal reported it expects a 130% revenue surge leading to its first operating profit. Goldman Sachs, JPMorgan, and Morgan Stanley are under consideration for key underwriting roles.",
+      "title": "SpaceX Files S-1, Targets $75B Raise in Historic June IPO",
+      "details": "SpaceX filed its public S-1 with the SEC on May 20, 2026, disclosing $18.67 billion in consolidated 2025 revenue after its February 2026 all-stock acquisition of xAI. The company is targeting a Nasdaq debut under ticker SPCX around June 12, with Goldman Sachs leading, at a valuation between $1.75 trillion and $2 trillion — which would surpass Saudi Aramco's $26B listing as the largest IPO in history. Up to 30% of shares are allocated to retail investors.",
       "category": "ipo",
-      "importance": "high"
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Investing.com",
+          "url": "https://www.investing.com/analysis/the-trilliondollar-ipo-test-spacex-and-openai-face-public-markets-200680688"
+        },
+        {
+          "label": "CNBC",
+          "url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html"
+        },
+        {
+          "label": "IndexBox",
+          "url": "https://www.indexbox.io/blog/ai-firms-and-spacex-drive-ipo-market-buzz-in-2026/"
+        }
+      ]
     },
     {
-      "title": "Anthropic $47B ARR Eclipses OpenAI's $25B in Revenue Race",
-      "details": "Anthropic reported a $47 billion revenue run rate in late May 2026, up from $30 billion earlier in the year and just $10 billion in full-year 2025, driven primarily by the Claude Code AI coding assistant. OpenAI generated approximately $5.7 billion in Q1 2026 revenue alone, with enterprise now making up over 40% of its mix. Counterpoint Research data showed Anthropic leading the LLM market with a 31.4% revenue share versus OpenAI's 29.0%.",
+      "title": "OpenAI Reports $5.7B Q1 2026 Revenue, Targets Fall IPO",
+      "details": "OpenAI generated approximately $5.7 billion in Q1 2026 revenue — about $1 billion ahead of Anthropic's $4.8B for the same period — driven by ChatGPT subscriptions, enterprise tools, and AI coding products like Codex. OpenAI is preparing to confidentially file for a U.S. IPO targeting a September listing near a $1 trillion valuation, with Goldman Sachs and Morgan Stanley advising. The company projects $14 billion in losses for full-year 2026, with cash-flow breakeven not expected until 2029.",
       "category": "revenue",
-      "importance": "high"
+      "importance": "high",
+      "sources": [
+        {
+          "label": "The Information via Sherwood News",
+          "url": "https://sherwood.news/tech/report-openais-q1-revenue-was-5-7-billion-beating-anthropic/"
+        },
+        {
+          "label": "The Tech Portal",
+          "url": "https://thetechportal.com/2026/05/22/openai-generates-5-7bn-revenue-in-q1-2026-around-1bn-ahead-of-anthropic-report/"
+        },
+        {
+          "label": "Built In",
+          "url": "https://builtin.com/articles/top-tech-ipos-2026"
+        }
+      ]
     },
     {
-      "title": "OpenAI Projects $85B Losses in 2028 Despite Record Revenue",
-      "details": "Confidential financial documents published by the Wall Street Journal ahead of OpenAI's IPO revealed the company projects spending $121 billion on compute in 2028 alone, resulting in projected losses of $85 billion that year. OpenAI does not expect to break even until after 2030. By contrast, Anthropic's training costs peak at roughly $30 billion in the same period — about 4x less — with the company projecting profitability as early as 2028 or 2029.",
+      "title": "Anthropic Projects First-Ever $559M Operating Profit in Q2 2026",
+      "details": "Anthropic is projecting its first-ever quarterly operating profit of approximately $559 million in Q2 2026, on revenue of at least $10.9 billion — more than double its Q1 figure. Sacra estimates Anthropic hit $45B in annualized revenue in May 2026, up from $9B at end-2025, driven by enterprise API contracts. By contrast, OpenAI faces a projected $14B annual loss for 2026 and a breakeven target pushed to 2029.",
       "category": "revenue",
-      "importance": "high"
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Open Tools AI",
+          "url": "https://opentools.ai/news/anthropic-revenue-surpasses-openai"
+        },
+        {
+          "label": "Sacra",
+          "url": "https://sacra.com/c/anthropic/"
+        },
+        {
+          "label": "Investing.com",
+          "url": "https://www.investing.com/analysis/the-ai-token-pricing-crisis-behind-openai-and-anthropics-revenue-race-200680777"
+        }
+      ]
     },
     {
-      "title": "Q1 2026 VC Hits Record $300B; AI Absorbs 80% of Global Funding",
-      "details": "Crunchbase data showed investors poured $300 billion into 6,000 startups globally in Q1 2026, up over 150% quarter-over-quarter and year-over-year — an all-time record. AI accounted for $242 billion, or 80% of total global venture funding, up from 55% in Q1 2025. Four of the five largest venture rounds ever were closed in Q1: OpenAI ($122B), Anthropic ($30B), xAI ($20B), and Waymo ($16B), collectively representing 65% of all global VC.",
+      "title": "Q1 2026 Global VC Sets All-Time Record: $300B with AI Taking 80%",
+      "details": "Q1 2026 saw $300 billion in global venture investment across 6,000 startups — an all-time record according to Crunchbase — with AI accounting for $242 billion or 80% of total funding. Four mega-rounds alone — OpenAI ($122B), Anthropic ($30B), xAI ($20B), and Waymo ($16B) — collectively raised $188 billion, or more than 63% of total quarterly funding. European venture funding also reached $17.6B in Q1 2026, up nearly 30% year-over-year, with AI claiming over 50% of Europe's total for the first time.",
       "category": "funding",
-      "importance": "high"
+      "importance": "high",
+      "sources": [
+        {
+          "label": "AI Funding Tracker",
+          "url": "https://aifundingtracker.com/ai-startup-funding-news-today/"
+        },
+        {
+          "label": "Crunchbase News",
+          "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-autonomy-biotech-anthropic/"
+        }
+      ]
     },
     {
-      "title": "OpenAI Targets Q4 2026 IPO at ~$1 Trillion Valuation",
-      "details": "OpenAI is preparing to file its confidential IPO prospectus in the coming weeks, targeting a public debut in fall 2026 at a valuation approaching $1 trillion. The company previously closed its $122 billion funding round in March 2026 at an $852 billion post-money valuation. OpenAI's Stargate infrastructure initiative has grown to nearly 7 gigawatts of capacity with over $400 billion in planned investment.",
-      "category": "ipo",
-      "importance": "high"
-    },
-    {
-      "title": "NVIDIA Q1 FY2027 Data Center Revenue Hits $75.2B, Up 92% YoY",
-      "details": "NVIDIA's SEC filing showed Q1 FY2027 (ending April 2026) total revenue of $81.6 billion, up 85% year-over-year, with data center revenue alone reaching $75.2 billion — a 92% annual increase. The company holds approximately 80-90% of the AI accelerator market by revenue, with its Blackwell GPU architecture as the primary growth driver. NVIDIA CEO Jensen Huang has stated the revenue opportunity for AI chips may reach at least $1 trillion through 2027.",
-      "category": "revenue",
-      "importance": "high"
-    },
-    {
-      "title": "Google Completes $32B Wiz Acquisition, Unifying AI-Cloud Security",
-      "details": "Google LLC completed its $32 billion acquisition of cloud and AI security platform Wiz on March 11, 2026, after initial announcement in March 2025. Wiz joined Google Cloud while maintaining its brand and multi-cloud commitment, with Google committing $1.5 billion in combined cash and stock retention bonuses for Wiz's 1,800 employees. The combined platform aims to detect AI-generated threats, protect AI models, and enable unified security operations across all major cloud environments.",
-      "category": "m_a",
-      "importance": "high"
-    },
-    {
-      "title": "Alphabet Acquires Wiz; Palo Alto Buys CyberArk for $25B",
-      "details": "In addition to the Wiz deal, Palo Alto Networks announced a $25 billion acquisition of CyberArk to accelerate identity security and AI integration, per PwC's 2026 Tech Deals Outlook. ServiceNow separately paid approximately $3 billion for Moveworks, acquiring its natural language AI platform to power enterprise workflow automation. AI-related M&A deals closed in Q1 2026 totaled 266, a 90% increase year-over-year according to CB Insights.",
-      "category": "m_a",
-      "importance": "high"
-    },
-    {
-      "title": "Shield AI Raises $2B at $12.7B Valuation for Defense Autonomy",
-      "details": "Shield AI raised $1.5 billion in Series G equity at a $12.7 billion post-money valuation on March 26, 2026, led by Advent International and JPMorganChase's Security and Resiliency Initiative, with Blackstone committing $500 million in preferred equity financing. The San Diego-based company is projecting more than 80% revenue growth in 2026, equating to at least $540 million, and is using proceeds to acquire flight simulation company Aechelon Technology. Shield AI's Hivemind platform has been selected by the U.S. Air Force as a mission autonomy provider for its Collaborative Combat Aircraft program.",
+      "title": "OpenAI Closes $122B Round at $852B Valuation with Amazon as Exclusive Cloud Partner",
+      "details": "OpenAI closed what is now the single largest private venture round in history at $122 billion on March 31, 2026, pushing its post-money valuation to $852 billion. Amazon was named the exclusive third-party cloud partner as part of a $50 billion commitment. The round was co-led by SoftBank, Andreessen Horowitz, and D.E. Shaw Ventures, with Nvidia and SoftBank each investing $30 billion, and for the first time $3 billion was raised from retail investors through bank channels.",
       "category": "funding",
-      "importance": "high"
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Crescendo AI",
+          "url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups"
+        },
+        {
+          "label": "AI Funding Tracker",
+          "url": "https://aifundingtracker.com/top-50-ai-startups/"
+        }
+      ]
     },
     {
-      "title": "ElevenLabs Hits $500M ARR, Raises $500M at $11B Valuation",
-      "details": "AI voice startup ElevenLabs raised $500 million at an $11 billion valuation in February 2026, a round led by Sequoia Capital with participation from Andreessen Horowitz, Lightspeed, and Iconiq, more than tripling its prior $3.3 billion valuation. The company subsequently surpassed $500 million in annual recurring revenue with institutional investors BlackRock and NVIDIA among new backers. Enterprise customers including Deutsche Telekom, Meta, Revolut, and Salesforce are driving adoption.",
-      "category": "funding",
-      "importance": "high"
-    },
-    {
-      "title": "Legora Legal AI Raises $550M Series D at $5.55B Valuation",
-      "details": "Legora, a collaborative AI platform for legal teams, raised $550 million in a Series D round at a $5.55 billion valuation, with investors including Insight Partners, Index Ventures, IVP, and Bessemer Venture Partners. The round came as Legora aggressively expanded into the U.S. market one year after initially entering it, bringing total funding to nearly $1 billion. The deal positions Legora alongside Harvey and Steno as one of the defining companies in the legal AI space.",
-      "category": "funding",
-      "importance": "medium"
-    },
-    {
-      "title": "White House Releases National AI Legislative Framework, Targets State Preemption",
-      "details": "On March 20, 2026, the Trump Administration released a comprehensive National Policy Framework for Artificial Intelligence, urging Congress to establish a unified federal standard and preempt state AI laws deemed 'unduly burdensome.' The framework calls against creating any new federal AI rulemaking body, instead relying on existing sector-specific regulators and industry-led standards. An AI Litigation Task Force was established by the Attorney General in January 2026 to challenge conflicting state measures.",
+      "title": "White House Releases National AI Policy Framework, Targets State Law Preemption",
+      "details": "On March 20, 2026, the White House released its National Policy Framework for Artificial Intelligence, outlining legislative recommendations to establish a unified federal approach and limit what it views as burdensome state-level AI regulation. The framework is paired with Sen. Marsha Blackburn's 291-page TRUMP AMERICA AI Act discussion draft, seeking to codify executive AI orders and constrain state authority. The framework prioritizes child safety, innovation sandboxes, and federal preemption while explicitly avoiding new federal rulemaking bodies.",
       "category": "regulation",
-      "importance": "high"
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Holland & Knight",
+          "url": "https://www.hklaw.com/en/insights/publications/2026/03/white-house-releases-a-national-policy-framework-for-artificial"
+        },
+        {
+          "label": "Ropes & Gray",
+          "url": "https://www.ropesgray.com/en/insights/alerts/2026/03/the-white-house-legislative-recommendations-national-policy-framework-for-artificial-intelligence-an"
+        }
+      ]
     },
     {
-      "title": "Colorado AI Act Enforcement Begins June 30; EU AI Act Under Revision",
-      "details": "Colorado's landmark AI Act — one of the first comprehensive state AI governance laws targeting high-risk AI in consequential decisions — reaches enforcement on June 30, 2026, after being delayed from its original February 1 date following industry pushback. A March 2026 working group draft would repeal and reenact the law with a reset effective date of January 1, 2027. Separately, the EU's 'Digital Omnibus' proposal, advancing through the EU legislative process, seeks to delay application of certain high-risk AI requirements and revise the EU AI Act.",
+      "title": "AI M&A Hits 266 Deals in Q1 2026 — 90% Year-over-Year Surge",
+      "details": "CB Insights reported 266 AI M&A deals closed in Q1 2026, a 90% increase year-over-year, with acquisitions concentrated in data infrastructure, LLM Ops, and AI security. Landmark deals included ServiceNow's ~$3 billion acquisition of Moveworks for NLP-powered enterprise workflow automation and Workday's $1.1 billion deal for Swedish AI startup Sana. EY data shows corporate deals above $100M rose 65% in value and 17% in volume in the February–April 2026 period versus the same period in 2025.",
+      "category": "m_a",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "FE International",
+          "url": "https://www.feinternational.com/blog/ai-ma-trend"
+        },
+        {
+          "label": "Dealroom",
+          "url": "https://dealroom.net/blog/recent-m-a-deals"
+        },
+        {
+          "label": "EY",
+          "url": "https://www.ey.com/en_us/insights/mergers-acquisitions/m-and-a-activity-report"
+        }
+      ]
+    },
+    {
+      "title": "Global AI Market Forecast: $539B by End-2026, $3.4T by 2033",
+      "details": "The global AI market, valued at $390.91 billion in 2025, is expected to reach $539 billion by end-2026 per multiple analyst estimates, with Statista placing the figure at $617.62 billion on a broader definition. Technavio projects the AI market will grow by over $310 billion from 2026–2030 at a CAGR of 26.9%. Morgan Stanley Research estimates nearly $3 trillion of AI-related infrastructure investment will flow through the global economy by 2028, with more than 80% of that spending still ahead.",
+      "category": "forecast",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Ventureburn",
+          "url": "https://ventureburn.com/ai-statistic-2026-market-funding-enterprise-and-startup-playbook/"
+        },
+        {
+          "label": "Statista",
+          "url": "https://www.statista.com/outlook/tmo/artificial-intelligence/worldwide"
+        },
+        {
+          "label": "Morgan Stanley",
+          "url": "https://www.morganstanley.com/insights/articles/ai-market-trends-institute-2026"
+        }
+      ]
+    },
+    {
+      "title": "Hyperscaler AI Capex Consensus Reaches $527B for 2026",
+      "details": "Goldman Sachs reports the Wall Street consensus for 2026 hyperscaler AI capital expenditure now stands at $527 billion, up from $465 billion at the start of Q3 2025 earnings season, continuing a trend of upward revisions. Cumulative 2025–2027 hyperscaler capex is projected at $1.15 trillion — more than double the $477 billion spent 2022–2024. Goldman Sachs warns that justifying this capex would require an annual AI profit run-rate exceeding $1 trillion, more than double the $450B 2026 consensus income estimate.",
+      "category": "forecast",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Goldman Sachs",
+          "url": "https://www.goldmansachs.com/insights/articles/why-ai-companies-may-invest-more-than-500-billion-in-2026"
+        },
+        {
+          "label": "SQ Magazine",
+          "url": "https://sqmagazine.co.uk/ai-market-statistics/"
+        }
+      ]
+    },
+    {
+      "title": "Enterprise AI Adoption Hits 72%; Generative AI Usage Doubles to 65%",
+      "details": "McKinsey's 2026 Global AI Survey finds 72% of enterprises now run at least one AI use case in production, up from 55% in 2024. Generative AI adoption doubled from 33% in 2024 to 65% in 2026, accelerated by falling model costs and proven ROI. IDC projects total global AI spending will reach $301 billion in 2026, up from $223 billion in 2025, with Gartner estimating AI software alone will account for $157 billion.",
+      "category": "enterprise",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Swfte AI",
+          "url": "https://www.swfte.com/ai/adoption"
+        },
+        {
+          "label": "Medha Cloud",
+          "url": "https://medhacloud.com/blog/ai-adoption-statistics-2026"
+        },
+        {
+          "label": "NVIDIA Blog",
+          "url": "https://blogs.nvidia.com/blog/state-of-ai-report-2026/"
+        }
+      ]
+    },
+    {
+      "title": "Shield AI Raises $1.5B Series G at $12.7B Valuation for Defense Autonomy",
+      "details": "Shield AI secured $1.5 billion in Series G funding as part of a broader $2.25 billion capital package, co-led by Advent International and JPMorgan Chase, with $500M from Blackstone preferred equity, valuing the company at $12.7 billion — up 140% in just one year. The startup's Hivemind autonomous pilot platform was selected by the U.S. Air Force for its Collaborative Combat Aircraft program, the first time mission autonomy software has been decoupled from the aircraft itself. Shield AI projects $540M+ in 2026 revenue, representing 80% year-over-year growth.",
+      "category": "funding",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Crescendo AI",
+          "url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups"
+        }
+      ]
+    },
+    {
+      "title": "Pentagon Signs AI Deals With OpenAI, Google, Microsoft, Amazon, Nvidia, SpaceX",
+      "details": "The Pentagon announced AI contracts with OpenAI, Google, Microsoft, Amazon, Nvidia, and SpaceX to deploy large language models on classified Department of Defense networks for lawful operational use. The DoD's GenAI.mil platform, launched in December with Google Gemini, has already been used by more than 1.3 million personnel who have generated tens of millions of prompts and deployed hundreds of thousands of AI agents in five months. The DoD's 2026 budget request includes $33.7 billion earmarked for science, technology, and autonomous systems.",
+      "category": "partnership",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Decrypt",
+          "url": "https://decrypt.co/366351/pentagon-ai-deals-google-openai-nvidia-microsoft-amazon-spacex"
+        },
+        {
+          "label": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/the-pentagon-announces-ai-deals-with-openai-google-microsoft-amazon-nvidia-and-more-llms-to-be-deployed-on-classified-department-of-war-networks-for-lawful-operational-use"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft-OpenAI Exclusivity Ends; OpenAI Now Multi-Cloud",
+      "details": "A restructured April 2026 deal between Microsoft and OpenAI eliminated Microsoft Azure's exclusive hosting rights for OpenAI models. OpenAI can now serve all its products to customers across AWS, Google Cloud, Oracle, and any other infrastructure partner it chooses. Microsoft retains approximately 27% stake under the October 2025 recapitalization, but a renegotiated revenue-share agreement caps total payments at $38 billion through 2030, with roughly $6 billion owed in 2026 alone.",
+      "category": "partnership",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Oplexa",
+          "url": "https://oplexa.com/microsoft-openai-partnership/"
+        },
+        {
+          "label": "Investing.com",
+          "url": "https://www.investing.com/analysis/the-trilliondollar-ipo-test-spacex-and-openai-face-public-markets-200680688"
+        }
+      ]
+    },
+    {
+      "title": "NVIDIA Posts $216B Annual Revenue; Announces Meta Multiyear GPU Partnership",
+      "details": "NVIDIA reported $216 billion in annual fiscal 2026 revenue, with Q1 FY2027 revenue hitting $44.1 billion — up 69% year-over-year — driven by data center demand. NVIDIA announced a multiyear, multigenerational strategic partnership with Meta spanning on-premises, cloud, and AI infrastructure including deployment of millions of NVIDIA Blackwell and Rubin GPUs. NVIDIA also unveiled its Rubin platform, comprising six new chips delivering up to a 10x reduction in inference token cost versus the Blackwell platform.",
+      "category": "revenue",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "NVIDIA SEC Form 8-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000019/q4fy26pr.htm"
+        },
+        {
+          "label": "FX Leaders",
+          "url": "https://www.fxleaders.com/news/2026/05/12/nvidia-nvda-stock-forecast-2026-ai-capex-boom-hyperscaler-spending-strategic-partnerships-drive-nvda-price-surge/"
+        }
+      ]
+    },
+    {
+      "title": "Generative AI Market Forecast: $83.3B in 2026, Hitting $988B by 2035",
+      "details": "Global Market Insights forecasts the generative AI market will grow from $53.7 billion in 2025 to $83.3 billion in 2026, expanding at a 31.6% CAGR to reach $988.4 billion by 2035. OpenAI led with over 23.6% market share in 2025, while the software segment accounted for 81% of market revenue. Cloud deployment held 73.8% market share in 2025, driven by scalability and seamless integration into enterprise digital ecosystems.",
+      "category": "forecast",
+      "importance": "medium",
+      "sources": [
+        {
+          "label": "Global Market Insights",
+          "url": "https://www.gminsights.com/industry-analysis/generative-ai-market"
+        }
+      ]
+    },
+    {
+      "title": "DOJ and FTC Escalate AI Antitrust Actions on Algorithmic Pricing",
+      "details": "The DOJ and FTC have taken active enforcement positions in cases involving algorithmic pricing and information-sharing allegedly facilitated by AI systems, according to Morgan Lewis. Several class-action lawsuits have been filed in the U.S. challenging use of AI to coordinate pricing strategies. California's AB 325 (Preventing Algorithmic Price Fixing Act), effective January 1, 2026, strengthens antitrust oversight by prohibiting the use of AI-driven 'common pricing algorithms' among competitors and lowers the pleading standard for civil claims under the Cartwright Act.",
       "category": "regulation",
-      "importance": "high"
+      "importance": "high",
+      "sources": [
+        {
+          "label": "Morgan Lewis",
+          "url": "https://www.morganlewis.com/pubs/2026/04/ai-enforcement-accelerates-as-federal-policy-stalls-and-states-step-in"
+        },
+        {
+          "label": "White & Case",
+          "url": "https://www.whitecase.com/insight-alert/eyes-ai-looking-ahead-potential-ai-antitrust-enforcement-trump-administration"
+        },
+        {
+          "label": "National Law Review",
+          "url": "https://natlawreview.com/article/2026-outlook-artificial-intelligence"
+        }
+      ]
     },
     {
-      "title": "Enterprise GenAI Adoption Doubles to 65%; Global AI Spend Tops $300B",
-      "details": "McKinsey's 2026 Global AI Survey found generative AI enterprise adoption doubled from 33% in 2024 to 65% in 2026, while 72% of enterprises now have at least one AI workload in production. Global spending on AI systems surpassed $300 billion in 2026 according to IDC, with the average enterprise AI budget of $3.7 million expected to grow 30%+ in 2027. The median time to ROI for enterprise AI deployments has dropped from 24 months in 2024 to 14 months.",
+      "title": "Cognition AI Raises $1B Series D at $26B Valuation as Devin Writes 89% of Code",
+      "details": "Cognition AI raised over $1 billion in Series D funding co-led by Lux Capital, General Catalyst, and 8VC, with participation from Founders Fund and Ribbit Capital, more than doubling the company's valuation in under eight months to $26 billion. The Devin autonomous coding agent now writes 89% of Cognition's own production code, validating autonomous software engineering as an operational reality. Earlier data showed Cognition's ARR surged from $1 million in September 2024 to $73 million by June 2025, leading to a prior $10.2 billion valuation.",
+      "category": "funding",
+      "importance": "high",
+      "sources": [
+        {
+          "label": "AI Funding Tracker",
+          "url": "https://aifundingtracker.com/"
+        },
+        {
+          "label": "Eqvista",
+          "url": "https://eqvista.com/ai-startup-fundraising-trends/"
+        }
+      ]
+    },
+    {
+      "title": "Legora Raises $550M Series D at $5.55B Valuation for Legal AI",
+      "details": "Legora raised $550 million in a Series D round at a $5.55 billion valuation, led by Insight Partners with participation from Index Ventures, IVP, Bessemer Venture Partners, and Vine Ventures, bringing total funding to nearly $1 billion. The collaborative AI platform helps lawyers and in-house legal teams research cases, review documents, and draft filings more efficiently. The round coincided with Legora's aggressive U.S. market expansion, cementing legal AI as one of 2026's deepest-funded professional services categories.",
+      "category": "funding",
+      "importance": "medium",
+      "sources": [
+        {
+          "label": "Crescendo AI",
+          "url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups"
+        },
+        {
+          "label": "AI Funding Tracker",
+          "url": "https://aifundingtracker.com/"
+        }
+      ]
+    },
+    {
+      "title": "Enterprise AI ROI Gap Widens: 97% Report Benefits but Only 29% See Significant Returns",
+      "details": "A 2026 survey by WRITER found 79% of organizations face challenges adopting AI — a double-digit increase from 2025 — with 54% of C-suite executives admitting AI adoption is causing structural organizational strain. Despite near-universal benefit claims, only 29% of organizations see significant ROI from generative AI, even as individual productivity gains are real. Median time-to-ROI has dropped from 24 months in 2024 to 14 months, and AI governance spending has grown to 8–12% of AI budget in 2026, up from 3–5% in 2024.",
       "category": "enterprise",
-      "importance": "high"
-    },
-    {
-      "title": "97% of Executives Deploy AI Agents; Only 29% See Significant ROI",
-      "details": "Writer's 2026 Enterprise AI Adoption Survey (2,400 respondents) found nearly all executives (97%) report deploying AI agents in the past year, with 52% of employees already using them, and 80%+ of Fortune 500 running agents in production. Average enterprise AI spend is projected to jump 65% to $11.6 million in 2026 from roughly $7 million in 2025. Yet only 29% of executives report significant organizational ROI, and 54% of C-suite leaders admit AI adoption is 'tearing their company apart.'",
-      "category": "enterprise",
-      "importance": "high"
-    },
-    {
-      "title": "AI Global Market Valued at ~$514B in 2026; Set to Hit $1T by 2029",
-      "details": "The global AI market is valued at approximately $514.5 billion as of 2026 and is projected to cross the $1 trillion mark by 2029, growing at a CAGR of 30.6%, per multiple analyst estimates. Fortune Business Insights projects growth from $375.93 billion in 2026 to $2.48 trillion by 2034 at a 26.6% CAGR, with cloud deployments accounting for 71.6% of the market. Statista separately forecasts the total AI market worldwide will reach $617.62 billion by end of 2026, with the U.S. generating $414.89 billion of that.",
-      "category": "forecast",
-      "importance": "high"
-    },
-    {
-      "title": "Agentic AI Market Valued at $9.1B in 2026, to Hit $139B by 2034",
-      "details": "Fortune Business Insights valued the global agentic AI market at $9.14 billion in 2026, projecting growth to $139.19 billion by 2034 at a 40.5% CAGR. North America dominates with a 33.6% market share, and telecom leads enterprise agentic AI deployment at 48%, followed by retail and CPG at 47%. Microsoft, IBM, NVIDIA, and Anthropic are identified as the key players driving the space.",
-      "category": "forecast",
-      "importance": "medium"
-    },
-    {
-      "title": "Goldman Sachs Warns Hyperscaler Capex to Hit $527B in 2026; ROI Gap Widens",
-      "details": "Goldman Sachs estimated Wall Street consensus for 2026 hyperscaler capital spending at $527 billion, with cumulative 2025–2027 AI capex projected at $1.15 trillion — more than double the $477 billion spent from 2022 through 2024. Goldman warned that justifying this capex would require an annual AI profit run-rate exceeding $1 trillion, more than double the $450 billion 2026 consensus income estimate. Global corporate AI investment reached $581.7 billion in 2025, up 130% year-over-year according to Stanford HAI's 2026 AI Index.",
-      "category": "forecast",
-      "importance": "high"
-    },
-    {
-      "title": "Anthropic Beats OpenAI in Business Adoption; Claude Code Captures 54% of AI Coding Market",
-      "details": "Ramp's AI Index showed that, for the first time, more businesses are using Anthropic's AI (34.4%) than OpenAI's (32.3%) as of May 2026, with Anthropic's business adoption quadrupling over the past year while OpenAI's rose just 0.3%. Claude Code generated over $2.5 billion in annualized recurring revenue by early 2026, capturing approximately 54% of the AI coding assistant market. Anthropic now serves over 1,000 enterprise customers spending more than $1 million per year, with eight of the Fortune 10 as Claude customers.",
-      "category": "market_share",
-      "importance": "high"
+      "importance": "medium",
+      "sources": [
+        {
+          "label": "WRITER",
+          "url": "https://writer.com/blog/enterprise-ai-adoption-2026/"
+        },
+        {
+          "label": "Presenc AI",
+          "url": "https://presenc.ai/research/enterprise-ai-budget-allocation-2026"
+        },
+        {
+          "label": "Swfte AI",
+          "url": "https://www.swfte.com/ai/adoption"
+        }
+      ]
     }
   ]
 }
