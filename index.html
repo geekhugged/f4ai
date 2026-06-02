@@ -108,18 +108,29 @@
             align-items: center;
             gap: 8px;
             background: #f8f9fa;
+            border: none;
             border-bottom: 1px solid var(--border);
+            width: 100%;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            -webkit-appearance: none;
+            appearance: none;
+            text-align: left;
         }
+        .review-meta:hover { background: #eef2fb; }
         .review-meta .material-icons { font-size: 17px; color: var(--primary); }
         .review-date { font-size: 13px; font-weight: 500; }
         .review-count {
-            margin-left: auto;
             font-size: 11px;
             color: var(--text-muted);
             background: var(--border);
             padding: 2px 10px;
             border-radius: 10px;
         }
+        .review-chevron { margin-left: auto; font-size: 20px; color: var(--text-muted); flex-shrink: 0; transition: transform .22s ease; }
+        .review-meta.open .review-chevron { transform: rotate(180deg); }
+        .review-content { overflow: hidden; }
+        .review-content:not(.open) { display: none; }
 
         /* ── Accordion ── */
         .accordion { padding: 0; }
@@ -275,11 +286,13 @@
         </div>
         <!-- MARKET_START -->
     <div class="review-block" data-date="2026-06-02">
-        <div class="review-meta">
+        <button class="review-meta open" onclick="toggleReview(this)">
             <span class="material-icons">calendar_today</span>
             <span class="review-date">02 June 2026</span>
             <span class="review-count">20 insights</span>
-        </div>
+            <span class="material-icons review-chevron">expand_more</span>
+        </button>
+        <div class="review-content open">
         <div class="accordion">
         <div class="acc-item imp-high">
             <button class="acc-btn" onclick="toggleAccordion(this)">
@@ -502,6 +515,7 @@
             </div>
         </div>
         </div>
+        </div>
     </div>
         <!-- MARKET_END -->
     </section>
@@ -513,11 +527,13 @@
         </div>
         <!-- TECH_START -->
     <div class="review-block" data-date="2026-06-02">
-        <div class="review-meta">
+        <button class="review-meta open" onclick="toggleReview(this)">
             <span class="material-icons">calendar_today</span>
             <span class="review-date">02 June 2026</span>
             <span class="review-count">20 insights</span>
-        </div>
+            <span class="material-icons review-chevron">expand_more</span>
+        </button>
+        <div class="review-content open">
         <div class="accordion">
         <div class="acc-item imp-high">
             <button class="acc-btn" onclick="toggleAccordion(this)">
@@ -740,6 +756,7 @@
             </div>
         </div>
         </div>
+        </div>
     </div>
         <!-- TECH_END -->
     </section>
@@ -759,6 +776,13 @@ function toggleAccordion(btn) {
     const opening = !btn.classList.contains('open');
     btn.classList.toggle('open', opening);
     body.classList.toggle('open', opening);
+}
+
+function toggleReview(btn) {
+    const content = btn.nextElementSibling;
+    const opening = !btn.classList.contains('open');
+    btn.classList.toggle('open', opening);
+    content.classList.toggle('open', opening);
 }
 </script>
 

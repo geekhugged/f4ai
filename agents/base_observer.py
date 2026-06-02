@@ -180,7 +180,7 @@ class BaseObserver:
 
     # ── HTML generation ───────────────────────────────────────────────────────
 
-    def _review_block_html(self, items: list[dict], review_date: str) -> str:
+    def _review_block_html(self, items: list[dict], review_date: str, is_open: bool = False) -> str:
         """Build one accordion review block from a list of items."""
         try:
             dt = datetime.strptime(review_date, "%Y-%m-%d")
@@ -231,15 +231,19 @@ class BaseObserver:
             )
 
         items_html = "\n".join(rows)
+        open_cls = ' open' if is_open else ''
         return (
             f'    <div class="review-block" data-date="{review_date}">\n'
-            f'        <div class="review-meta">\n'
+            f'        <button class="review-meta{open_cls}" onclick="toggleReview(this)">\n'
             f'            <span class="material-icons">calendar_today</span>\n'
             f'            <span class="review-date">{date_label}</span>\n'
             f'            <span class="review-count">{len(items)} insights</span>\n'
-            f'        </div>\n'
+            f'            <span class="material-icons review-chevron">expand_more</span>\n'
+            f'        </button>\n'
+            f'        <div class="review-content{open_cls}">\n'
             f'        <div class="accordion">\n'
             f'{items_html}\n'
+            f'        </div>\n'
             f'        </div>\n'
             f'    </div>'
         )
@@ -254,11 +258,11 @@ class BaseObserver:
             new_inner = f"\n        {EMPTY_STATES[self.section_id]}\n        "
         else:
             blocks = []
-            for f in files:
+            for i, f in enumerate(files):
                 try:
                     data = json.loads(f.read_text(encoding="utf-8"))
                     blocks.append(
-                        self._review_block_html(data["items"], data["review_date"])
+                        self._review_block_html(data["items"], data["review_date"], is_open=(i == 0))
                     )
                 except (json.JSONDecodeError, KeyError) as exc:
                     print(f"  Warning: skipping {f.name} ({exc})", file=sys.stderr)
