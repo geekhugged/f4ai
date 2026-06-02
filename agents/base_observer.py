@@ -2,9 +2,8 @@
 import json
 import re
 import sys
-from datetime import datetime
+from datetime import date as DateType, datetime
 from pathlib import Path
-from typing import Optional
 
 import anthropic
 
@@ -32,10 +31,26 @@ ICON_MAP = {
     "acquisition": "merge_type",
 }
 
+EMPTY_STATES = {
+    "market": (
+        '<div class="empty-state">'
+        '<span class="material-icons">show_chart</span>'
+        '<h3>Обзоров пока нет</h3>'
+        '<p>Запустите <code>python run_observers.py --market</code></p>'
+        '</div>'
+    ),
+    "tech": (
+        '<div class="empty-state">'
+        '<span class="material-icons">rocket_launch</span>'
+        '<h3>Обзоров пока нет</h3>'
+        '<p>Запустите <code>python run_observers.py --tech</code></p>'
+        '</div>'
+    ),
+}
+
 
 class BaseObserver:
     section_id: str = ""
-    history_filename: str = ""
 
     def __init__(self):
         self.data_dir = ROOT / "data"
@@ -43,23 +58,48 @@ class BaseObserver:
         self.html_file = ROOT / "index.html"
         self.client = anthropic.Anthropic()
 
-    # ── History ──────────────────────────────────────────────────────────────
+    # ── Review file helpers ───────────────────────────────────────────────────
+
+    def _review_path(self, review_date: str) -> Path:
+        """Returns path like data/market_2026-06-02.json."""
+        return self.data_dir / f"{self.section_id}_{review_date}.json"
+
+    def _all_review_files(self) -> list[Path]:
+        """All review JSON files for this section, sorted newest-first."""
+        return sorted(
+            self.data_dir.glob(f"{self.section_id}_*.json"),
+            reverse=True,
+        )
+
+    # ── History (deduplication) ───────────────────────────────────────────────
 
     def load_history(self) -> list[str]:
-        path = self.data_dir / self.history_filename
-        if path.exists():
-            return json.loads(path.read_text(encoding="utf-8")).get("topics", [])
-        return []
+        """Collect all previously generated titles from data files."""
+        titles: list[str] = []
+        for f in self._all_review_files():
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+                titles.extend(item.get("title", "") for item in data.get("items", []))
+            except (json.JSONDecodeError, KeyError):
+                pass
+        return titles[-300:]
 
-    def save_history(self, new_topics: list[str]) -> None:
-        path = self.data_dir / self.history_filename
-        existing = self.load_history()
-        merged = (existing + new_topics)[-300:]  # keep last 300 titles
+    # ── Save review ───────────────────────────────────────────────────────────
+
+    def save_review(self, items: list[dict], review_date: str) -> Path:
+        """Write review to data/{section}_{date}.json and return the path."""
+        path = self._review_path(review_date)
+        payload = {
+            "section": self.section_id,
+            "review_date": review_date,
+            "generated_at": datetime.now().isoformat(),
+            "items": items,
+        }
         path.write_text(
-            json.dumps({"topics": merged, "updated": datetime.now().isoformat()},
-                       ensure_ascii=False, indent=2),
-            encoding="utf-8"
+            json.dumps(payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
         )
+        return path
 
     # ── Claude call ──────────────────────────────────────────────────────────
 
@@ -68,8 +108,7 @@ class BaseObserver:
         messages = [{"role": "user", "content": prompt}]
         tools = [{"type": "web_search_20250305", "name": "web_search"}]
 
-        # Agentic loop — handle server-side tool use
-        for iteration in range(10):
+        for _ in range(10):
             try:
                 response = self.client.messages.create(
                     model="claude-sonnet-4-6",
@@ -93,14 +132,9 @@ class BaseObserver:
                 return "\n".join(texts)
 
             if response.stop_reason == "tool_use":
-                # Add assistant turn and provide tool results to continue
                 messages.append({"role": "assistant", "content": response.content})
                 tool_results = [
-                    {
-                        "type": "tool_result",
-                        "tool_use_id": b.id,
-                        "content": "Search executed by server.",
-                    }
+                    {"type": "tool_result", "tool_use_id": b.id, "content": "Search executed."}
                     for b in response.content
                     if getattr(b, "type", None) == "tool_use"
                 ]
@@ -108,7 +142,6 @@ class BaseObserver:
                     messages.append({"role": "user", "content": tool_results})
                 continue
 
-            # max_tokens or unexpected stop — return what we have
             return "\n".join(texts)
 
         return ""
@@ -116,14 +149,12 @@ class BaseObserver:
     # ── JSON extraction ───────────────────────────────────────────────────────
 
     def parse_items(self, raw: str) -> list[dict]:
-        # 1) fenced code block
         m = re.search(r"```(?:json)?\s*(\[[\s\S]*?\])\s*```", raw)
         if m:
             try:
                 return json.loads(m.group(1))
             except json.JSONDecodeError:
                 pass
-        # 2) bare JSON array (greedy last match)
         for match in re.finditer(r"\[[\s\S]*?\]", raw):
             try:
                 data = json.loads(match.group())
@@ -135,12 +166,13 @@ class BaseObserver:
 
     # ── HTML generation ───────────────────────────────────────────────────────
 
-    def _badge_class(self, category: str) -> str:
-        return "b-" + category.lower().replace(" ", "_").replace("-", "_")
-
-    def generate_review_block(self, items: list[dict]) -> str:
-        now = datetime.now()
-        date_str = now.strftime("%d %B %Y • %H:%M")
+    def _review_block_html(self, items: list[dict], review_date: str) -> str:
+        """Build one accordion review block from a list of items."""
+        try:
+            dt = datetime.strptime(review_date, "%Y-%m-%d")
+            date_label = dt.strftime("%d %B %Y")
+        except ValueError:
+            date_label = review_date
 
         rows = []
         for item in items:
@@ -149,7 +181,7 @@ class BaseObserver:
             title = item.get("title", "").replace("<", "&lt;").replace(">", "&gt;")
             body  = item.get("details", "").replace("<", "&lt;").replace(">", "&gt;")
             icon  = ICON_MAP.get(cat, "info")
-            badge = self._badge_class(cat)
+            badge = "b-" + cat
             label = cat.replace("_", " ").title()
 
             rows.append(
@@ -166,10 +198,10 @@ class BaseObserver:
 
         items_html = "\n".join(rows)
         return (
-            f'    <div class="review-block" data-date="{now.isoformat()}">\n'
+            f'    <div class="review-block" data-date="{review_date}">\n'
             f'        <div class="review-meta">\n'
-            f'            <span class="material-icons">update</span>\n'
-            f'            <span class="review-date">{date_str}</span>\n'
+            f'            <span class="material-icons">calendar_today</span>\n'
+            f'            <span class="review-date">{date_label}</span>\n'
             f'            <span class="review-count">{len(items)} insights</span>\n'
             f'        </div>\n'
             f'        <div class="accordion">\n'
@@ -178,36 +210,52 @@ class BaseObserver:
             f'    </div>'
         )
 
-    # ── HTML update ───────────────────────────────────────────────────────────
+    # ── Rebuild HTML section from all JSON files ──────────────────────────────
 
-    def update_html(self, new_block: str) -> None:
+    def rebuild_html_section(self) -> None:
+        """Replace section content in index.html from all data/{section}_*.json."""
+        files = self._all_review_files()  # newest first
+
+        if not files:
+            new_inner = f"\n        {EMPTY_STATES[self.section_id]}\n        "
+        else:
+            blocks = []
+            for f in files:
+                try:
+                    data = json.loads(f.read_text(encoding="utf-8"))
+                    blocks.append(
+                        self._review_block_html(data["items"], data["review_date"])
+                    )
+                except (json.JSONDecodeError, KeyError) as exc:
+                    print(f"  Warning: skipping {f.name} ({exc})", file=sys.stderr)
+            new_inner = "\n" + "\n".join(blocks) + "\n        "
+
         content = self.html_file.read_text(encoding="utf-8")
         start = f"<!-- {self.section_id.upper()}_START -->"
         end   = f"<!-- {self.section_id.upper()}_END -->"
+        pattern = re.compile(re.escape(start) + r"[\s\S]*?" + re.escape(end))
 
-        pattern = re.compile(
-            re.escape(start) + r"([\s\S]*?)" + re.escape(end)
-        )
-        m = pattern.search(content)
-        if not m:
+        if not pattern.search(content):
             raise ValueError(f"Marker {start} not found in index.html")
 
-        inner = m.group(1)
-        # Remove empty-state div if present
-        inner = re.sub(r"\s*<div class=\"empty-state\">[\s\S]*?</div>", "", inner)
-        # Prepend new review block
-        new_inner = f"\n{new_block}\n{inner}"
-
-        new_content = content[: m.start(1)] + new_inner + content[m.end(1):]
+        new_content = pattern.sub(f"{start}{new_inner}{end}", content)
         self.html_file.write_text(new_content, encoding="utf-8")
 
     # ── Entry point ───────────────────────────────────────────────────────────
 
-    def run(self) -> None:
-        history = self.load_history()
-        system, prompt = self.build_prompts(history)
+    def run(self, review_date: str) -> None:
+        """Generate a review for review_date (YYYY-MM-DD) and write to file."""
+        out_path = self._review_path(review_date)
+        if out_path.exists():
+            print(f"  Review for {review_date} already exists: {out_path.name}")
+            print("  Delete the file and re-run to regenerate.")
+            self.rebuild_html_section()
+            return
 
-        print(f"[{self.section_id.upper()}] Calling Claude with web search…")
+        history = self.load_history()
+        system, prompt = self.build_prompts(history, review_date)
+
+        print(f"[{self.section_id.upper()}] Generating review for {review_date}…")
         raw = self.call_claude(system, prompt)
 
         if not raw:
@@ -221,13 +269,11 @@ class BaseObserver:
             sys.exit(1)
 
         items = items[:20]
-        print(f"  Parsed {len(items)} items")
+        saved = self.save_review(items, review_date)
+        print(f"  Saved {len(items)} items → {saved.relative_to(ROOT)}")
 
-        block = self.generate_review_block(items)
-        self.update_html(block)
+        self.rebuild_html_section()
+        print(f"  ✓ index.html updated ({self.section_id} section rebuilt)")
 
-        self.save_history([i.get("title", "") for i in items])
-        print(f"  ✓ {self.section_id.upper()} section updated in index.html")
-
-    def build_prompts(self, history: list[str]) -> tuple[str, str]:
+    def build_prompts(self, history: list[str], review_date: str) -> tuple[str, str]:
         raise NotImplementedError
