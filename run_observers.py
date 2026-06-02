@@ -20,6 +20,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
+from agents.forecast_observer import ForecastObserver
 from agents.glossary_observer import GlossaryObserver
 from agents.llm_observer import LlmObserver
 from agents.market_observer import MarketObserver
@@ -36,6 +37,7 @@ def main() -> None:
     parser.add_argument("--market",   action="store_true", help="Run Market Observer")
     parser.add_argument("--tech",     action="store_true", help="Run Tech Observer")
     parser.add_argument("--startup",  action="store_true", help="Run Startup Observer")
+    parser.add_argument("--forecast", action="store_true", help="Run Forecast Observer (AI & jobs)")
     parser.add_argument("--llm",      action="store_true", help="Run LLM Catalogue (50 models)")
     parser.add_argument("--glossary", action="store_true", help="Run Glossary (100 AI terms)")
     parser.add_argument(
@@ -46,10 +48,11 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    any_selected = args.market or args.tech or args.startup or args.llm or args.glossary
+    any_selected = args.market or args.tech or args.startup or args.forecast or args.llm or args.glossary
     run_market   = args.market   or not any_selected
     run_tech     = args.tech     or not any_selected
     run_startup  = args.startup  or not any_selected
+    run_forecast = args.forecast or not any_selected
     run_llm      = args.llm      or not any_selected
     run_glossary = args.glossary or not any_selected
 
@@ -66,6 +69,11 @@ def main() -> None:
     if run_startup:
         print("=" * 52)
         StartupObserver().run(args.date)
+        print()
+
+    if run_forecast:
+        print("=" * 52)
+        ForecastObserver().run(args.date)
         print()
 
     if run_llm:

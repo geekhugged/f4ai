@@ -49,6 +49,15 @@ ICON_MAP = {
     "accelerator": "school",
     "unicorn": "star",
     "pivot": "sync_alt",
+    # Forecast / Future of work
+    "high_risk":      "warning",
+    "medium_risk":    "trending_down",
+    "low_risk":       "verified",
+    "new_roles":      "add_circle",
+    "transformation": "autorenew",
+    "timeline":       "schedule",
+    "strategy":       "lightbulb",
+    "society":        "groups",
 }
 
 EMPTY_STATES = {
@@ -78,6 +87,13 @@ EMPTY_STATES = {
         '<span class="material-icons">smart_toy</span>'
         '<h3>Каталог ещё не сгенерирован</h3>'
         '<p>Запустите <code>python run_observers.py --llm</code></p>'
+        '</div>'
+    ),
+    "forecast": (
+        '<div class="empty-state">'
+        '<span class="material-icons">work_history</span>'
+        '<h3>Обзоров пока нет</h3>'
+        '<p>Запустите <code>python run_observers.py --forecast</code></p>'
         '</div>'
     ),
 }

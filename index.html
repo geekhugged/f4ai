@@ -283,6 +283,15 @@
         .b-gl-safety        { background:#fce8e6; color:#d93025; }
         .b-gl-agents        { background:#e8eaf6; color:#283593; }
         .b-gl-business      { background:#fff8e1; color:#f57f17; }
+        /* Forecast badges */
+        .b-high_risk      { background:#fce8e6; color:#c62828; }
+        .b-medium_risk    { background:#fff3e0; color:#e65100; }
+        .b-low_risk       { background:#e6f4ea; color:#1e8e3e; }
+        .b-new_roles      { background:#e8f0fe; color:#1a73e8; }
+        .b-transformation { background:#f3e8fd; color:#9334e6; }
+        .b-timeline       { background:#e0f7fa; color:#0097a7; }
+        .b-strategy       { background:#fff8e1; color:#f57f17; }
+        .b-society        { background:#e8eaf6; color:#283593; }
 
         .chevron { font-size: 20px; color: var(--text-muted); flex-shrink: 0; transition: transform .22s ease; }
         .acc-btn.open .chevron { transform: rotate(180deg); }
@@ -375,6 +384,10 @@
     <button class="tab" onclick="showTab('startup', this)">
         <span class="material-icons">bolt</span>
         Startups &amp; VC
+    </button>
+    <button class="tab" onclick="showTab('forecast', this)">
+        <span class="material-icons">work_history</span>
+        Прогнозы
     </button>
     <button class="tab" onclick="showTab('llm', this)">
         <span class="material-icons">smart_toy</span>
@@ -2517,6 +2530,247 @@
         </div>
     </div>
         <!-- LLM_END -->
+    </section>
+
+    <section id="forecast" class="section">
+        <div class="section-header">
+            <h2>Прогнозы: AI и профессии</h2>
+            <p>Кто под риском, новые роли, стратегии адаптации</p>
+        </div>
+        <!-- FORECAST_START -->
+    <div class="review-block" data-date="2026-06-02">
+        <button class="review-meta open" onclick="toggleReview(this)">
+            <span class="material-icons">calendar_today</span>
+            <span class="review-date">02 June 2026</span>
+            <span class="review-count">20 insights</span>
+            <span class="material-icons review-chevron">expand_more</span>
+        </button>
+        <div class="review-content open">
+        <div class="accordion">
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">warning</span>
+                <span class="acc-title">Paralegals & Legal Researchers Face 65–80% Automation Risk by 2027</span>
+                <span class="badge b-high_risk">High Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>AI tools are projected to give paralegals an 80% risk of automation by 2026 and legal researchers a 65% risk by 2027, driven by LLM-powered document review and contract analysis platforms. Medical transcription is already 99% automated, and 40% of medical coding is projected to be automated in 2025. These 'knowledge factory' roles face the steepest near-term curves because they rely on routine information processing that generative AI handles efficiently.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.demandsage.com/ai-job-replacement-stats/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DemandSage AI Job Replacement Statistics 2026</a><a href="https://www.designrush.com/agency/ai-companies/trends/ai-job-displacement-statistics" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DesignRush AI Job Displacement Statistics 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">warning</span>
+                <span class="acc-title">Administration & Customer Service Lead Sector Displacement Rankings</span>
+                <span class="badge b-high_risk">High Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Administration faces the highest sector exposure with 26% of jobs at risk, reflecting the vulnerability of routine clerical tasks to automation. Customer service roles rank second at 20% risk as chatbots and AI assistants increasingly handle frontline interactions. Production work shows a moderate 13% impact, while the legal sector has lower sector-wide exposure at just 6% due to the need for expert judgment.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://sqmagazine.co.uk/ai-job-loss-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SQ Magazine AI Job Loss Statistics 2026</a><a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>WEF Future of Jobs Report 2025</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">warning</span>
+                <span class="acc-title">Retail Cashiers Face 65% Automation Risk; Walmart & Sam's Club Lead Rollout</span>
+                <span class="badge b-high_risk">High Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Retail cashiers face a 65% risk of automation by 2025 due to self-checkout and computer-vision systems, with AI-powered checkout expected to reach 25% adoption by 2026–2028. Walmart's self-checkout expansion may replace 8,000 positions, while Sam's Club's AI verification rollout could eliminate 12,000 cashier jobs. Oxford Economics predicts global manufacturing could lose up to 20 million jobs by 2030 if automation accelerates.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.designrush.com/agency/ai-companies/trends/ai-job-displacement-statistics" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DesignRush AI Job Displacement Statistics 2026</a><a href="https://www.designrush.com/agency/ai-companies/trends/ai-job-displacement-statistics" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Oxford Economics / SSRN via DesignRush</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">warning</span>
+                <span class="acc-title">Junior Software Developers: 20% Employment Drop Among Ages 22–25 Since 2022</span>
+                <span class="badge b-high_risk">High Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Stanford's AI Index 2026 confirmed that employment for software developers aged 22–25 fell nearly 20% from its late-2022 peak, driven by AI coding tools automating boilerplate tasks. The share of juniors and graduates in new IT hires dropped from roughly 15% to just 7% over three years, as companies prefer senior engineers working with AI assistants over training pipelines. U.S. overall programmer employment fell 27.5% between 2023 and 2025 per BLS data, though software developer (design-oriented) roles fell only 0.3% in the same period.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://findskill.ai/blog/stanford-ai-index-junior-dev-hiring-drop/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Stanford AI Index 2026 via FindSkill.ai</a><a href="https://spectrum.ieee.org/ai-effect-entry-level-jobs" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IEEE Spectrum – AI Shifts Expectations for Entry Level Jobs</a><a href="https://ardura.consulting/blog/junior-developer-crisis-2026-why-companies-stopped-hiring-entry-level/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ARDURA Consulting Junior Developer Crisis 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">trending_down</span>
+                <span class="acc-title">SHRM 2026 Survey: 23.2 Million U.S. Jobs Already More Than Half Automated</span>
+                <span class="badge b-medium_risk">Medium Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>The SHRM 2025 Automation/AI Survey of 20,262 U.S. workers found that at least 50% of tasks are already automated in 15.1% of U.S. employment, representing approximately 23.2 million American jobs where automation has crossed the majority threshold. A further 7.8% of U.S. employment — roughly 12 million jobs — involves workers using generative AI for more than half their tasks. Goldman Sachs estimates that if current AI use cases were expanded uniformly, approximately 2.5% of U.S. employment would face direct displacement risk, rising to 6–7% with wide and deep adoption.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://theworlddata.com/ai-job-displacement-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>The World Data – AI Job Displacement Statistics 2026</a><a href="https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Goldman Sachs – How Will AI Affect the US Labor Market</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">trending_down</span>
+                <span class="acc-title">McKinsey: Today's AI Could Automate 57% of U.S. Work Hours — Deployment Is the Bottleneck</span>
+                <span class="badge b-medium_risk">Medium Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>McKinsey's late-2025 research estimated that current AI technology could theoretically automate approximately 57% of current U.S. work hours — but deployment, not capability, is the limiting factor. Their model suggests workers will spend 30–40% less time on routine tasks, either taking on higher-value work or facing headcount reduction, rather than outright replacement. By 2030, approximately 27% of current work hours in Europe and 30% in the United States could be automated, accelerated by generative AI.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://almcorp.com/blog/ai-job-displacement-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ALM Corp – AI Job Displacement Statistics 2026–2030</a><a href="https://sqmagazine.co.uk/ai-job-creation-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SQ Magazine AI Job Creation Statistics 2026</a><a href="https://roboticsandautomationnews.com/2025/11/26/mckinsey-warns-ai-and-robots-could-automate-40-percent-of-us-jobs-by-2030/97003/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>McKinsey Global Institute via Robotics & Automation News</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">trending_down</span>
+                <span class="acc-title">Radiologists: AI Augments Rather Than Replaces, But Workforce Will Shift by 2030</span>
+                <span class="badge b-medium_risk">Medium Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Despite earlier fears of replacement, the medical imaging AI market is projected to grow from $7.52 billion in 2025 to $26.16 billion by 2030, with AI augmenting rather than replacing radiologists by automating reports, triage, and routine scans. The 2025 Philips Future Health Index found that 43% of radiologists now spend more time on administrative work than five years ago — precisely the tasks AI is beginning to automate, freeing radiologists for interpretation and patient consults. By 2026, the EU AI Act classifies radiology AI as 'high-risk,' requiring bias checks, training data documentation, and mandatory human oversight.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://intuitionlabs.ai/articles/ai-radiology-trends-2025" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IntuitionLabs – AI in Radiology Trends 2025</a><a href="https://www.philips.com/a-w/about/news/archive/features/2025/ai-in-radiology-three-keys-to-real-world-impact.html" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Philips Future Health Index 2025</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">verified</span>
+                <span class="acc-title">Skilled Trades & Physical Care Roles Remain Lowest-Risk Professions Through 2030</span>
+                <span class="badge b-low_risk">Low Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Construction workers, electricians, plumbers, and HVAC technicians consistently rank among the least vulnerable to automation, as physical dexterity and real-world sensorimotor integration remain difficult for AI to replicate at competitive cost. Food service, personal care, and cleaning roles are similarly protected due to the technical difficulty of building robots for unstructured physical environments. These sectors are projected to add hundreds of thousands of jobs through 2033, and WEF identifies frontline roles including farmworkers, delivery drivers, and construction workers as seeing the largest absolute job growth by 2030.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://almcorp.com/blog/ai-job-displacement-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ALM Corp – AI Job Displacement Statistics 2026–2030</a><a href="https://sqmagazine.co.uk/ai-job-creation-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SQ Magazine AI Job Creation Statistics 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">verified</span>
+                <span class="acc-title">PwC AI Jobs Barometer: AI-Skilled Workers Command 56% Wage Premium in 2025</span>
+                <span class="badge b-low_risk">Low Risk</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>PwC's 2025 Global AI Jobs Barometer found that workers with AI skills command wage premiums up to 56% higher than their non-AI peers — up sharply from 25% in prior years. AI-skill job postings grew 7.5% while overall job postings fell 11.3%, and industries with AI exposure generate 3x more revenue per employee. LinkedIn's 2025 data confirms AI literacy and LLM proficiency as the fastest-growing skills globally, while Lightcast found that 51% of AI-related job postings are now outside traditional IT roles.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://sqmagazine.co.uk/ai-job-creation-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SQ Magazine AI Job Creation Statistics 2026</a><a href="https://gloat.com/blog/ai-workforce-trends/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Gloat – AI Workforce Trends 2026 Q2 Update</a><a href="https://tripleten.com/blog/posts/ai-skills" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TripleTen – AI Skills 2026 Employer's Wishlist</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">add_circle</span>
+                <span class="acc-title">WEF 2025: 170 Million New Jobs Created, 92 Million Displaced — Net +78 Million by 2030</span>
+                <span class="badge b-new_roles">New Roles</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>The WEF Future of Jobs Report 2025, drawing on 1,000+ employers representing 14 million workers across 55 economies, projects 170 million new roles created and 92 million displaced by 2030, yielding a net gain of 78 million jobs. The fastest-growing roles are dominated by big data specialists, fintech engineers, AI and machine learning specialists, alongside growth in healthcare, education, and the green economy. Robots and autonomous systems are expected to be the largest net displacer globally at around 5 million jobs, while AI and information processing will create 11 million jobs while displacing 9 million.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>WEF Future of Jobs Report 2025</a><a href="https://www.weforum.org/stories/2026/02/workforce-transformation-ai-jobs/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>WEF – AI-Driven Workforce Transformation Feb 2026</a><a href="https://gloat.com/blog/ai-workforce-trends/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Gloat – AI Workforce Trends 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">add_circle</span>
+                <span class="acc-title">Agentic AI Spawns 8 New Job Titles: Agent Architect, AI Evals Engineer, Context Engineer</span>
+                <span class="badge b-new_roles">New Roles</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>In Q1 2026, Anthropic, Salesforce, EY, Deloitte, and Accenture began posting job titles that did not exist two years prior, centered on agentic AI — systems that plan, call tools, and complete multi-step work autonomously. Eight core roles have emerged: AI Agent Architect, MLOps/Agent Reliability Engineer, AI Product Manager, AI Evals Engineer, Context Engineer, Forward-Deployed Engineer, AI Red Team Engineer, and AI Ethics Officer. Forward-Deployed Engineer postings surged 800% in 2025 per Interview Query's January 2026 analysis, reflecting enterprise demand for vendor engineers embedded in client AI stacks.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://theaicareerlab.com/blog/agentic-ai-jobs-guide-2026" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>The AI Career Lab – Agentic AI Job Guide 2026</a><a href="https://productleadersdayindia.org/blogs/ai-engineering-jobs-skills/ai-engineering-jobs-skills-hiring-wave.html" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Product Leaders Day India – AI Engineering Jobs 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">add_circle</span>
+                <span class="acc-title">Prompt Engineering & LLM Ops Demand Surges 135.8%; Average AI Engineer Salary Hits $206K</span>
+                <span class="badge b-new_roles">New Roles</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Demand for prompt engineering roles surged 135.8% in a single year per PromptLayer analysis, while Stanford's 2025 AI Index recorded generative AI skill postings growing from 16,000 in 2023 to over 66,000 in 2024 — a near fourfold increase. Average AI engineer salaries hit $206,000 in 2025, a $50,000 increase year-over-year, with LLM fine-tuning specialists commanding $195K–$350K and AI Red Team Engineers earning $300K+ at frontier labs. MLOps roles — the critical bottleneck for production AI — pay mid-level $145K–$200K and senior $210K–$280K+, yet routinely sit open beyond 90 days due to the rare combination of data science, software engineering, and cloud architecture skills required.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.secondtalent.com/resources/most-in-demand-ai-engineering-skills-and-salary-ranges/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Second Talent – Top AI Engineering Skills & Salary Ranges 2026</a><a href="https://www.herohunt.ai/blog/fastest-growing-ai-roles-in-2026-data-and-rankings/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>HeroHunt – Fastest Growing AI Roles in 2026</a><a href="https://sqmagazine.co.uk/ai-job-creation-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SQ Magazine AI Job Creation Statistics 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-medium">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">add_circle</span>
+                <span class="acc-title">AI Human Trainers & Model Evaluators: Demand Growing 25–35% Annually</span>
+                <span class="badge b-new_roles">New Roles</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Global demand for human AI evaluators and trainers is growing by 25–35% annually, as continuous human feedback loops are essential for maintaining model performance and safety. Semi-technical governance roles — covering model evaluation, bias auditing, dataset curation, and knowledge engineering — are growing rapidly as organizations face regulatory pressure around AI risk and transparency requirements. Companies using structured prompt engineering report 40% fewer hallucinations and 60% better brand alignment, driving dedicated specialist hiring across enterprise product and content teams.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.mercor.com/resources/experts/new-artificial-intelligence-job-opportunities/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Mercor – New Jobs & Roles Emerging Due to AI in 2026</a><a href="https://www.index.dev/blog/emerging-ai-roles-to-hire" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Index.dev – 10 Emerging AI Roles to Hire in 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">autorenew</span>
+                <span class="acc-title">Software Developers Transform from Code Writers to AI-Augmented System Architects</span>
+                <span class="badge b-transformation">Transformation</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>65% of developers expect their role to be redefined in 2026, moving from routine coding toward architecture, integration, and AI-enabled decision-making, per a WEF survey of 1,600+ developers in 63 countries. Harvard research shows companies adopting generative AI reduce junior developer hiring by 9–10% within six quarters of implementation, yet the U.S. BLS projects 15% overall software developer job growth through 2034 — five times faster than the average occupation. Gartner predicts 80% of engineers must upskill by 2027, as the role evolves from writing code to directing AI systems and reviewing AI-generated output for security vulnerabilities.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.weforum.org/stories/2026/01/software-developers-ai-work/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>WEF – Software Developers as AI Vanguard Jan 2026</a><a href="https://byteiota.com/software-engineering-2026-ai-reshapes-developer-jobs/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ByteIota – Software Engineering 2026: AI Reshapes Developer Jobs</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">autorenew</span>
+                <span class="acc-title">Marketing & Media Professions Transforming: Content Writer Roles to Decline 50% by 2030</span>
+                <span class="badge b-transformation">Transformation</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Digital marketing content writer positions are projected to decline by 50% by 2030, and reporter and writer positions are expected to shrink by 30% over the same period, driven by generative AI content tools. However, roles are not disappearing entirely — 15% of marketing job postings now mention AI skills, with specialists commanding premiums for managing AI-generated content pipelines, brand voice governance, and prompt engineering for consistent outputs. McKinsey research finds demand for technological skills could increase 29% in hours worked by 2030, with social and emotional skills rising 14% as human creativity and judgment command a premium.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.demandsage.com/ai-job-replacement-stats/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DemandSage AI Job Replacement Statistics 2026</a><a href="https://tripleten.com/blog/posts/ai-skills" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TripleTen – AI Skills 2026</a><a href="https://sqmagazine.co.uk/ai-job-creation-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SQ Magazine AI Job Creation Statistics 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">schedule</span>
+                <span class="acc-title">2025–2027: Financial Services & Tech Feel Disruption First; Manufacturing Peaks 2028–2030</span>
+                <span class="badge b-timeline">Timeline</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>The 2026–2030 period marks a pivotal 'transition phase' where generative AI evolves into agentic AI: 2025–2026 sees modest productivity gains with AI tools complementing workflows; 2027–2028 sees agentic AI absorbing entire job functions in financial services, legal, and customer support; and 2028–2030 sees manufacturing and logistics automation peaking with assembly line roles projected to drop from 2.1M to 1.0M and packaging workers from 890K to 320K. Goldman Sachs projects AI has already reduced monthly U.S. payroll growth by roughly 16,000 jobs while adding back approximately 9,000 augmentation-related jobs per month. The IMF estimates 40% of global employment is exposed to AI, with advanced economies at 60% exposure — nearly twice the rate of emerging markets.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://genesishumanexperience.com/2026/01/12/ai-disruption-of-jobs-a-deep-dive-into-2026-2030-with-focus-on-ai-agents/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Genesis Human Experience – AI Disruption 2026–2030 Deep Dive</a><a href="https://sqmagazine.co.uk/ai-job-creation-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SQ Magazine AI Job Creation Statistics 2026</a><a href="https://electroiq.com/how-to-guide/ai-job-displacement-statistics/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>ElectroIQ – AI Job Displacement Statistics 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">lightbulb</span>
+                <span class="acc-title">AI Skill Premium Is the #1 Adaptation Strategy: Workers Need RAG, MLOps, and Eval Literacy</span>
+                <span class="badge b-strategy">Strategy</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>The WEF reports that nearly 40% of skills required in jobs will change by 2030, and 63% of employers already cite the skills gap as a major barrier — yet LinkedIn shows workers are more than twice as likely to add AI skills now than six years ago. Key in-demand skills for 2026 are prompt engineering, Python, SQL, machine learning, retrieval-augmented generation (RAG), and MLOps, with eval literacy — knowing how to design and reason about model evaluations — identified as the single biggest differentiator for LLM practitioners. Workers in AI-exposed roles who successfully reskill gain a 56% wage premium; 70% of displaced workers are estimated to be able to transition successfully due to high adaptive capacity.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://safety4sea.com/cm-wef-rapid-commercialization-of-ai-is-poised-to-reshape-future-jobs/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SAFETY4SEA – WEF Rapid Commercialization of AI</a><a href="https://tripleten.com/blog/posts/ai-skills" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>TripleTen – AI Skills 2026: The Employer's Wishlist</a><a href="https://www.designrush.com/agency/ai-companies/trends/ai-job-displacement-statistics" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>DesignRush AI Job Displacement Statistics 2026</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">groups</span>
+                <span class="acc-title">EU AI Act Fully Applicable August 2026, Mandating AI Literacy and High-Risk Oversight</span>
+                <span class="badge b-society">Society</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>The EU AI Act becomes fully applicable on 2 August 2026, with Article 4 — requiring AI literacy for all staff interacting with AI systems — already in force since February 2025 and enforcement by national surveillance authorities commencing August 2026. The EU's April 2025 AI Continent Action Plan launched an AI Skills Academy to upskill professionals via generative AI-focused degrees and apprenticeships, targeting 80% adult digital-skills coverage by 2030. Italy became the first EU country to enact its own comprehensive AI law (Law 132/2025), including criminal penalties for misuse, while the EU's Digital Omnibus agreement of May 7, 2026 pushed back enforcement of high-risk AI workplace obligations by 16 months to December 2027.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-talent-skills-and-literacy" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>EU Digital Strategy – AI Talent, Skills and Literacy</a><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>EU Digital Strategy – AI Act Regulatory Framework</a><a href="https://gloat.com/blog/ai-workforce-trends/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>Gloat – AI Workforce Trends 2026 Q2 Update</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">groups</span>
+                <span class="acc-title">IMF Working Paper 2025: AI May Reduce Wage Inequality — But Widen Wealth Gaps</span>
+                <span class="badge b-society">Society</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>An April 2025 IMF Working Paper (WP/25/68) using household microdata found that, unlike previous automation waves that raised both wage and wealth inequality, AI could reduce wage inequality by displacing high-income workers. However, two counteracting forces apply: high-income workers' tasks are highly complementary with AI (boosting their productivity), and they are better positioned to benefit from capital returns on AI investment. When firms can choose adoption levels, the wealth inequality effect is particularly pronounced, as cost savings from automating high-wage tasks drive significantly higher adoption rates — a dynamic the paper warns is under-measured.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://www.elibrary.imf.org/view/journals/001/2025/068/article-A001-en.xml" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IMF Working Paper WP/25/68 – AI Adoption and Inequality</a><a href="https://www.imf.org/en/blogs/articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>IMF Blog – AI Will Transform the Global Economy</a></div>
+            </div>
+        </div>
+        <div class="acc-item imp-high">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">groups</span>
+                <span class="acc-title">UBI Pilots Expand: Ireland Makes Arts Basic Income Permanent in 2026; Robot Tax Debated</span>
+                <span class="badge b-society">Society</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Ireland's 'Basic Income for the Arts' pilot — providing unconditional income to creative professionals — transitions to a permanent program in 2026, serving as a model for sector-specific UBI in AI-disrupted fields. The Stanford Basic Income Lab reports over 160 UBI tests or pilots conducted over four decades, with the International Public Policy Observatory counting 38+ pilots across Europe, North America, and Asia since 2015 showing generally positive employment outcomes. Policy proposals gaining traction include a 'robot tax' creating a direct financial link between automation revenue and social support funds, and a proposed 0.05% levy on large-scale AI inference compute to fund transition programs.</p>
+            <div class="acc-sources"><span class="sources-label">Sources:</span><a href="https://blogs.lse.ac.uk/businessreview/2025/04/29/universal-basic-income-as-a-new-social-contract-for-the-age-of-ai-1/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>LSE Business Review – UBI as New Social Contract for AI Age</a><a href="https://silverscoopblog.com/wealth-ai-universal-basic-income-2026/" target="_blank" rel="noopener noreferrer"><span class="material-icons">open_in_new</span>SilverScoop Blog – UBI in 2026: Universal Basic Income vs. AI Automation</a></div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+        <!-- FORECAST_END -->
     </section>
 
     <section id="startup" class="section">
