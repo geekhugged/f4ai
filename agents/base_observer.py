@@ -1,5 +1,6 @@
 """Base class for AI observer agents."""
 import json
+import os
 import re
 import sys
 from datetime import date as DateType, datetime
@@ -8,6 +9,19 @@ from pathlib import Path
 import anthropic
 
 ROOT = Path(__file__).parent.parent
+
+
+def _make_client() -> anthropic.Anthropic:
+    """Create Anthropic client: ANTHROPIC_API_KEY → session token → error."""
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if api_key:
+        return anthropic.Anthropic(api_key=api_key)
+    token_file = os.environ.get("CLAUDE_SESSION_INGRESS_TOKEN_FILE")
+    if token_file and Path(token_file).exists():
+        return anthropic.Anthropic(auth_token=Path(token_file).read_text().strip())
+    raise RuntimeError(
+        "No auth found. Set ANTHROPIC_API_KEY or run inside a Claude Code session."
+    )
 
 ICON_MAP = {
     # Market
@@ -56,7 +70,7 @@ class BaseObserver:
         self.data_dir = ROOT / "data"
         self.data_dir.mkdir(exist_ok=True)
         self.html_file = ROOT / "index.html"
-        self.client = anthropic.Anthropic()
+        self.client = _make_client()
 
     # ── Review file helpers ───────────────────────────────────────────────────
 

@@ -44,11 +44,6 @@ def main() -> None:
     run_market = args.market or not (args.market or args.tech)
     run_tech   = args.tech   or not (args.market or args.tech)
 
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("ERROR: ANTHROPIC_API_KEY is not set.", file=sys.stderr)
-        print("  export ANTHROPIC_API_KEY=sk-ant-...", file=sys.stderr)
-        sys.exit(1)
-
     if run_market:
         print("=" * 52)
         MarketObserver().run(args.date)
