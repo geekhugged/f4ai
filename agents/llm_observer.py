@@ -1,4 +1,4 @@
-"""LLM Observer — chronological catalogue of major AI models from Big Tech."""
+"""LLM Observer — ranked catalogue of top AI models, newest first."""
 from .base_observer import BaseObserver
 import json
 import re
@@ -8,32 +8,38 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 
 SYSTEM = """You are an AI Model Catalogue agent. Your job is to compile an accurate, \
-comprehensive chronological catalogue of the most important large language models \
-and AI models released by major companies.
+curated list of the STRONGEST and most capable AI models released by major companies.
 
 Cover models from: OpenAI, Anthropic, Google (DeepMind), Meta, Microsoft, Mistral, \
-xAI (Grok), Alibaba (Qwen), Baidu (ERNIE), Cohere, Amazon, Apple, Samsung, and \
+xAI (Grok), Alibaba (Qwen), Baidu (ERNIE), Cohere, Amazon, Apple, DeepSeek, and \
 other significant AI labs.
 
+Selection criteria — include only frontier-tier or historically significant models:
+• Current state-of-the-art models (highest benchmarks, most capable)
+• Models that set a new capability milestone at time of release
+• Flagship models from each major lab
+• Skip minor point releases unless they represent a clear capability leap
+
 Instructions:
-1. Search the web to verify release dates and model details.
-2. List models in chronological order by release date (oldest first).
+1. Search the web to verify release dates and model capabilities.
+2. Order by release date DESCENDING — most recent models first.
 3. Include only publicly released or announced models — no speculation.
 4. Return ONLY a valid JSON array of exactly 50 objects — nothing else.
    Each object must have:
    - "name"        : model name including version (e.g. "GPT-4o", "Claude 3.5 Sonnet")
    - "company"     : company/lab name
-   - "released"    : release date or year as string (e.g. "2024-05", "2023")
+   - "released"    : release date as string (e.g. "2025-05", "2024-03")
    - "category"    : one of: llm | multimodal | reasoning | image | audio | video | code | embedding
-   - "description" : 1 sentence — key capability, context window, or notable first (max 25 words)
+   - "description" : 1 sentence — standout capability, benchmark score, or milestone (max 25 words)
    - "sources"     : array of 1-2 objects, each with "label" and "url"
 """
 
 USER_TEMPLATE = """\
-Compile a chronological catalogue of the 50 most important AI models from Big Tech companies.
+Compile a ranked catalogue of the 50 strongest AI models, ordered newest-first.
 
-Focus on models released up to {cutoff_date}. Order by release date, oldest first.
-Include flagship models and notable releases — prioritise variety across companies.
+Models released up to {cutoff_date}. Start with the most recent frontier models \
+(Claude Opus 4.8, GPT-5, Gemini 3.5, etc.) and go back in time.
+Prioritise the most capable model per generation per company — skip minor variants.
 
 Return ONLY the JSON array of exactly 50 objects. No markdown, no extra text."""
 

@@ -1,804 +1,294 @@
 {
   "section": "llm",
   "review_date": "2026-06-02",
-  "generated_at": "2026-06-02T17:51:19.419188",
+  "generated_at": "2026-06-02T18:18:35.420113",
   "items": [
     {
-      "name": "GPT-2",
-      "company": "OpenAI",
-      "released": "2019-02",
-      "category": "llm",
-      "description": "1.5B-parameter unsupervised language model; staged release due to misuse concerns.",
-      "sources": [
-        {
-          "label": "GitHub Timeline",
-          "url": "https://github.com/jqueryscript/chatgpt-timeline"
-        },
-        {
-          "label": "Wikipedia GPT",
-          "url": "https://en.wikipedia.org/wiki/Generative_pre-trained_transformer"
-        }
-      ]
-    },
-    {
-      "name": "GPT-3",
-      "company": "OpenAI",
-      "released": "2020-05",
-      "category": "llm",
-      "description": "175B-parameter model setting new benchmark for few-shot generative AI capabilities.",
-      "sources": [
-        {
-          "label": "Wikipedia GPT",
-          "url": "https://en.wikipedia.org/wiki/Generative_pre-trained_transformer"
-        },
-        {
-          "label": "GitHub Timeline",
-          "url": "https://github.com/jqueryscript/chatgpt-timeline"
-        }
-      ]
-    },
-    {
-      "name": "DALL-E",
-      "company": "OpenAI",
-      "released": "2021-01",
-      "category": "image",
-      "description": "First DALL-E text-to-image model using GPT-3 architecture to generate images from text.",
-      "sources": [
-        {
-          "label": "Wikipedia OpenAI Products",
-          "url": "https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI"
-        },
-        {
-          "label": "OpenAI Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/OpenAI"
-        }
-      ]
-    },
-    {
-      "name": "Whisper",
-      "company": "OpenAI",
-      "released": "2022-09",
-      "category": "audio",
-      "description": "General-purpose speech recognition model trained on diverse audio for multilingual transcription.",
-      "sources": [
-        {
-          "label": "Wikipedia OpenAI Products",
-          "url": "https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI"
-        },
-        {
-          "label": "OpenAI Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/OpenAI"
-        }
-      ]
-    },
-    {
-      "name": "ChatGPT (GPT-3.5)",
-      "company": "OpenAI",
-      "released": "2022-11",
-      "category": "llm",
-      "description": "Instruction-tuned GPT-3.5 chatbot that catalysed the generative AI boom with 100M users in 2 months.",
-      "sources": [
-        {
-          "label": "GitHub Timeline",
-          "url": "https://github.com/jqueryscript/chatgpt-timeline"
-        },
-        {
-          "label": "OpenAI Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/OpenAI"
-        }
-      ]
-    },
-    {
-      "name": "Claude 1",
+      "name": "Claude Opus 4.8",
       "company": "Anthropic",
-      "released": "2023-03",
-      "category": "llm",
-      "description": "First public Claude model focused on safe conversation, writing, summarisation, and coding via Constitutional AI.",
+      "released": "2026-05",
+      "category": "reasoning",
+      "description": "Anthropic's flagship with improved agentic reliability, 4× lower code-flaw pass-through rate, and Dynamic Workflows in Claude Code.",
       "sources": [
         {
-          "label": "Claude Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Claude_(language_model)"
+          "label": "Anthropic Official",
+          "url": "https://www.anthropic.com/claude/opus"
         },
         {
-          "label": "ScriptByAI Claude Timeline",
+          "label": "WaveSpeed Blog",
+          "url": "https://wavespeed.ai/blog/posts/opus-4-8/"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "company": "Google DeepMind",
+      "released": "2026-05",
+      "category": "multimodal",
+      "description": "First Gemini 3.5 model; beats Gemini 3.1 Pro on coding and agentic benchmarks at 4× faster output speed.",
+      "sources": [
+        {
+          "label": "Google Blog",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"
+        },
+        {
+          "label": "MarkTechPost",
+          "url": "https://www.marktechpost.com/2026/05/20/google-introduces-gemini-3-5-flash-at-i-o-2026-a-faster-and-cheaper-model-for-ai-agents-and-coding/"
+        }
+      ]
+    },
+    {
+      "name": "GPT-5.5",
+      "company": "OpenAI",
+      "released": "2026-04",
+      "category": "reasoning",
+      "description": "OpenAI's most capable model at launch; 82.7% on Terminal-Bench 2.0 and leading agentic coding with Codex integration.",
+      "sources": [
+        {
+          "label": "OpenAI Official",
+          "url": "https://openai.com/index/introducing-gpt-5-5/"
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/GPT-5.5"
+        }
+      ]
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "company": "Anthropic",
+      "released": "2026-04",
+      "category": "reasoning",
+      "description": "87.6% SWE-bench Verified, 3.75-megapixel vision, 1M-token context, and xhigh effort level; led Claude Design launch.",
+      "sources": [
+        {
+          "label": "Anthropic Official",
+          "url": "https://www.anthropic.com/claude/opus"
+        },
+        {
+          "label": "WebWallah Review",
+          "url": "https://webwallah.in/claude-opus-4-7-anthropic-models-complete-guide/"
+        }
+      ]
+    },
+    {
+      "name": "DeepSeek V4-Pro",
+      "company": "DeepSeek",
+      "released": "2026-04",
+      "category": "reasoning",
+      "description": "1.6T-param open-weight MoE; 80.6% SWE-bench at frontier cost, 1M-token context, MIT-licensed.",
+      "sources": [
+        {
+          "label": "DeepSeek API Docs",
+          "url": "https://api-docs.deepseek.com/news/news260424"
+        },
+        {
+          "label": "Hugging Face",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        }
+      ]
+    },
+    {
+      "name": "Gemma 4",
+      "company": "Google DeepMind",
+      "released": "2026-04",
+      "category": "reasoning",
+      "description": "Open-weight model purpose-built for advanced reasoning and agentic workflows, released April 2, 2026.",
+      "sources": [
+        {
+          "label": "Gemini API Changelog",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog"
+        },
+        {
+          "label": "Wikipedia – Gemini",
+          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 3.1 Pro",
+      "company": "Google DeepMind",
+      "released": "2026-02",
+      "category": "reasoning",
+      "description": "77.1% on ARC-AGI-2 (more than double Gemini 3 Pro), 94.3% GPQA Diamond; top-ranked on Artificial Analysis Intelligence Index.",
+      "sources": [
+        {
+          "label": "Google Cloud Docs",
+          "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-1-pro"
+        },
+        {
+          "label": "ALM Corp Guide",
+          "url": "https://almcorp.com/blog/gemini-3-1-pro-complete-guide/"
+        }
+      ]
+    },
+    {
+      "name": "Claude Sonnet 4.6",
+      "company": "Anthropic",
+      "released": "2026-02",
+      "category": "llm",
+      "description": "Balanced-tier model with 1M-token context GA, agent teams, and improved computer use; 79.6% SWE-bench at release.",
+      "sources": [
+        {
+          "label": "Anthropic Platform Docs",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "label": "Tygart Media Timeline",
+          "url": "https://tygartmedia.com/claude-release-history/"
+        }
+      ]
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "company": "Anthropic",
+      "released": "2026-02",
+      "category": "reasoning",
+      "description": "Introduced agent teams, 1M-token context at GA, PowerPoint integration, and C-compiler-from-scratch capability in agent tests.",
+      "sources": [
+        {
+          "label": "Anthropic Official",
+          "url": "https://www.anthropic.com/claude/opus"
+        },
+        {
+          "label": "Wikipedia – Claude",
+          "url": "https://en.wikipedia.org/wiki/Claude_(language_model)"
+        }
+      ]
+    },
+    {
+      "name": "Grok 4.20 (Beta)",
+      "company": "xAI",
+      "released": "2026-02",
+      "category": "reasoning",
+      "description": "First Grok with rapid-learning architecture; updates weekly from user feedback, introduces 4-agent parallel collaboration.",
+      "sources": [
+        {
+          "label": "Grokipedia",
+          "url": "https://grokipedia.com/page/Grok_41"
+        },
+        {
+          "label": "AdwaitX",
+          "url": "https://www.adwaitx.com/grok-4-20-beta-release-date-xai-launch/"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 3 Deep Think",
+      "company": "Google DeepMind",
+      "released": "2025-12",
+      "category": "reasoning",
+      "description": "Parallel-hypothesis reasoning mode; 41% on Humanity's Last Exam and 45.1% on ARC-AGI-2 with code execution.",
+      "sources": [
+        {
+          "label": "Google Blog",
+          "url": "https://blog.google/products/gemini/gemini-3-deep-think/"
+        },
+        {
+          "label": "Gemini Release Notes",
+          "url": "https://gemini.google/release-notes/"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 3 Flash",
+      "company": "Google DeepMind",
+      "released": "2025-12",
+      "category": "multimodal",
+      "description": "Successor to 2.5 Flash; became Gemini app default with major capability upgrade and PhD-level reasoning at Flash speed.",
+      "sources": [
+        {
+          "label": "Wikipedia – Gemini",
+          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        },
+        {
+          "label": "Gemini Release Notes",
+          "url": "https://gemini.google/release-notes/"
+        }
+      ]
+    },
+    {
+      "name": "Claude Opus 4.5",
+      "company": "Anthropic",
+      "released": "2025-11",
+      "category": "reasoning",
+      "description": "State-of-the-art at launch for agentic workflows; self-improves in 4 iterations vs 10 for rivals, $5/$25 per-million pricing.",
+      "sources": [
+        {
+          "label": "Anthropic Official",
+          "url": "https://www.anthropic.com/news/claude-opus-4-5"
+        },
+        {
+          "label": "Anthropic Opus Page",
+          "url": "https://www.anthropic.com/claude/opus"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 3 Pro",
+      "company": "Google DeepMind",
+      "released": "2025-11",
+      "category": "multimodal",
+      "description": "1501 Elo on LMArena, 91.9% GPQA Diamond, 37.4% on Humanity's Last Exam; launched across all Google products simultaneously.",
+      "sources": [
+        {
+          "label": "Google Blog",
+          "url": "https://blog.google/products/gemini/gemini-3/"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/18/google-launches-gemini-3-with-new-coding-app-and-record-benchmark-scores/"
+        }
+      ]
+    },
+    {
+      "name": "Grok 4.1",
+      "company": "xAI",
+      "released": "2025-11",
+      "category": "llm",
+      "description": "#1 on LMArena Text Arena with 1483 Elo; 65% hallucination reduction over Grok 4 and top EQ-Bench3 emotional intelligence score.",
+      "sources": [
+        {
+          "label": "xAI Official",
+          "url": "https://x.ai/news/grok-4-1"
+        },
+        {
+          "label": "Wikipedia – Grok",
+          "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
+        }
+      ]
+    },
+    {
+      "name": "Claude Haiku 4.5",
+      "company": "Anthropic",
+      "released": "2025-10",
+      "category": "llm",
+      "description": "Fastest and lowest-cost tier of the Claude 4 generation; optimized for low-latency, high-volume production workloads.",
+      "sources": [
+        {
+          "label": "Tygart Media Timeline",
+          "url": "https://tygartmedia.com/claude-release-history/"
+        },
+        {
+          "label": "ScriptByAI Timeline",
           "url": "https://www.scriptbyai.com/anthropic-claude-timeline/"
         }
       ]
     },
     {
-      "name": "GPT-4",
-      "company": "OpenAI",
-      "released": "2023-03",
-      "category": "multimodal",
-      "description": "Large multimodal model accepting text and image input; state-of-the-art on professional benchmarks.",
-      "sources": [
-        {
-          "label": "GitHub Timeline",
-          "url": "https://github.com/jqueryscript/chatgpt-timeline"
-        },
-        {
-          "label": "OpenAI Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/OpenAI"
-        }
-      ]
-    },
-    {
-      "name": "LLaMA 1",
-      "company": "Meta",
-      "released": "2023-02",
-      "category": "llm",
-      "description": "Open-weight foundation models (7B–65B params); LLaMA-13B matched GPT-3 on many benchmarks.",
-      "sources": [
-        {
-          "label": "LLaMA Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Llama_(language_model)"
-        },
-        {
-          "label": "arXiv Survey",
-          "url": "https://arxiv.org/html/2510.12178v1"
-        }
-      ]
-    },
-    {
-      "name": "PaLM 2",
-      "company": "Google DeepMind",
-      "released": "2023-05",
-      "category": "llm",
-      "description": "Successor to PaLM with enhanced coding, multilingual, and reasoning capabilities; powered Google Bard.",
-      "sources": [
-        {
-          "label": "IBM Google Gemini",
-          "url": "https://www.ibm.com/think/topics/google-gemini"
-        },
-        {
-          "label": "TIME Gemini",
-          "url": "https://time.com/6343450/gemini-google-deepmind-ai/"
-        }
-      ]
-    },
-    {
-      "name": "Mistral 7B",
-      "company": "Mistral AI",
-      "released": "2023-09",
-      "category": "llm",
-      "description": "First open-source Mistral model (Apache 2.0) outperforming LLaMA 2 13B on all benchmarks at 7B params.",
-      "sources": [
-        {
-          "label": "Contrary Research Mistral",
-          "url": "https://research.contrary.com/company/mistral-ai"
-        },
-        {
-          "label": "Built In Mistral",
-          "url": "https://builtin.com/articles/mistral-ai"
-        }
-      ]
-    },
-    {
-      "name": "LLaMA 2",
-      "company": "Meta",
-      "released": "2023-07",
-      "category": "llm",
-      "description": "First Llama with an open commercial license; expanded to 70B parameters with instruction-tuned chat variants.",
-      "sources": [
-        {
-          "label": "LLaMA Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Llama_(language_model)"
-        },
-        {
-          "label": "TechTarget Llama 4",
-          "url": "https://www.techtarget.com/whatis/feature/Meta-Llama-4-explained-Everything-you-need-to-know"
-        }
-      ]
-    },
-    {
-      "name": "Qwen 1 (Tongyi Qianwen)",
-      "company": "Alibaba",
-      "released": "2023-08",
-      "category": "llm",
-      "description": "Alibaba's first open-weight LLM family (7B–72B), released publicly after regulatory clearance in China.",
-      "sources": [
-        {
-          "label": "Qwen Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Qwen"
-        },
-        {
-          "label": "GitHub Qwen",
-          "url": "https://github.com/QwenLM/Qwen"
-        }
-      ]
-    },
-    {
-      "name": "DALL-E 3",
-      "company": "OpenAI",
-      "released": "2023-09",
-      "category": "image",
-      "description": "Improved text-to-image model with better prompt adherence and detailed rendering including hands and text.",
-      "sources": [
-        {
-          "label": "Wikipedia OpenAI Products",
-          "url": "https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI"
-        },
-        {
-          "label": "Sora Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)"
-        }
-      ]
-    },
-    {
-      "name": "Grok 1",
-      "company": "xAI",
-      "released": "2023-11",
-      "category": "llm",
-      "description": "314B MoE model with real-time X platform data access; later open-sourced under Apache 2.0 in March 2024.",
-      "sources": [
-        {
-          "label": "Grok Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
-        },
-        {
-          "label": "Grokipedia History",
-          "url": "https://grokipedia.ac/history-of-grok-the-complete-evolution/"
-        }
-      ]
-    },
-    {
-      "name": "Mixtral 8x7B",
-      "company": "Mistral AI",
-      "released": "2023-12",
-      "category": "llm",
-      "description": "Sparse mixture-of-experts open-source model outperforming LLaMA 2 70B and GPT-3.5 on most benchmarks.",
-      "sources": [
-        {
-          "label": "Brief Bismarck Mistral",
-          "url": "https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute"
-        },
-        {
-          "label": "Built In Mistral",
-          "url": "https://builtin.com/articles/mistral-ai"
-        }
-      ]
-    },
-    {
-      "name": "Gemini 1.0",
-      "company": "Google DeepMind",
-      "released": "2023-12",
-      "category": "multimodal",
-      "description": "First Gemini family (Ultra/Pro/Nano) processing text, images, audio, and video; Gemini Ultra surpassed GPT-4 on MMLU.",
-      "sources": [
-        {
-          "label": "Gemini Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
-        },
-        {
-          "label": "TIME Gemini",
-          "url": "https://time.com/6343450/gemini-google-deepmind-ai/"
-        }
-      ]
-    },
-    {
-      "name": "Gemini 1.5 Pro",
-      "company": "Google DeepMind",
-      "released": "2024-02",
-      "category": "multimodal",
-      "description": "Mixture-of-experts architecture with breakthrough 1-million-token context window for long-document processing.",
-      "sources": [
-        {
-          "label": "Gemini Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
-        },
-        {
-          "label": "IBM Google Gemini",
-          "url": "https://www.ibm.com/think/topics/google-gemini"
-        }
-      ]
-    },
-    {
-      "name": "Claude 3 (Opus/Sonnet/Haiku)",
+      "name": "Claude Sonnet 4.5",
       "company": "Anthropic",
-      "released": "2024-03",
-      "category": "multimodal",
-      "description": "Three-tier model family establishing Opus/Sonnet/Haiku naming; introduced vision and surpassed GPT-4 on benchmarks.",
+      "released": "2025-09",
+      "category": "reasoning",
+      "description": "Balanced flagship with strong agentic performance, 1M-token beta context, and deep computer-use improvements.",
       "sources": [
         {
-          "label": "ClaudeFast Models",
-          "url": "https://claudefa.st/blog/models"
-        },
-        {
-          "label": "Claude Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Claude_(language_model)"
-        }
-      ]
-    },
-    {
-      "name": "LLaMA 3",
-      "company": "Meta",
-      "released": "2024-04",
-      "category": "llm",
-      "description": "Open-weight models (8B and 70B) debuting as the new open-source standard for their time.",
-      "sources": [
-        {
-          "label": "Interconnects Llama 4",
-          "url": "https://www.interconnects.ai/p/llama-4"
-        },
-        {
-          "label": "TechTarget Llama 4",
-          "url": "https://www.techtarget.com/whatis/feature/Meta-Llama-4-explained-Everything-you-need-to-know"
-        }
-      ]
-    },
-    {
-      "name": "GPT-4o",
-      "company": "OpenAI",
-      "released": "2024-05",
-      "category": "multimodal",
-      "description": "Omni model unifying text, audio, and vision in real-time; faster and cheaper than GPT-4 Turbo.",
-      "sources": [
-        {
-          "label": "GitHub Timeline",
-          "url": "https://github.com/jqueryscript/chatgpt-timeline"
-        },
-        {
-          "label": "OpenAI API Changelog",
-          "url": "https://platform.openai.com/docs/changelog"
-        }
-      ]
-    },
-    {
-      "name": "DeepSeek-V2",
-      "company": "DeepSeek",
-      "released": "2024-05",
-      "category": "llm",
-      "description": "MoE model with Multi-head Latent Attention; triggered an AI price war in China with aggressive pricing.",
-      "sources": [
-        {
-          "label": "DeepSeek Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/DeepSeek"
-        },
-        {
-          "label": "DeepSeek History Guide",
-          "url": "https://deepseekai.guide/guides/deepseek-history/"
-        }
-      ]
-    },
-    {
-      "name": "Mistral Large",
-      "company": "Mistral AI",
-      "released": "2024-02",
-      "category": "llm",
-      "description": "Mistral's flagship closed model competing with GPT-4; first released alongside the Le Chat consumer app.",
-      "sources": [
-        {
-          "label": "Brief Bismarck Mistral",
-          "url": "https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute"
-        },
-        {
-          "label": "Built In Mistral",
-          "url": "https://builtin.com/articles/mistral-ai"
-        }
-      ]
-    },
-    {
-      "name": "Veo (1)",
-      "company": "Google DeepMind",
-      "released": "2024-05",
-      "category": "video",
-      "description": "First Google video generation model announced at Google I/O; generates 1080p videos beyond one minute long.",
-      "sources": [
-        {
-          "label": "Google DeepMind Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Google_DeepMind"
-        },
-        {
-          "label": "ScriptByAI Google Timeline",
-          "url": "https://www.scriptbyai.com/google-ai-timeline-biggest-moments/"
-        }
-      ]
-    },
-    {
-      "name": "Claude 3.5 Sonnet",
-      "company": "Anthropic",
-      "released": "2024-06",
-      "category": "multimodal",
-      "description": "Mid-tier model that outperformed Claude 3 Opus at lower cost; became a leading model for coding tasks.",
-      "sources": [
-        {
-          "label": "ClaudeFast Models",
-          "url": "https://claudefa.st/blog/models"
-        },
-        {
-          "label": "ScriptByAI Claude Timeline",
+          "label": "ScriptByAI Timeline",
           "url": "https://www.scriptbyai.com/anthropic-claude-timeline/"
-        }
-      ]
-    },
-    {
-      "name": "Qwen2",
-      "company": "Alibaba",
-      "released": "2024-06",
-      "category": "llm",
-      "description": "Expanded Qwen family with dense and sparse models; Qwen2-72B competed directly with GPT-4 in reasoning.",
-      "sources": [
-        {
-          "label": "Qwen Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Qwen"
         },
         {
-          "label": "GitHub Qwen3",
-          "url": "https://github.com/QwenLM/qwen3"
-        }
-      ]
-    },
-    {
-      "name": "LLaMA 3.1",
-      "company": "Meta",
-      "released": "2024-07",
-      "category": "llm",
-      "description": "405B model marked first time open-weight model competed with GPT-4; added 128K token context window.",
-      "sources": [
-        {
-          "label": "Interconnects Llama 4",
-          "url": "https://www.interconnects.ai/p/llama-4"
-        },
-        {
-          "label": "LLaMA Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Llama_(language_model)"
-        }
-      ]
-    },
-    {
-      "name": "Mistral Large 2",
-      "company": "Mistral AI",
-      "released": "2024-07",
-      "category": "llm",
-      "description": "Dense 123B-parameter model with 128K context; improved reasoning, math, coding and multilingual capabilities.",
-      "sources": [
-        {
-          "label": "IntuitionLabs Mistral Large 3",
-          "url": "https://intuitionlabs.ai/articles/mistral-large-3-moe-llm-explained"
-        },
-        {
-          "label": "Brief Bismarck Mistral",
-          "url": "https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute"
-        }
-      ]
-    },
-    {
-      "name": "Grok-2",
-      "company": "xAI",
-      "released": "2024-08",
-      "category": "multimodal",
-      "description": "Improved reasoning, tool use and vision; introduced Grok-2 mini for lighter workloads alongside the flagship.",
-      "sources": [
-        {
-          "label": "Grok Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
-        },
-        {
-          "label": "xAI News",
-          "url": "https://x.ai/news"
-        }
-      ]
-    },
-    {
-      "name": "LLaMA 3.2",
-      "company": "Meta",
-      "released": "2024-09",
-      "category": "multimodal",
-      "description": "Meta's first fully multimodal LLM family with vision-capable 11B and 90B models alongside edge-friendly 1B–3B.",
-      "sources": [
-        {
-          "label": "Interconnects Llama 4",
-          "url": "https://www.interconnects.ai/p/llama-4"
-        },
-        {
-          "label": "TechTarget Llama 4",
-          "url": "https://www.techtarget.com/whatis/feature/Meta-Llama-4-explained-Everything-you-need-to-know"
-        }
-      ]
-    },
-    {
-      "name": "Claude 3.5 Sonnet v2",
-      "company": "Anthropic",
-      "released": "2024-10",
-      "category": "multimodal",
-      "description": "First major AI model with Computer Use, enabling direct control of computer interfaces via cursor and keyboard.",
-      "sources": [
-        {
-          "label": "ClaudeFast Models",
-          "url": "https://claudefa.st/blog/models"
-        },
-        {
-          "label": "Claude Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Claude_(language_model)"
-        }
-      ]
-    },
-    {
-      "name": "OpenAI o1",
-      "company": "OpenAI",
-      "released": "2024-09",
-      "category": "reasoning",
-      "description": "First public OpenAI reasoning model series using chain-of-thought for step-by-step logical problem solving.",
-      "sources": [
-        {
-          "label": "GitHub Timeline",
-          "url": "https://github.com/jqueryscript/chatgpt-timeline"
-        },
-        {
-          "label": "OpenAI API Changelog",
-          "url": "https://platform.openai.com/docs/changelog"
-        }
-      ]
-    },
-    {
-      "name": "Gemini 2.0 Flash",
-      "company": "Google DeepMind",
-      "released": "2024-12",
-      "category": "multimodal",
-      "description": "Next-gen Gemini model with Multimodal Live API, native image generation, and integrated Google Search grounding.",
-      "sources": [
-        {
-          "label": "Gemini Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
-        },
-        {
-          "label": "TechTarget Gemini",
-          "url": "https://www.techtarget.com/searchenterpriseai/definition/Google-Gemini"
-        }
-      ]
-    },
-    {
-      "name": "Sora",
-      "company": "OpenAI",
-      "released": "2024-12",
-      "category": "video",
-      "description": "Text-to-video diffusion transformer generating up to 1080p, 20-second videos publicly for ChatGPT Plus/Pro users.",
-      "sources": [
-        {
-          "label": "Sora Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)"
-        },
-        {
-          "label": "OpenAI Sora is Here",
-          "url": "https://openai.com/index/sora-is-here/"
-        }
-      ]
-    },
-    {
-      "name": "DeepSeek-V3",
-      "company": "DeepSeek",
-      "released": "2024-12",
-      "category": "llm",
-      "description": "671B MoE model trained for ~$5.6M, sparking global debate on AI cost efficiency vs. US frontier labs.",
-      "sources": [
-        {
-          "label": "DeepSeek Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/DeepSeek"
-        },
-        {
-          "label": "IISS DeepSeek Article",
-          "url": "https://www.iiss.org/publications/strategic-comments/2025/04/deepseeks-release-of-an-open-weight-frontier-ai-model/"
-        }
-      ]
-    },
-    {
-      "name": "DeepSeek-R1",
-      "company": "DeepSeek",
-      "released": "2025-01",
-      "category": "reasoning",
-      "description": "Open-source reasoning model matching OpenAI o1 benchmarks, trained for ~$294K; triggered 18% Nvidia stock drop.",
-      "sources": [
-        {
-          "label": "DeepSeek Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/DeepSeek"
-        },
-        {
-          "label": "Britannica DeepSeek",
-          "url": "https://www.britannica.com/money/DeepSeek"
-        }
-      ]
-    },
-    {
-      "name": "OpenAI o3-mini",
-      "company": "OpenAI",
-      "released": "2025-01",
-      "category": "reasoning",
-      "description": "Cost-efficient reasoning model for STEM, coding, and math; released to all ChatGPT users including free tier.",
-      "sources": [
-        {
-          "label": "OpenAI o3 Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/OpenAI_o3"
-        },
-        {
-          "label": "TechTarget o3 Explained",
-          "url": "https://www.techtarget.com/whatis/feature/OpenAI-o3-explained-Everything-you-need-to-know"
-        }
-      ]
-    },
-    {
-      "name": "Gemini 2.0 Pro",
-      "company": "Google DeepMind",
-      "released": "2025-02",
-      "category": "multimodal",
-      "description": "Full Gemini 2.0 flagship model with advanced reasoning and deeper integration across Google services.",
-      "sources": [
-        {
-          "label": "Gemini Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
-        },
-        {
-          "label": "Toponseek Gemini Versions",
-          "url": "https://www.toponseek.com/en/blogs/google-gemini-versions/"
-        }
-      ]
-    },
-    {
-      "name": "Claude 3.7 Sonnet",
-      "company": "Anthropic",
-      "released": "2025-02",
-      "category": "reasoning",
-      "description": "Introduced hybrid extended thinking, letting Claude pause and reason step-by-step before responding.",
-      "sources": [
-        {
-          "label": "ClaudeFast Models",
-          "url": "https://claudefa.st/blog/models"
-        },
-        {
-          "label": "ScriptByAI Claude Timeline",
-          "url": "https://www.scriptbyai.com/anthropic-claude-timeline/"
-        }
-      ]
-    },
-    {
-      "name": "GPT-4.5",
-      "company": "OpenAI",
-      "released": "2025-02",
-      "category": "llm",
-      "description": "Research preview of a larger GPT model for chat; described as a giant model with improved accuracy.",
-      "sources": [
-        {
-          "label": "Wikipedia OpenAI Products",
-          "url": "https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI"
-        },
-        {
-          "label": "Nexos ChatGPT Versions",
-          "url": "https://nexos.ai/blog/chatgpt-version-history/"
-        }
-      ]
-    },
-    {
-      "name": "Grok-3",
-      "company": "xAI",
-      "released": "2025-02",
-      "category": "reasoning",
-      "description": "Major reasoning leap using massive H100 clusters; introduced DeepSearch and Think modes for complex tasks.",
-      "sources": [
-        {
-          "label": "Grok Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
-        },
-        {
-          "label": "Grokipedia History",
-          "url": "https://grokipedia.ac/history-of-grok-the-complete-evolution/"
-        }
-      ]
-    },
-    {
-      "name": "Gemini 2.5 Pro",
-      "company": "Google DeepMind",
-      "released": "2025-03",
-      "category": "reasoning",
-      "description": "Google's most intelligent model with deep reasoning; debuted top of LMArena and leading math/coding benchmarks.",
-      "sources": [
-        {
-          "label": "Google I/O 2025 Blog",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/google-gemini-updates-io-2025/"
-        },
-        {
-          "label": "Gemini Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
-        }
-      ]
-    },
-    {
-      "name": "GPT-4.1",
-      "company": "OpenAI",
-      "released": "2025-04",
-      "category": "llm",
-      "description": "First production model with a 1-million-token context window; optimised for instruction-following and coding.",
-      "sources": [
-        {
-          "label": "Nexos ChatGPT Versions",
-          "url": "https://nexos.ai/blog/chatgpt-version-history/"
-        },
-        {
-          "label": "Wikipedia OpenAI Products",
-          "url": "https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI"
-        }
-      ]
-    },
-    {
-      "name": "OpenAI o3",
-      "company": "OpenAI",
-      "released": "2025-04",
-      "category": "reasoning",
-      "description": "Full-scale reasoning model with agentic tool use; 20% fewer major errors than o1 on real-world tasks.",
-      "sources": [
-        {
-          "label": "OpenAI o3 Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/OpenAI_o3"
-        },
-        {
-          "label": "OpenAI o3 & o4-mini",
-          "url": "https://openai.com/index/introducing-o3-and-o4-mini/"
-        }
-      ]
-    },
-    {
-      "name": "OpenAI o4-mini",
-      "company": "OpenAI",
-      "released": "2025-04",
-      "category": "reasoning",
-      "description": "Fast, cost-efficient reasoning model best on AIME 2024 & 2025; first reasoning model with full tool use.",
-      "sources": [
-        {
-          "label": "OpenAI o4-mini Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/OpenAI_o4-mini"
-        },
-        {
-          "label": "OpenAI o3 & o4-mini",
-          "url": "https://openai.com/index/introducing-o3-and-o4-mini/"
-        }
-      ]
-    },
-    {
-      "name": "LLaMA 4 (Scout & Maverick)",
-      "company": "Meta",
-      "released": "2025-04",
-      "category": "multimodal",
-      "description": "First MoE Llama models; Scout has 10M-token context, Maverick outranked GPT-4o on LM Arena at launch.",
-      "sources": [
-        {
-          "label": "LLaMA Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Llama_(language_model)"
-        },
-        {
-          "label": "TechCrunch Llama",
-          "url": "https://techcrunch.com/2025/10/06/meta-llama-everything-you-need-to-know-about-the-open-generative-ai-model/"
-        }
-      ]
-    },
-    {
-      "name": "Claude 4 (Sonnet & Opus)",
-      "company": "Anthropic",
-      "released": "2025-05",
-      "category": "code",
-      "description": "Professional-grade coding generation; Claude Code became generally available alongside Claude 4 release.",
-      "sources": [
-        {
-          "label": "ClaudeFast Models",
-          "url": "https://claudefa.st/blog/models"
-        },
-        {
-          "label": "Claude Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Claude_(language_model)"
-        }
-      ]
-    },
-    {
-      "name": "Qwen3",
-      "company": "Alibaba",
-      "released": "2025-04",
-      "category": "reasoning",
-      "description": "Apache 2.0 model family (0.6B–235B MoE) trained on 36T tokens in 119 languages with hybrid thinking mode.",
-      "sources": [
-        {
-          "label": "Qwen Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Qwen"
-        },
-        {
-          "label": "GitHub Qwen3",
-          "url": "https://github.com/QwenLM/qwen3"
+          "label": "Anthropic Docs",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
         }
       ]
     },
@@ -807,49 +297,559 @@
       "company": "OpenAI",
       "released": "2025-08",
       "category": "multimodal",
-      "description": "Unified system with dynamic router selecting fast or reasoning mode; 256K context, PhD-level across domains.",
+      "description": "Unified system with intelligent routing between fast and thinking modes; 94.6% AIME 2025, 74.9% SWE-bench, ~45% fewer hallucinations than GPT-4o.",
       "sources": [
         {
-          "label": "Wikipedia GPT",
-          "url": "https://en.wikipedia.org/wiki/Generative_pre-trained_transformer"
+          "label": "OpenAI Official",
+          "url": "https://openai.com/index/introducing-gpt-5/"
         },
         {
-          "label": "Wikipedia OpenAI Products",
-          "url": "https://en.wikipedia.org/wiki/Products_and_applications_of_OpenAI"
+          "label": "Wikipedia – GPT-5",
+          "url": "https://en.wikipedia.org/wiki/GPT-5"
         }
       ]
     },
     {
-      "name": "Grok-4",
+      "name": "Grok Code Fast 1",
       "company": "xAI",
-      "released": "2025-07",
-      "category": "reasoning",
-      "description": "100x training improvement over Grok-3; features native tool use, real-time search, and multi-agent capabilities.",
+      "released": "2025-08",
+      "category": "code",
+      "description": "Speedy, cost-efficient reasoning model for agentic coding; launched free on GitHub Copilot, Cursor, Cline, and Windsurf.",
       "sources": [
+        {
+          "label": "Wikipedia – Grok",
+          "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
+        },
         {
           "label": "xAI News",
           "url": "https://x.ai/news"
-        },
-        {
-          "label": "LifeArchitect Grok",
-          "url": "https://lifearchitect.ai/grok/"
         }
       ]
     },
     {
-      "name": "Mistral Large 3",
-      "company": "Mistral AI",
-      "released": "2025-12",
+      "name": "GPT-OSS-120B",
+      "company": "OpenAI",
+      "released": "2025-08",
       "category": "llm",
-      "description": "Open-source 675B MoE model with 256K context, native multimodal input, and 40+ language support.",
+      "description": "OpenAI's first open-weight release since GPT-2; 117B-param MoE achieving o4-mini-class performance on a single H100 GPU.",
       "sources": [
         {
-          "label": "IntuitionLabs Mistral Large 3",
-          "url": "https://intuitionlabs.ai/articles/mistral-large-3-moe-llm-explained"
+          "label": "YourGPT",
+          "url": "https://yourgpt.ai/blog/updates/gpt-5"
         },
         {
-          "label": "VentureBeat Mistral 3",
-          "url": "https://venturebeat.com/ai/mistral-launches-mistral-3-a-family-of-open-models-designed-to-run-on"
+          "label": "Built In",
+          "url": "https://builtin.com/artificial-intelligence/openai-gpt-5-release"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 2.5 Flash Image (Nano Banana)",
+      "company": "Google DeepMind",
+      "released": "2025-08",
+      "category": "image",
+      "description": "Viral photorealistic image model; released August 26, 2025 with speed, instruction following, and 3D-figurine generation.",
+      "sources": [
+        {
+          "label": "Wikipedia – Gemini",
+          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        },
+        {
+          "label": "Gemini API Changelog",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog"
+        }
+      ]
+    },
+    {
+      "name": "Grok 4",
+      "company": "xAI",
+      "released": "2025-07",
+      "category": "reasoning",
+      "description": "First model to exceed 50% on Humanity's Last Exam (Heavy variant); trained with RL at 200K-GPU Colossus scale with native tool use.",
+      "sources": [
+        {
+          "label": "xAI Official",
+          "url": "https://x.ai/news/grok-4"
+        },
+        {
+          "label": "MindStudio",
+          "url": "https://www.mindstudio.ai/models/grok-4"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 2.5 Pro",
+      "company": "Google DeepMind",
+      "released": "2025-06",
+      "category": "multimodal",
+      "description": "Top LMArena leaderboard at GA; 86.7% AIME 2025, 84% GPQA Diamond, 1M-token context with chain-of-thought and native multimodality.",
+      "sources": [
+        {
+          "label": "Google Developers Blog",
+          "url": "https://developers.googleblog.com/en/gemini-2-5-pro-io-improved-coding-performance/"
+        },
+        {
+          "label": "OpenRouter",
+          "url": "https://openrouter.ai/google/gemini-2.5-pro"
+        }
+      ]
+    },
+    {
+      "name": "Claude Opus 4.1",
+      "company": "Anthropic",
+      "released": "2025-08",
+      "category": "reasoning",
+      "description": "Drop-in replacement for Opus 4 with superior precision and multi-step problem handling for real-world coding and agentic tasks.",
+      "sources": [
+        {
+          "label": "Anthropic Opus Page",
+          "url": "https://www.anthropic.com/claude/opus"
+        },
+        {
+          "label": "ScriptByAI Timeline",
+          "url": "https://www.scriptbyai.com/anthropic-claude-timeline/"
+        }
+      ]
+    },
+    {
+      "name": "Qwen3-235B-A22B",
+      "company": "Alibaba",
+      "released": "2025-04",
+      "category": "reasoning",
+      "description": "235B-param open-weight MoE with hybrid thinking/non-thinking modes; trained on 36T tokens, supporting 119 languages.",
+      "sources": [
+        {
+          "label": "Alibaba Cloud Blog",
+          "url": "https://www.alibabacloud.com/blog/alibaba-introduces-qwen3-setting-new-benchmark-in-open-source-ai-with-hybrid-reasoning_602192"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/"
+        }
+      ]
+    },
+    {
+      "name": "Claude Sonnet 4",
+      "company": "Anthropic",
+      "released": "2025-05",
+      "category": "reasoning",
+      "description": "Launch model of the Claude 4 generation; set new SWE-bench highs at release and became default for AI coding agents.",
+      "sources": [
+        {
+          "label": "Anthropic Timeline",
+          "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
+        },
+        {
+          "label": "ScriptByAI Timeline",
+          "url": "https://www.scriptbyai.com/anthropic-claude-timeline/"
+        }
+      ]
+    },
+    {
+      "name": "Claude Opus 4",
+      "company": "Anthropic",
+      "released": "2025-05",
+      "category": "reasoning",
+      "description": "Launched the 4.x generation; introduced 1M-token beta context, effort parameter, and set the default for AI-coding agent products.",
+      "sources": [
+        {
+          "label": "Anthropic Timeline",
+          "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
+        },
+        {
+          "label": "Tygart Media",
+          "url": "https://tygartmedia.com/claude-release-history/"
+        }
+      ]
+    },
+    {
+      "name": "Llama 4 Maverick",
+      "company": "Meta",
+      "released": "2025-04",
+      "category": "multimodal",
+      "description": "400B-param MoE (17B active) open-weight; best multimodal model in class at launch, beating GPT-4o and Gemini 2.0 Flash.",
+      "sources": [
+        {
+          "label": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2025/04/05/meta-releases-llama-4-a-new-crop-of-flagship-ai-models/"
+        }
+      ]
+    },
+    {
+      "name": "Llama 4 Scout",
+      "company": "Meta",
+      "released": "2025-04",
+      "category": "multimodal",
+      "description": "17B-active-param open MoE with an industry-leading 10M-token context window, fits on a single H100 GPU.",
+      "sources": [
+        {
+          "label": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+        },
+        {
+          "label": "Wikipedia – Llama",
+          "url": "https://en.wikipedia.org/wiki/Llama_(language_model)"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI o3",
+      "company": "OpenAI",
+      "released": "2025-04",
+      "category": "reasoning",
+      "description": "First OpenAI reasoning model with full tool use; 69.1% SWE-bench, 88.9% AIME 2025, and image-integrated chain-of-thought.",
+      "sources": [
+        {
+          "label": "OpenAI Official",
+          "url": "https://openai.com/index/introducing-o3-and-o4-mini/"
+        },
+        {
+          "label": "Wikipedia – o3",
+          "url": "https://en.wikipedia.org/wiki/OpenAI_o3"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI o4-mini",
+      "company": "OpenAI",
+      "released": "2025-04",
+      "category": "reasoning",
+      "description": "Cost-efficient reasoning model; 92.7% AIME 2025 (best benchmark score at release) and 68.1% SWE-bench with visual chain-of-thought.",
+      "sources": [
+        {
+          "label": "OpenAI Official",
+          "url": "https://openai.com/index/introducing-o3-and-o4-mini/"
+        },
+        {
+          "label": "Wikipedia – o4-mini",
+          "url": "https://en.wikipedia.org/wiki/OpenAI_o4-mini"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 2.5 Pro Experimental",
+      "company": "Google DeepMind",
+      "released": "2025-03",
+      "category": "reasoning",
+      "description": "First public Gemini 2.5 release; introduced chain-of-thought with native multimodality, immediately topped LMArena on release.",
+      "sources": [
+        {
+          "label": "Wikipedia – Gemini",
+          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        },
+        {
+          "label": "TechTarget",
+          "url": "https://www.techtarget.com/whatis/feature/Google-Gemini-25-Pro-explained-Everything-you-need-to-know"
+        }
+      ]
+    },
+    {
+      "name": "GPT-4.5 (Orion)",
+      "company": "OpenAI",
+      "released": "2025-02",
+      "category": "multimodal",
+      "description": "Transitional model before GPT-5; sharpened reasoning accuracy, reduced hallucinations, and handled text, images, and audio.",
+      "sources": [
+        {
+          "label": "Botpress",
+          "url": "https://botpress.com/blog/everything-you-should-know-about-gpt-5"
+        },
+        {
+          "label": "TechTarget GPT-5",
+          "url": "https://www.techtarget.com/whatis/feature/GPT-5-explained"
+        }
+      ]
+    },
+    {
+      "name": "Claude 3.7 Sonnet",
+      "company": "Anthropic",
+      "released": "2025-02",
+      "category": "reasoning",
+      "description": "Introduced hybrid reasoning with controllable thinking budget; leading SWE-bench scores at launch and early computer-use gains.",
+      "sources": [
+        {
+          "label": "Anthropic Timeline",
+          "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
+        },
+        {
+          "label": "ScriptByAI Timeline",
+          "url": "https://www.scriptbyai.com/anthropic-claude-timeline/"
+        }
+      ]
+    },
+    {
+      "name": "Grok 3",
+      "company": "xAI",
+      "released": "2025-02",
+      "category": "reasoning",
+      "description": "Trained with 10× more compute than Grok 2 on Colossus; outperformed GPT-4o on AIME and GPQA at release with Think/Big Brain modes.",
+      "sources": [
+        {
+          "label": "Wikipedia – Grok",
+          "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
+        },
+        {
+          "label": "xAI News",
+          "url": "https://x.ai/news"
+        }
+      ]
+    },
+    {
+      "name": "DeepSeek R1",
+      "company": "DeepSeek",
+      "released": "2025-01",
+      "category": "reasoning",
+      "description": "Open-weight reasoning model trained for ~$6M; matched o1 on math and coding benchmarks, triggering industry-wide cost reassessment.",
+      "sources": [
+        {
+          "label": "Wikipedia – DeepSeek",
+          "url": "https://en.wikipedia.org/wiki/DeepSeek"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2025/04/05/meta-releases-llama-4-a-new-crop-of-flagship-ai-models/"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 2.0 Flash",
+      "company": "Google DeepMind",
+      "released": "2025-02",
+      "category": "multimodal",
+      "description": "Default Gemini model of 2025; introduced native tool use, multimodal generation, and agentic capabilities at Flash speed.",
+      "sources": [
+        {
+          "label": "TechTarget Gemini 2.5",
+          "url": "https://www.techtarget.com/whatis/feature/Google-Gemini-25-Pro-explained-Everything-you-need-to-know"
+        },
+        {
+          "label": "Wikipedia – Gemini",
+          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        }
+      ]
+    },
+    {
+      "name": "Claude 3.5 Sonnet (New/v2)",
+      "company": "Anthropic",
+      "released": "2024-10",
+      "category": "multimodal",
+      "description": "Launched Computer Use public beta; first frontier model to autonomously interact with desktop GUIs and leading coding benchmarks.",
+      "sources": [
+        {
+          "label": "Anthropic Timeline",
+          "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
+        },
+        {
+          "label": "ScriptByAI Timeline",
+          "url": "https://www.scriptbyai.com/anthropic-claude-timeline/"
+        }
+      ]
+    },
+    {
+      "name": "Llama 3.2",
+      "company": "Meta",
+      "released": "2024-10",
+      "category": "multimodal",
+      "description": "Meta's first fully multimodal Llama; added vision capabilities to the open-weight family with 11B and 90B vision models.",
+      "sources": [
+        {
+          "label": "TechTarget Llama 4",
+          "url": "https://www.techtarget.com/whatis/feature/Meta-Llama-4-explained-Everything-you-need-to-know"
+        },
+        {
+          "label": "Wikipedia – Llama",
+          "url": "https://en.wikipedia.org/wiki/Llama_(language_model)"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI o1",
+      "company": "OpenAI",
+      "released": "2024-09",
+      "category": "reasoning",
+      "description": "Launched the o-series reasoning paradigm; used private chain-of-thought to set new STEM benchmarks including 83% on AIME 2024.",
+      "sources": [
+        {
+          "label": "Wikipedia – o3",
+          "url": "https://en.wikipedia.org/wiki/OpenAI_o3"
+        },
+        {
+          "label": "TechTarget o3",
+          "url": "https://www.techtarget.com/whatis/feature/OpenAI-o3-explained-Everything-you-need-to-know"
+        }
+      ]
+    },
+    {
+      "name": "GPT-4o",
+      "company": "OpenAI",
+      "released": "2024-05",
+      "category": "multimodal",
+      "description": "First natively multimodal GPT; unified text, audio, and vision in real time at GPT-4-class intelligence with faster responses.",
+      "sources": [
+        {
+          "label": "TechTarget GPT-5",
+          "url": "https://www.techtarget.com/whatis/feature/GPT-5-explained"
+        },
+        {
+          "label": "Wikipedia – GPT-5",
+          "url": "https://en.wikipedia.org/wiki/GPT-5"
+        }
+      ]
+    },
+    {
+      "name": "Claude 3.5 Sonnet",
+      "company": "Anthropic",
+      "released": "2024-06",
+      "category": "multimodal",
+      "description": "Outperformed Claude 3 Opus at Sonnet pricing; became a leading model for coding, reasoning, and visual tasks mid-2024.",
+      "sources": [
+        {
+          "label": "Anthropic Timeline",
+          "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
+        },
+        {
+          "label": "ScriptByAI Timeline",
+          "url": "https://www.scriptbyai.com/anthropic-claude-timeline/"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 1.5 Pro",
+      "company": "Google DeepMind",
+      "released": "2024-02",
+      "category": "multimodal",
+      "description": "Pioneered 1M-token context at frontier quality; enabled processing entire codebases, long videos, and massive documents.",
+      "sources": [
+        {
+          "label": "TechTarget Gemini 2.5",
+          "url": "https://www.techtarget.com/whatis/feature/Google-Gemini-25-Pro-explained-Everything-you-need-to-know"
+        },
+        {
+          "label": "Wikipedia – Gemini",
+          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        }
+      ]
+    },
+    {
+      "name": "Claude 3 Opus",
+      "company": "Anthropic",
+      "released": "2024-03",
+      "category": "multimodal",
+      "description": "Introduced three-tier Haiku/Sonnet/Opus family with vision across all tiers; topped coding and reasoning benchmarks at launch.",
+      "sources": [
+        {
+          "label": "Anthropic Timeline",
+          "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
+        },
+        {
+          "label": "WebWallah Review",
+          "url": "https://webwallah.in/claude-opus-4-7-anthropic-models-complete-guide/"
+        }
+      ]
+    },
+    {
+      "name": "Llama 3.1 405B",
+      "company": "Meta",
+      "released": "2024-07",
+      "category": "llm",
+      "description": "First open-weight model at 405B parameters; competitive with GPT-4 class on many benchmarks, landmark for open-source frontier AI.",
+      "sources": [
+        {
+          "label": "TechTarget Llama 4",
+          "url": "https://www.techtarget.com/whatis/feature/Meta-Llama-4-explained-Everything-you-need-to-know"
+        },
+        {
+          "label": "Wikipedia – Llama",
+          "url": "https://en.wikipedia.org/wiki/Llama_(language_model)"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 1.0 Ultra",
+      "company": "Google DeepMind",
+      "released": "2024-02",
+      "category": "multimodal",
+      "description": "First model to exceed human experts on MMLU (90%); natively multimodal across text, images, audio, video, and code.",
+      "sources": [
+        {
+          "label": "Wikipedia – Gemini",
+          "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        },
+        {
+          "label": "TechTarget Gemini 2.5",
+          "url": "https://www.techtarget.com/whatis/feature/Google-Gemini-25-Pro-explained-Everything-you-need-to-know"
+        }
+      ]
+    },
+    {
+      "name": "GPT-4 Turbo",
+      "company": "OpenAI",
+      "released": "2023-11",
+      "category": "multimodal",
+      "description": "Extended GPT-4 with 128K context, vision, and updated knowledge; introduced JSON mode and function calling improvements.",
+      "sources": [
+        {
+          "label": "TechTarget GPT-5",
+          "url": "https://www.techtarget.com/whatis/feature/GPT-5-explained"
+        },
+        {
+          "label": "Wikipedia – GPT-5",
+          "url": "https://en.wikipedia.org/wiki/GPT-5"
+        }
+      ]
+    },
+    {
+      "name": "Claude 2.1",
+      "company": "Anthropic",
+      "released": "2023-11",
+      "category": "llm",
+      "description": "Doubled context window to 200K tokens (~500 pages); set the standard for long-document processing before Claude 3.",
+      "sources": [
+        {
+          "label": "WebWallah Review",
+          "url": "https://webwallah.in/claude-opus-4-7-anthropic-models-complete-guide/"
+        },
+        {
+          "label": "Anthropic Timeline",
+          "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
+        }
+      ]
+    },
+    {
+      "name": "GPT-4",
+      "company": "OpenAI",
+      "released": "2023-03",
+      "category": "multimodal",
+      "description": "Landmark multimodal model; set new SOTA across law, medicine, coding, and reasoning benchmarks, defining the modern LLM era.",
+      "sources": [
+        {
+          "label": "TechTarget GPT-5",
+          "url": "https://www.techtarget.com/whatis/feature/GPT-5-explained"
+        },
+        {
+          "label": "Wikipedia – GPT-5",
+          "url": "https://en.wikipedia.org/wiki/GPT-5"
+        }
+      ]
+    },
+    {
+      "name": "Claude 2",
+      "company": "Anthropic",
+      "released": "2023-07",
+      "category": "llm",
+      "description": "First publicly available Claude; pioneered 100K-token context window when GPT-4 was capped at 8K–32K tokens.",
+      "sources": [
+        {
+          "label": "WebWallah Review",
+          "url": "https://webwallah.in/claude-opus-4-7-anthropic-models-complete-guide/"
+        },
+        {
+          "label": "Anthropic Timeline",
+          "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
         }
       ]
     }
