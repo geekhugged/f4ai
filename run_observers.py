@@ -20,6 +20,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
+from agents.glossary_observer import GlossaryObserver
 from agents.llm_observer import LlmObserver
 from agents.market_observer import MarketObserver
 from agents.startup_observer import StartupObserver
@@ -32,10 +33,11 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument("--market",  action="store_true", help="Run Market Observer")
-    parser.add_argument("--tech",    action="store_true", help="Run Tech Observer")
-    parser.add_argument("--startup", action="store_true", help="Run Startup Observer")
-    parser.add_argument("--llm",     action="store_true", help="Run LLM Catalogue (50 models)")
+    parser.add_argument("--market",   action="store_true", help="Run Market Observer")
+    parser.add_argument("--tech",     action="store_true", help="Run Tech Observer")
+    parser.add_argument("--startup",  action="store_true", help="Run Startup Observer")
+    parser.add_argument("--llm",      action="store_true", help="Run LLM Catalogue (50 models)")
+    parser.add_argument("--glossary", action="store_true", help="Run Glossary (100 AI terms)")
     parser.add_argument(
         "--date",
         default=DateType.today().isoformat(),
@@ -44,11 +46,12 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    any_selected = args.market or args.tech or args.startup or args.llm
-    run_market  = args.market  or not any_selected
-    run_tech    = args.tech    or not any_selected
-    run_startup = args.startup or not any_selected
-    run_llm     = args.llm     or not any_selected
+    any_selected = args.market or args.tech or args.startup or args.llm or args.glossary
+    run_market   = args.market   or not any_selected
+    run_tech     = args.tech     or not any_selected
+    run_startup  = args.startup  or not any_selected
+    run_llm      = args.llm      or not any_selected
+    run_glossary = args.glossary or not any_selected
 
     if run_market:
         print("=" * 52)
@@ -68,6 +71,11 @@ def main() -> None:
     if run_llm:
         print("=" * 52)
         LlmObserver().run(args.date)
+        print()
+
+    if run_glossary:
+        print("=" * 52)
+        GlossaryObserver().run(args.date)
         print()
 
     print("Done. Open index.html in your browser.")

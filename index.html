@@ -209,6 +209,67 @@
         .b-llm-code       { background:#e6f4ea; color:#1e8e3e; }
         .b-llm-embedding  { background:#ede7f6; color:#4527a0; }
 
+        /* ── Glossary Toolbar ── */
+        .glossary-toolbar {
+            background: var(--surface);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .gl-search {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 8px 16px;
+        }
+        .gl-search .material-icons { color: var(--text-muted); font-size: 20px; }
+        .gl-search input {
+            border: none;
+            background: none;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: var(--text);
+            outline: none;
+            flex: 1;
+            min-width: 0;
+        }
+        .gl-cats { display: flex; flex-wrap: wrap; gap: 6px; }
+        .gl-cat {
+            border: 1px solid var(--border);
+            background: none;
+            border-radius: 16px;
+            padding: 4px 14px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all .15s;
+        }
+        .gl-cat:hover { background: rgba(26,115,232,.06); border-color: var(--primary); color: var(--primary); }
+        .gl-cat.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .gl-count { font-size: 12px; color: var(--text-muted); }
+        /* Glossary term row */
+        .gl-term-name { font-size: 14px; font-weight: 600; flex: 1; min-width: 0; }
+        .gl-term-name small { font-weight: 400; color: var(--text-muted); margin-left: 8px; font-size: 12px; }
+        /* Glossary category badges */
+        .b-gl-basics        { background:#e8f0fe; color:#1a73e8; }
+        .b-gl-architecture  { background:#f3e8fd; color:#9334e6; }
+        .b-gl-training      { background:#e6f4ea; color:#1e8e3e; }
+        .b-gl-inference     { background:#fff3e0; color:#e65100; }
+        .b-gl-capabilities  { background:#e0f7fa; color:#0097a7; }
+        .b-gl-safety        { background:#fce8e6; color:#d93025; }
+        .b-gl-agents        { background:#e8eaf6; color:#283593; }
+        .b-gl-business      { background:#fff8e1; color:#f57f17; }
+
         .chevron { font-size: 20px; color: var(--text-muted); flex-shrink: 0; transition: transform .22s ease; }
         .acc-btn.open .chevron { transform: rotate(180deg); }
 
@@ -284,7 +345,11 @@
 </header>
 
 <nav class="tab-bar">
-    <button class="tab active" onclick="showTab('market', this)">
+    <button class="tab active" onclick="showTab('intro', this)">
+        <span class="material-icons">school</span>
+        Введение
+    </button>
+    <button class="tab" onclick="showTab('market', this)">
         <span class="material-icons">trending_up</span>
         Market
     </button>
@@ -304,7 +369,1038 @@
 
 <div class="content">
 
-    <section id="market" class="section active">
+    <section id="intro" class="section active">
+        <div class="section-header">
+            <h2>Введение в AI</h2>
+            <p>100 ключевых терминов — от токена до конституционного AI</p>
+        </div>
+        <div class="glossary-toolbar">
+            <div class="gl-search">
+                <span class="material-icons">search</span>
+                <input type="text" id="glSearch" placeholder="Найти термин…" oninput="filterGlossary()">
+            </div>
+            <div class="gl-cats">
+                <button class="gl-cat active" data-cat="all" onclick="setGlossaryCat(this)">Все</button>
+                <button class="gl-cat" data-cat="basics" onclick="setGlossaryCat(this)">Основы</button>
+                <button class="gl-cat" data-cat="architecture" onclick="setGlossaryCat(this)">Архитектура</button>
+                <button class="gl-cat" data-cat="training" onclick="setGlossaryCat(this)">Обучение</button>
+                <button class="gl-cat" data-cat="inference" onclick="setGlossaryCat(this)">Инференс</button>
+                <button class="gl-cat" data-cat="capabilities" onclick="setGlossaryCat(this)">Возможности</button>
+                <button class="gl-cat" data-cat="safety" onclick="setGlossaryCat(this)">Безопасность</button>
+                <button class="gl-cat" data-cat="agents" onclick="setGlossaryCat(this)">Агенты</button>
+                <button class="gl-cat" data-cat="business" onclick="setGlossaryCat(this)">Технологии</button>
+            </div>
+            <div class="gl-count" id="glCount"></div>
+        </div>
+        <!-- GLOSSARY_START -->
+    <div class="review-block">
+        <div class="accordion" id="glossaryAccordion">
+        <div class="acc-item gl-item" data-cat="basics" data-term="token токен">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Токен<small>Token</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Минимальная единица текста, с которой работает языковая модель: слово, часть слова или символ. Например, слово «кошка» — один токен, а «непредсказуемый» может быть разбит на несколько.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="neural network нейронная сеть">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Нейронная сеть<small>Neural Network</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Математическая система, вдохновлённая структурой мозга: множество узлов-«нейронов» передают сигналы друг другу, обучаясь распознавать образы в данных.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="parameter параметр">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Параметр<small>Parameter</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Числовое значение внутри модели, которое настраивается в процессе обучения. Модели с миллиардами параметров способны хранить больше знаний — как книга с большим числом страниц.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="model модель">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Модель<small>Model</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Обученная программа, которая принимает входные данные (текст, изображение) и выдаёт результат. Примеры: GPT-4, Gemini, Claude.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="weight вес">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Вес<small>Weight</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Числовой коэффициент в нейронной сети, определяющий силу связи между нейронами. Именно веса хранят «знания» модели после обучения.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="bias смещение (байас)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Смещение (байас)<small>Bias</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Дополнительный параметр нейрона, позволяющий модели сдвигать свои предсказания. Как точка пересечения прямой с осью Y в школьной алгебре.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="inference инференс / вывод">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Инференс / Вывод<small>Inference</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Процесс применения уже обученной модели для получения ответа на новый запрос пользователя — в отличие от обучения, когда модель ещё «учится».</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="training обучение">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Обучение<small>Training</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Процесс, в котором модель изучает данные, многократно корректируя свои параметры, чтобы делать более точные предсказания.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="dataset датасет / набор данных">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Датасет / Набор данных<small>Dataset</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Структурированная коллекция примеров (текстов, изображений, разметки), на которых обучается или оценивается модель.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="loss function функция потерь">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Функция потерь<small>Loss Function</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Метрика, показывающая насколько ответ модели отличается от правильного. Цель обучения — минимизировать это значение.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="epoch эпоха">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Эпоха<small>Epoch</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Один полный проход модели через весь обучающий датасет. Обычно модель обучают несколько эпох для лучшего усвоения данных.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="overfitting переобучение">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Переобучение<small>Overfitting</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Ситуация, когда модель слишком хорошо запомнила обучающие данные, но плохо работает на новых примерах — как студент, зазубривший ответы, не понимая сути.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="basics" data-term="activation function функция активации">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">school</span>
+                <span class="gl-term-name">Функция активации<small>Activation Function</small></span>
+                <span class="badge b-gl-basics">Основы</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Математическая функция, определяющая «включается» ли нейрон и с какой силой. Добавляет нелинейность, позволяя сети решать сложные задачи.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="transformer трансформер">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Трансформер<small>Transformer</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Архитектура нейронной сети, лежащая в основе большинства современных языковых моделей. Использует механизм внимания для понимания контекста всего текста сразу.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="attention внимание (attention)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Внимание (Attention)<small>Attention</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Механизм, позволяющий модели при обработке каждого токена «обращать внимание» на наиболее релевантные части входного текста, как человек выделяет ключевые слова при чтении.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="embedding эмбеддинг / векторное представление">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Эмбеддинг / Векторное представление<small>Embedding</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Преобразование токена (слова) в числовой вектор, где похожие по смыслу слова оказываются «близко» в многомерном пространстве.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="layer слой">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Слой<small>Layer</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Один уровень обработки информации в нейронной сети. Глубокие модели имеют десятки и сотни слоёв, каждый из которых извлекает более абстрактные признаки.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="moe moe / смесь экспертов">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">MoE / Смесь экспертов<small>MoE</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Архитектура, где модель состоит из множества специализированных подсетей («экспертов»), и только часть из них активируется для каждого запроса — экономя вычисления.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="positional encoding позиционное кодирование">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Позиционное кодирование<small>Positional Encoding</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способ сообщить трансформеру порядок токенов в тексте: модель сама не «знает» что идёт первым, поэтому позиция каждого токена кодируется математически.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="residual connection остаточное соединение">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Остаточное соединение<small>Residual Connection</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Приём в архитектуре сетей: выход слоя складывается с его входом, что позволяет обучать очень глубокие модели без потери градиентного сигнала.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="self-attention само-внимание">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Само-внимание<small>Self-Attention</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Разновидность механизма внимания, при которой каждый токен в последовательности сравнивается с остальными токенами того же текста для понимания контекста.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="multi-head attention многоголовое внимание">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Многоголовое внимание<small>Multi-Head Attention</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Параллельный запуск нескольких механизмов внимания, каждый из которых учится фокусироваться на разных аспектах текста одновременно.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="feed-forward network полносвязная подсеть (ffn)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Полносвязная подсеть (FFN)<small>Feed-Forward Network</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Компонент трансформера, обрабатывающий каждый токен независимо через два линейных слоя с нелинейностью между ними — своеобразная «память» модели.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="decoder-only architecture архитектура только с декодером">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Архитектура только с декодером<small>Decoder-Only Architecture</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Тип трансформера (используется в GPT), который генерирует текст токен за токеном слева направо, не имея отдельного энкодера.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="tokenizer токенизатор">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Токенизатор<small>Tokenizer</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Алгоритм, разбивающий входной текст на токены перед подачей в модель. Разные модели используют разные токенизаторы с разными словарями.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="architecture" data-term="normalization нормализация">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">account_tree</span>
+                <span class="gl-term-name">Нормализация<small>Normalization</small></span>
+                <span class="badge b-gl-architecture">Архитектура</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Технический приём стабилизации обучения: числовые значения в слоях приводятся к единому масштабу, предотвращая взрывной рост или затухание сигнала.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="pre-training предобучение">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Предобучение<small>Pre-training</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Первый этап обучения: модель обучается на огромном корпусе текстов предсказывать следующий токен, получая базовые знания о языке и мире.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="fine-tuning дообучение / файн-тюнинг">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Дообучение / Файн-тюнинг<small>Fine-tuning</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Дополнительное обучение уже предобученной модели на специализированном датасете для адаптации под конкретную задачу или стиль поведения.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="rlhf rlhf / обучение с подкреплением от обратной связи людей">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">RLHF / Обучение с подкреплением от обратной связи людей<small>RLHF</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Метод обучения, при котором люди оценивают ответы модели, а эти оценки используются для её улучшения через обучение с подкреплением.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="backpropagation обратное распространение ошибки">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Обратное распространение ошибки<small>Backpropagation</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Алгоритм, вычисляющий как нужно скорректировать каждый вес сети, чтобы уменьшить ошибку — ошибка «распространяется» от выхода к входу.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="gradient descent градиентный спуск">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Градиентный спуск<small>Gradient Descent</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Метод оптимизации: параметры модели обновляются маленькими шагами в направлении уменьшения функции потерь, как спуск с горы в самую низкую точку.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="lora lora / низкоранговая адаптация">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">LoRA / Низкоранговая адаптация<small>LoRA</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Эффективный метод дообучения: вместо изменения всех весов модели добавляются небольшие матрицы-адаптеры, что требует в сотни раз меньше памяти.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="sft sft / обучение с учителем">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">SFT / Обучение с учителем<small>SFT</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Supervised Fine-Tuning — этап дообучения на размеченных парах «запрос–идеальный ответ», написанных людьми, для придания модели нужного поведения.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="learning rate скорость обучения">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Скорость обучения<small>Learning Rate</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Гиперпараметр, определяющий размер шага при обновлении весов. Слишком большое значение — модель «прыгает» мимо оптимума, слишком малое — обучение занимает вечность.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="batch size размер батча">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Размер батча<small>Batch Size</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Количество примеров из датасета, которые обрабатываются одновременно перед одним обновлением весов модели.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="dpo dpo / прямая оптимизация предпочтений">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">DPO / Прямая оптимизация предпочтений<small>DPO</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Альтернатива RLHF: модель обучается напрямую на парах предпочтительных и нежелательных ответов, без обучения отдельной модели вознаграждения.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="data augmentation аугментация данных">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Аугментация данных<small>Data Augmentation</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Искусственное расширение обучающего датасета путём создания новых примеров из существующих — переформулировки, перевода, добавления шума.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="regularization регуляризация">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Регуляризация<small>Regularization</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Набор техник для борьбы с переобучением: добавление штрафов за слишком большие веса или случайное отключение нейронов во время тренировки.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="training" data-term="checkpoint чекпоинт">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">fitness_center</span>
+                <span class="gl-term-name">Чекпоинт<small>Checkpoint</small></span>
+                <span class="badge b-gl-training">Обучение</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Сохранённое состояние весов модели в определённый момент обучения. Позволяет вернуться к промежуточной версии модели или продолжить обучение позже.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="context window контекстное окно">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Контекстное окно<small>Context Window</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Максимальное количество токенов, которые модель может «видеть» за один раз — и запрос, и ответ. Как рабочая память: всё, что не помещается, модель не учитывает.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="temperature температура">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Температура<small>Temperature</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Параметр, управляющий случайностью генерации: низкая температура — предсказуемые, «осторожные» ответы; высокая — более творческие и разнообразные.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="sampling сэмплинг / выборка">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Сэмплинг / Выборка<small>Sampling</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Метод выбора следующего токена при генерации: модель не всегда берёт самый вероятный вариант, а случайно выбирает из распределения, что создаёт разнообразие.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="kv-cache kv-кэш">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">KV-кэш<small>KV-Cache</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Кэш ключей и значений (Key-Value) в механизме внимания: позволяет не пересчитывать уже обработанные токены при генерации, ускоряя вывод модели.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="quantization квантизация">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Квантизация<small>Quantization</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Сжатие модели путём представления весов меньшим числом бит (например, 4 вместо 16). Уменьшает размер модели и ускоряет работу при небольшой потере качества.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="latency задержка / латентность">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Задержка / Латентность<small>Latency</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Время от отправки запроса до получения первого токена ответа. Критически важный показатель для пользовательского опыта в реальных приложениях.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="throughput пропускная способность">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Пропускная способность<small>Throughput</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Количество токенов или запросов, которые модель может обработать в единицу времени. Ключевая метрика при масштабировании сервиса.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="top-p sampling top-p сэмплинг (ядерная выборка)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Top-P сэмплинг (ядерная выборка)<small>Top-P Sampling</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Метод генерации, при котором следующий токен выбирается из минимального набора наиболее вероятных вариантов, суммарная вероятность которых ≥ P.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="beam search лучевой поиск">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Лучевой поиск<small>Beam Search</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Алгоритм генерации, одновременно отслеживающий несколько наиболее перспективных вариантов продолжения текста и выбирающий лучший итоговый результат.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="speculative decoding спекулятивное декодирование">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Спекулятивное декодирование<small>Speculative Decoding</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Ускорение вывода: маленькая быстрая модель предлагает несколько следующих токенов, а большая проверяет их за один проход, существенно сокращая время ответа.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="prompt промпт / запрос">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Промпт / Запрос<small>Prompt</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Текстовый ввод, который пользователь или система передаёт модели. Качество промпта напрямую влияет на качество ответа.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="streaming потоковая генерация">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Потоковая генерация<small>Streaming</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Режим передачи ответа модели пользователю по мере генерации — токен за токеном, не дожидаясь завершения. Создаёт эффект «живого» печатания текста.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="inference" data-term="stop token стоп-токен">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">speed</span>
+                <span class="gl-term-name">Стоп-токен<small>Stop Token</small></span>
+                <span class="badge b-gl-inference">Инференс</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Специальный токен или строка, сигнализирующие модели об окончании генерации. Предотвращает бесконечное продолжение ответа.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="reasoning рассуждение">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Рассуждение<small>Reasoning</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способность модели выстраивать логические цепочки для решения задач: математических, аналитических или здравого смысла.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="chain-of-thought цепочка рассуждений (cot)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Цепочка рассуждений (CoT)<small>Chain-of-Thought</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Техника, при которой модель пошагово излагает ход своих рассуждений перед ответом, что значительно повышает точность на сложных задачах.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="multimodal мультимодальность">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Мультимодальность<small>Multimodal</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способность модели работать с несколькими типами данных одновременно: текстом, изображениями, аудио, видео — как GPT-4o или Gemini.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="rag rag / поиск с генерацией">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">RAG / Поиск с генерацией<small>RAG</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Retrieval-Augmented Generation — метод, при котором модель перед ответом ищет релевантные документы в базе знаний и использует их как дополнительный контекст.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="in-context learning обучение в контексте">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Обучение в контексте<small>In-Context Learning</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способность модели адаптироваться к новой задаче, просто получив несколько примеров прямо в промпте, без изменения её весов.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="benchmark бенчмарк / тест производительности">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Бенчмарк / Тест производительности<small>Benchmark</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Стандартизированный набор задач для объективного сравнения моделей. Примеры: MMLU (знания), HumanEval (код), GSM8K (математика).</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="few-shot prompting промптинг с примерами (few-shot)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Промптинг с примерами (Few-Shot)<small>Few-Shot Prompting</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Включение нескольких примеров «вопрос–ответ» в промпт, чтобы показать модели желаемый формат или стиль ответа.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="zero-shot нулевой выстрел (zero-shot)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Нулевой выстрел (Zero-Shot)<small>Zero-Shot</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способность модели выполнить задачу без каких-либо примеров в промпте — только по описанию задания.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="code generation генерация кода">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Генерация кода<small>Code Generation</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способность языковой модели писать, объяснять и отлаживать программный код на различных языках программирования.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="summarization суммаризация / реферирование">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Суммаризация / Реферирование<small>Summarization</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Задача создания краткого изложения длинного текста с сохранением ключевой информации.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="emergent capability эмерджентная способность">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Эмерджентная способность<small>Emergent Capability</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Неожиданная способность, появляющаяся у модели при достижении определённого масштаба, которой не было у меньших версий — как новое качество, возникающее из количества.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="retrieval ретривал / поиск по базе знаний">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Ретривал / Поиск по базе знаний<small>Retrieval</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Компонент RAG-систем: поиск наиболее релевантных фрагментов документов по схожести векторных эмбеддингов с запросом пользователя.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="capabilities" data-term="long-context understanding понимание длинного контекста">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">psychology</span>
+                <span class="gl-term-name">Понимание длинного контекста<small>Long-Context Understanding</small></span>
+                <span class="badge b-gl-capabilities">Возможности</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способность модели сохранять связность и точность при работе с очень длинными документами — книгами, кодовыми базами, многочасовыми транскриптами.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="hallucination галлюцинация">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Галлюцинация<small>Hallucination</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Генерация модели уверенно звучащей, но фактически неверной информации — например, несуществующие цитаты, имена или события.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="alignment выравнивание / alignment">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Выравнивание / Alignment<small>Alignment</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Задача обеспечить, чтобы поведение ИИ соответствовало ценностям и намерениям людей: был полезным, честным и безопасным.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="red teaming красная команда / red teaming">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Красная команда / Red Teaming<small>Red Teaming</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Практика намеренных попыток сломать или обмануть модель: специалисты ищут уязвимости и опасные режимы поведения до публичного выпуска.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="guardrails ограждения / guardrails">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Ограждения / Guardrails<small>Guardrails</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Технические или программные барьеры, ограничивающие нежелательное поведение модели: фильтры контента, правила отказа от опасных запросов.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="jailbreak джейлбрейк / обход ограничений">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Джейлбрейк / Обход ограничений<small>Jailbreak</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Техники манипуляции промптом, направленные на обход встроенных ограничений безопасности модели для получения запрещённого контента.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="constitutional ai конституционный ии">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Конституционный ИИ<small>Constitutional AI</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Метод Anthropic: модель обучается следовать набору принципов («конституции»), самостоятельно критикуя и улучшая свои ответы в соответствии с ними.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="bias предвзятость / bias">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Предвзятость / Bias<small>Bias</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Систематические перекосы в ответах модели, отражающие предвзятость обучающих данных: дискриминация по полу, расе, политическим взглядам.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="prompt injection инъекция промпта">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Инъекция промпта<small>Prompt Injection</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Атака на ИИ-систему: вредоносные инструкции встраиваются в обрабатываемый моделью контент, чтобы перехватить управление её поведением.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="toxicity токсичность">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Токсичность<small>Toxicity</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Оскорбительный, вредоносный или деструктивный контент в ответах модели — оскорбления, угрозы, язык ненависти.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="adversarial attack состязательная атака">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Состязательная атака<small>Adversarial Attack</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Намеренно сконструированный ввод, вводящий модель в заблуждение или вызывающий неожиданный сбой — например, незаметные изменения текста меняют классификацию.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="safety fine-tuning дообучение на безопасность">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Дообучение на безопасность<small>Safety Fine-tuning</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Этап обучения, на котором модель специально учится отказывать в опасных запросах, давать сбалансированные ответы и не причинять вред.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="watermarking водяной знак (для ии)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Водяной знак (для ИИ)<small>Watermarking</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Встраивание скрытой статистической метки в генерируемый текст, позволяющей определить, что контент создан языковой моделью.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="safety" data-term="interpretability интерпретируемость">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">shield</span>
+                <span class="gl-term-name">Интерпретируемость<small>Interpretability</small></span>
+                <span class="badge b-gl-safety">Безопасность</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Область исследований, изучающая что именно происходит внутри нейронной сети: какие нейроны активируются и почему модель принимает те или иные решения.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="agent агент">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Агент<small>Agent</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>ИИ-система, способная самостоятельно планировать и выполнять многошаговые задачи, используя инструменты и принимая решения для достижения цели.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="tool use использование инструментов">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Использование инструментов<small>Tool Use</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способность модели вызывать внешние инструменты — поисковик, калькулятор, API, браузер — для получения актуальной информации или выполнения действий.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="mcp mcp / протокол контекста модели">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">MCP / Протокол контекста модели<small>MCP</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Model Context Protocol — открытый стандарт от Anthropic для унифицированного подключения ИИ-агентов к внешним инструментам, данным и сервисам.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="function calling вызов функций">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Вызов функций<small>Function Calling</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Функция API, позволяющая модели структурированно запрашивать выполнение заданных функций с нужными аргументами, получая результат обратно.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="memory память агента">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Память агента<small>Memory</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Механизм хранения информации между сессиями или шагами агента: краткосрочная (контекст), долгосрочная (база данных) или семантическая (эмбеддинги).</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="agentic loop агентный цикл">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Агентный цикл<small>Agentic Loop</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Повторяющийся цикл работы агента: получить задачу → сформировать план → выполнить действие → получить результат → скорректировать план → повторить.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="orchestration оркестрация">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Оркестрация<small>Orchestration</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Управление несколькими ИИ-агентами или инструментами: координация их взаимодействия, разделение задач и сбор результатов в единую систему.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="react react (рассуждение + действие)">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">ReAct (рассуждение + действие)<small>ReAct</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Фреймворк для агентов, чередующий шаги рассуждения (Reasoning) и действия (Acting) — модель «думает вслух» перед каждым действием.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="planning планирование">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Планирование<small>Planning</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Способность агента разбивать сложную цель на последовательность подзадач и выстраивать стратегию их выполнения.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="multi-agent system мультиагентная система">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Мультиагентная система<small>Multi-Agent System</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Архитектура, в которой несколько ИИ-агентов взаимодействуют, разделяя роли (исследователь, критик, исполнитель) для решения сложных задач.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="vector database векторная база данных">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Векторная база данных<small>Vector Database</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Специализированная база данных для хранения и быстрого поиска эмбеддингов. Основа памяти агентов и RAG-систем: Pinecone, Weaviate, Chroma.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="autonomous agent автономный агент">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Автономный агент<small>Autonomous Agent</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Агент, способный выполнять длительные задачи с минимальным участием человека, самостоятельно принимая решения на каждом шаге.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="agents" data-term="scratchpad черновик / scratchpad">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">smart_toy</span>
+                <span class="gl-term-name">Черновик / Scratchpad<small>Scratchpad</small></span>
+                <span class="badge b-gl-agents">Агенты</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Внутреннее «рабочее пространство» агента, где он фиксирует промежуточные рассуждения, результаты инструментов и планы, невидимые пользователю.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="prompt engineering инженерия промптов">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">Инженерия промптов<small>Prompt Engineering</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Искусство и наука создания эффективных запросов к языковым моделям для получения нужных результатов без изменения весов самой модели.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="llmops llmops / операционализация llm">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">LLMOps / Операционализация LLM<small>LLMOps</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Совокупность практик и инструментов для разработки, развёртывания, мониторинга и обслуживания приложений на базе больших языковых моделей в продакшн.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="distillation дистилляция">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">Дистилляция<small>Distillation</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Перенос знаний от большой «учительской» модели к маленькой «ученической»: меньшая модель учится воспроизводить поведение большой, оставаясь компактной.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="api api / программный интерфейс">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">API / Программный интерфейс<small>API</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Интерфейс для взаимодействия с языковой моделью через код: разработчики отправляют запросы и получают ответы, не управляя инфраструктурой напрямую.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="cost-per-token стоимость токена">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">Стоимость токена<small>Cost-per-Token</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Ценовая модель API: оплата за каждую тысячу входных и выходных токенов. Ключевая метрика для оценки экономики ИИ-приложений.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="model serving обслуживание модели">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">Обслуживание модели<small>Model Serving</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Инфраструктура для развёртывания обученной модели и обработки запросов пользователей: серверы, балансировщики нагрузки, оптимизация GPU.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="sla sla / соглашение об уровне сервиса">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">SLA / Соглашение об уровне сервиса<small>SLA</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Договорные обязательства провайдера ИИ-сервиса по доступности, задержке и надёжности: например, 99.9% аптайм и время ответа не более 2 секунд.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="system prompt системный промпт">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">Системный промпт<small>System Prompt</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Скрытые инструкции, задаваемые разработчиком приложения перед разговором с пользователем: задают роль, ограничения и стиль поведения модели.</p>
+            </div>
+        </div>
+        <div class="acc-item gl-item" data-cat="business" data-term="evaluation (evals) эвалюация / оценка модели">
+            <button class="acc-btn" onclick="toggleAccordion(this)">
+                <span class="material-icons acc-icon">settings</span>
+                <span class="gl-term-name">Эвалюация / Оценка модели<small>Evaluation (Evals)</small></span>
+                <span class="badge b-gl-business">Технологии</span>
+                <span class="material-icons chevron">expand_more</span>
+            </button>
+            <div class="acc-body"><p>Систематическое тестирование качества модели по метрикам (точность, безопасность, скорость) перед выпуском или после обновления.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+        <!-- GLOSSARY_END -->
+    </section>
+
+    <section id="market" class="section">
         <div class="section-header">
             <h2>AI Market Observer</h2>
             <p>Инвестиции, оценки, регулирование, прогнозы рынка ИИ</p>
@@ -1671,6 +2767,26 @@ function toggleReview(btn) {
     const opening = !btn.classList.contains('open');
     btn.classList.toggle('open', opening);
     content.classList.toggle('open', opening);
+}
+
+function filterGlossary() {
+    const q   = (document.getElementById('glSearch').value || '').toLowerCase();
+    const cat = (document.querySelector('.gl-cat.active') || {dataset:{cat:'all'}}).dataset.cat;
+    let count = 0;
+    document.querySelectorAll('#glossaryAccordion .gl-item').forEach(item => {
+        const show = (!q || (item.dataset.term || '').includes(q)) &&
+                     (cat === 'all' || item.dataset.cat === cat);
+        item.style.display = show ? '' : 'none';
+        if (show) count++;
+    });
+    const el = document.getElementById('glCount');
+    if (el) el.textContent = count ? count + ' терминов' : '';
+}
+
+function setGlossaryCat(btn) {
+    document.querySelectorAll('.gl-cat').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterGlossary();
 }
 </script>
 
