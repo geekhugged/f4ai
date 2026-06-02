@@ -58,7 +58,12 @@
             position: sticky;
             top: 64px;
             z-index: 100;
+            overflow-x: auto;
+            overflow-y: visible;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
         }
+        .tab-bar::-webkit-scrollbar { display: none; }
         .tab {
             flex: 0 0 auto;
             min-width: 160px;
@@ -241,7 +246,16 @@
             flex: 1;
             min-width: 0;
         }
-        .gl-cats { display: flex; flex-wrap: wrap; gap: 6px; }
+        .gl-cats {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 6px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 2px;
+        }
+        .gl-cats::-webkit-scrollbar { display: none; }
         .gl-cat {
             border: 1px solid var(--border);
             background: none;
@@ -330,9 +344,10 @@
         /* ── Responsive ── */
         @media (max-width: 600px) {
             .app-bar h1 { font-size: 16px; }
-            .tab { min-width: 120px; font-size: 12px; padding: 0 14px; }
+            .tab { min-width: 100px; font-size: 12px; padding: 0 12px; }
             .badge { display: none; }
             .acc-body.open { padding-left: 20px; }
+            .gl-cat { white-space: nowrap; }
         }
     </style>
 </head>
